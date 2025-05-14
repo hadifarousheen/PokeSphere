@@ -80,7 +80,7 @@
 
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Function from "./components/Function";
