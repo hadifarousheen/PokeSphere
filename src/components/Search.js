@@ -13,8 +13,10 @@ const Search=()=>{
                 console.log(searchtext);
             }}/>
             <button onClick={()=>{
-            const searchcards=pokemondata.filter((poke)=>poke.name.toLowerCase()==searchtext.toLowerCase());
-            setfilteredpokemondata(searchcards);
+const searchValue = searchtext.toLowerCase();
+    const searchcards = pokemondata.filter((poke) =>
+        poke.name.toLowerCase() === searchValue)
+                setfilteredpokemondata(searchcards);
             console.log(searchcards);
             }}>Search</button>
         </div>

@@ -7,7 +7,7 @@ const Body=()=>{
 
     return (
         <div className="flex flex-wrap">
-       {filteredpokemondata?.map((poke,index)=><PokemonCard key={index} pokemondata={poke}/>)
+       {filteredpokemondata?.map((poke,index)=><PokemonCard key={poke.name} pokemondata={poke}/>)
        }
         </div>
     )

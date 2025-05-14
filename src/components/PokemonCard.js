@@ -54,6 +54,7 @@ const PokemonCard=(props)=>{
                 // setfavouritesdata(pokemondetails)
                 favouritedata.push(pokemondetails);
                 console.log(favouritedata);
+                setfilteredpokemondata(favouritedata);
                 localStorage.setItem('favourites',JSON.stringify(favouritedata));
                 
             }}>{favouritetext}</button>

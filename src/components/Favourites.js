@@ -15,7 +15,7 @@ const Favourites=()=>{
     return(
         <div className="flex flex-wrap">
             <h1>Favourites Page</h1>
-       {favouritesdata?.map((poke,index)=><PokemonCard key={index} pokemondata={poke}/>)
+       {filteredpokemondata?.map((poke,index)=><PokemonCard key={index} pokemondata={poke}/>)
        }
         </div>
     )

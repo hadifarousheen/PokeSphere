@@ -9,7 +9,7 @@ const Header=()=>{
             <nav className="flex flex-wrap">
                 <h1 className="text-2xl">Pokemon API</h1>
                 <div className="flex ml-auto  my-auto">
-             <Link to="/body">  <h2 className="border border-black m-1 p-1"  onClick={()=>{
+             <Link to="/">  <h2 className="border border-black m-1 p-1"  onClick={()=>{
                 setfilteredpokemondata(pokemondata)
              }}>Get All Cards</h2></Link> 
               <Link to="/favourites">  <h2 className="border border-black m-1 p-1" 

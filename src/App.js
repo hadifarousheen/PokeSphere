@@ -117,9 +117,9 @@ const App = () => {
   return (
     <CardContext.Provider
       value={{
-        pokemondata,
+        pokemondata:pokemondata,
         setpokemondata,
-        filteredpokemondata,
+        filteredpokemondata:filteredpokemondata,
         setfilteredpokemondata,
         pokemoncompletedata,
         setpokemoncompletedata,
