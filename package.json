@@ -1,7 +1,7 @@
 {
   "name": "pokemon-api",
   "version": "1.0.0",
-  "homepage": "https://github.com/hadifarousheen/Pokemon-API",
+  "homepage": "https://hadifarousheen.github.io/Pokemon-API",
   "scripts": {
     "build":"parcel build index.html",
      "predeploy":"npm run build",
