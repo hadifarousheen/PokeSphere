@@ -1,7 +1,7 @@
 
 import { useEffect, useState ,useContext} from "react";
 import CardContext from "../utils/CardContext";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const PokemonCard=(props)=>{
 

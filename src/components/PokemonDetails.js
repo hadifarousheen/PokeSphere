@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 const PokemonDetails=()=>{
     const location = useLocation();
   const { pokemondata } = location.state || {};
