@@ -29,7 +29,7 @@ const Filter = () => {
   }
 
   return (
-    <div>
+    <div className="block">
       <h1 onClick={() => setfiltertype(!showfiltertype)}>Filter</h1>
 
       {showfiltertype && (
@@ -166,7 +166,9 @@ const Filter = () => {
           >
             Filter
           </button>
-          <button>Clear Filter</button>
+          <button onClick={()=>{
+            settypevalues([])
+          }}>Clear Filter</button>
         </div>
       )}
     </div>

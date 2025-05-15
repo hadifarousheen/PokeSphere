@@ -33,8 +33,8 @@ function sortcards() {
 
 
   return (
-<div>
-  <h1
+<div className="flex">
+  <h1 className="m-2 border border-black p-1"
     onClick={() => {
       setshowsort(!showsort);
     }}
@@ -42,35 +42,35 @@ function sortcards() {
     Sort
   </h1>
   {showsort ? (
-    <div>
-      <input
+    <div className="flex border border-black m-2 p-1">
+      <input className="m-1"
         type="radio"
         name="sort"
         checked={sortval === "alpha-asc"}
         onChange={() => {
           setsortval("alpha-asc");
         }}
-      />{" "}
+      /> 
       a-z
-      <input
+      <input className="m-1"
         type="radio"
         name="sort"
         checked={sortval === "alpha-desc"}
         onChange={() => {
           setsortval("alpha-desc");
         }}
-      />{" "}
+      /> 
       z-a
-      <input
+      <input className="m-1"
         type="radio"
         name="sort"
         checked={sortval === "num-asc"}
         onChange={() => {
           setsortval("num-asc");
         }}
-      />{" "}
-      1-1032
-      <input
+      /> 
+      1-100
+      <input className="m-1"
         type="radio"
         name="sort"
         checked={sortval === "num-desc"}
@@ -78,10 +78,10 @@ function sortcards() {
           setsortval("num-desc")
         }}
         
-      />{" "}
-      1032-1
-      <button onClick={sortcards}>
-        Sort
+      /> 
+      100-1
+      <button className="border border-black bg-blue-400 mx-1 p-0.5" onClick={sortcards}>
+        Submit
       </button>
     </div>
   ) : (

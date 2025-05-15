@@ -5,12 +5,12 @@ const Search=()=>{
     const[searchtext,setsearchtext]=useState("");
     const{pokemondata,setfilteredpokemondata}=useContext(CardContext);
     return(
-        <div>
+        <div >
             <input type="text" value={searchtext} className="border border-black" onChange={(e)=>{
                 setsearchtext(e.target.value);
                 console.log(searchtext);
             }}/>
-            <button onClick={()=>{
+            <button className="border border-black bg-blue-300 m-2 p-1" onClick={()=>{
 const searchValue = searchtext.toLowerCase();
     const searchcards = pokemondata.filter((poke) =>
         poke.name.toLowerCase() === searchValue)
