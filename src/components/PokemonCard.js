@@ -41,10 +41,10 @@ const PokemonCard=(props)=>{
    
     return (
         
-        <div className="border border-black m-2 p-2">
+        <div className="border border-black text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>   <div>
-            <span>{(pokemondetails?.id? pokemondetails?.id:pokemondata.id)}</span>
-            <span> {(pokemondetails?.name)?pokemondetails?.name:pokemondata.name}</span>
+            <span className="bg-blue-200">#{(pokemondetails?.id? pokemondetails?.id:pokemondata.id)}</span>
+            <span > {(pokemondetails?.name)?pokemondetails?.name:pokemondata.name}</span>
             <img className="m-auto h-30" 
             src={(imageurl)?(imageurl):(pokemondata?.sprites?.front_shiny)}/>
             
@@ -56,19 +56,19 @@ const PokemonCard=(props)=>{
       : "Loading...")}</p>
     </div>
     </Link>   
-            <button className="border border-black m-1 p-1" onClick={()=>{
+           { pokemondetails? (<button className="border border-black m-1 p-1 bg-blue-200 rounded-md" onClick={()=>{
                 setfavouritetext("Favourite");
                 const favouritedata=JSON.parse(localStorage.getItem('favourites'))
                 favouritedata.push(pokemondetails);
                 localStorage.setItem('favourites',JSON.stringify(favouritedata));
                 
-            }}>{favouritetext}</button>
-            <button className="border border-black m-1 p-1" onClick={()=>{
+            }}>{favouritetext}</button>):(<span></span>)}
+           {pokemondetails?( <button className="border border-black m-1 p-1 bg-blue-300 rounded-md" onClick={()=>{
                 const comparisions=JSON.parse(localStorage.getItem('comparisions'))
                 comparisions.push(pokemondetails)
                 setcomparetext("Selected");
                 localStorage.setItem('comparisions',JSON.stringify(comparisions))
-            }}>{comparetext}</button>
+            }}>{comparetext}</button>):(<span></span>)}
         </div>
     )
 }

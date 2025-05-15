@@ -30,11 +30,11 @@ const Filter = () => {
 
   return (
     <div className="block">
-      <h1 onClick={() => setfiltertype(!showfiltertype)}>Filter</h1>
+      <h1 className="border border-black w-fit font-bold" onClick={() => setfiltertype(!showfiltertype)}>Type Filter {showfiltertype?'🔼':'🔽'}</h1>
 
       {showfiltertype && (
-        <div>
-          <input
+        <div className="border border-black my-2 p-1">
+          <input className="mx-1"
             type="checkbox"
             value={"fire"}
             onClick={() => {
@@ -42,7 +42,7 @@ const Filter = () => {
             }}
           />{" "}
           Fire
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"water"}
             onClick={() => {
@@ -50,7 +50,7 @@ const Filter = () => {
             }}
           />{" "}
           Water
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"grass"}
             onClick={() => {
@@ -58,7 +58,7 @@ const Filter = () => {
             }}
           />{" "}
           Grass
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"poison"}
             onClick={() => {
@@ -66,7 +66,7 @@ const Filter = () => {
             }}
           />{" "}
           Poison
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"flying"}
             onClick={() => {
@@ -74,7 +74,7 @@ const Filter = () => {
             }}
           />{" "}
           Flying
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"bug"}
             onClick={() => {
@@ -82,7 +82,7 @@ const Filter = () => {
             }}
           />{" "}
         Bug
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"normal"}
             onClick={() => {
@@ -90,7 +90,7 @@ const Filter = () => {
             }}
           />{" "}
           Normal
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"electric"}
             onClick={() => {
@@ -98,7 +98,7 @@ const Filter = () => {
             }}
           />{" "}
           Electric
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"ground"}
             onClick={() => {
@@ -106,7 +106,7 @@ const Filter = () => {
             }}
           />{" "}
           Ground
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"fairy"}
             onClick={() => {
@@ -114,7 +114,7 @@ const Filter = () => {
             }}
           />{" "}
           Fairy
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"fighting"}
             onClick={() => {
@@ -122,7 +122,7 @@ const Filter = () => {
             }}
           />{" "}
           Fighting
-          <input
+          <input className="mx-1"
             type="checkbox"
             value={"psychic"}
             onClick={() => {
@@ -130,31 +130,31 @@ const Filter = () => {
             }}
           />{" "}
           psychic
-          <input type="checkbox" value={"rock"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"rock"} onClick={()=>{
             settypevalues(prev => [...prev, "rock"]);
 
           }}/> Rock
-          <input type="checkbox" value={"steel"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"steel"} onClick={()=>{
             settypevalues(prev => [...prev, "steel"]);
 
           }}/> Steel
-          <input type="checkbox" value={"ice"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"ice"} onClick={()=>{
             settypevalues(prev => [...prev, "ice"]);
 
           }}/> Ice
-          <input type="checkbox" value={"ghost"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"ghost"} onClick={()=>{
             settypevalues(prev => [...prev, "ghost"]);
 
           }}/> Ghost
-          <input type="checkbox" value={"dark"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"dark"} onClick={()=>{
             settypevalues(prev => [...prev, "dark"]);
 
           }}/> dark
-          <input type="checkbox" value={"dragon"} onClick={()=>{
+          <input className="mx-1" type="checkbox" value={"dragon"} onClick={()=>{
             settypevalues(prev => [...prev, "dragon"]);
 
           }}/> Dragon
-          <button
+          <button className="border border-black mx-1 my-2"
             onClick={() => {
               
               const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
@@ -166,7 +166,7 @@ const Filter = () => {
           >
             Filter
           </button>
-          <button onClick={()=>{
+          <button className="border border-black mx-1" onClick={()=>{
             settypevalues([])
           }}>Clear Filter</button>
         </div>

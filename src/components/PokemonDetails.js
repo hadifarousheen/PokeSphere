@@ -5,7 +5,7 @@ const PokemonDetails=()=>{
     console.log(pokemondata);
     const types=pokemondata.types.map((typeObj) => typeObj.type.name);
     const abilities=pokemondata.abilities.map((typeobj)=>typeobj.ability.name)
-    return (<div>
+    return (<div className="border border-black m-auto w-fit p-2 rounded-2xl shadow-2xl shadow-blue-400">
 <h1>Name : {pokemondata?.name}</h1>
 <img src={pokemondata.sprites.front_shiny}/>
 

@@ -34,15 +34,15 @@ function sortcards() {
 
   return (
 <div className="flex">
-  <h1 className="m-2 border border-black p-1"
+  <h1 className="m-2 border border-black p-1 font-bold"
     onClick={() => {
       setshowsort(!showsort);
     }}
   >
-    Sort
+    Sort {showsort?'◀️':'▶️'}
   </h1>
   {showsort ? (
-    <div className="flex border border-black m-2 p-1">
+    <div className="flex border border-black m-1.5 p-1">
       <input className="m-1"
         type="radio"
         name="sort"
@@ -80,7 +80,7 @@ function sortcards() {
         
       /> 
       100-1
-      <button className="border border-black bg-blue-400 mx-1 p-0.5" onClick={sortcards}>
+      <button className="border border-black bg-blue-300  p-0.5 rounded-xl" onClick={sortcards}>
         Submit
       </button>
     </div>

@@ -6,10 +6,10 @@ import { useState } from "react";
 const Function=()=>{
     const[showfilter,setshowfilter]=useState(false);
     return(
-        <div className="  m-6 p-2">
-            <h1 className="w-fit border border-black p-1"  onClick={()=>{
+        <div className="  mx-16 p-2 my-4">
+            <h1 className="w-fit border border-black p-1 font-bold"  onClick={()=>{
                 setshowfilter(!showfilter)
-            }}>Filter ▶️</h1>
+            }}>Filter {showfilter?'🔼':'🔽'}</h1>
             <div >
             {showfilter?(
                 <div className="border border-black  w-11/12 mt-2 p-2">

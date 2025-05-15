@@ -10,12 +10,14 @@ const Comparison = () => {
     localStorage.setItem("comparisions", JSON.stringify(comparisiondata2));
   }, []);
   return (
-    <div className="flex flex-wrap">
-      <h1>Comparison page</h1>
+    <div className="m-auto">
+      <h1 className="text-3xl text-center text-blue-950 font-bold my-6">Comparision</h1>
+    <div className="flex flex-wrap items-center justify-center">
+      
       {comparisiondata?.map((poke, index) => (
         <PokemonCard key={index} pokemondata={poke} />
       ))}
-    </div>
+    </div></div>
   );
 };
 

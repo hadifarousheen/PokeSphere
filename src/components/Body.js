@@ -6,7 +6,7 @@ const Body = () => {
   const { filteredpokemondata } = useContext(CardContext);
 
   return (
-    <div className="flex flex-wrap m-4">
+    <div className="flex flex-wrap m-4 items-center justify-center">
       {filteredpokemondata?.map((poke, index) => (
         <PokemonCard key={poke.name} pokemondata={poke} />
       ))}

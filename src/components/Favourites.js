@@ -11,11 +11,15 @@ const Favourites = () => {
     localStorage.setItem("favourites", JSON.stringify(favouritedata));
   }, []);
   return (
-    <div className="flex flex-wrap">
-      <h1>Favourites Page</h1>
+    <div className="m-auto my-6 ">
+            <h1 className="text-3xl text-center text-blue-950 font-bold my-6">Favourite Pokemons</h1>
+
+    <div className="flex flex-wrap items-center justify-center">
+      {/* <h1 className="text-3xl m-auto text-blue-950">Favourite Pokemons</h1> */}
       {favouritesdata?.map((poke, index) => (
         <PokemonCard key={index} pokemondata={poke} />
       ))}
+    </div>
     </div>
   );
 };
