@@ -34817,7 +34817,7 @@ const Body = ()=>{
     _s();
     const { filteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-wrap m-4",
+        className: "flex flex-wrap m-4 items-center justify-center",
         children: filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                 pokemondata: poke
             }, poke.name, false, {
@@ -34886,7 +34886,7 @@ const PokemonCard = (props)=>{
         } catch (error) {}
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black m-2 p-2",
+        className: "border border-black text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: "/details",
@@ -34898,8 +34898,12 @@ const PokemonCard = (props)=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: pokemondetails?.id ? pokemondetails?.id : pokemondata.id
-                            }, void 0, false, {
+                                className: "bg-blue-200",
+                                children: [
+                                    "#",
+                                    pokemondetails?.id ? pokemondetails?.id : pokemondata.id
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
                                 lineNumber: 46,
                                 columnNumber: 13
@@ -34944,8 +34948,8 @@ const PokemonCard = (props)=>{
                 lineNumber: 45,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "border border-black m-1 p-1",
+            pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "border border-black m-1 p-1 bg-blue-200 rounded-md",
                 onClick: ()=>{
                     setfavouritetext("Favourite");
                     const favouritedata = JSON.parse(localStorage.getItem('favourites'));
@@ -34956,10 +34960,14 @@ const PokemonCard = (props)=>{
             }, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
                 lineNumber: 59,
-                columnNumber: 13
+                columnNumber: 31
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                fileName: "src/components/PokemonCard.js",
+                lineNumber: 65,
+                columnNumber: 43
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "border border-black m-1 p-1",
+            pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "border border-black m-1 p-1 bg-blue-300 rounded-md",
                 onClick: ()=>{
                     const comparisions = JSON.parse(localStorage.getItem('comparisions'));
                     comparisions.push(pokemondetails);
@@ -34970,7 +34978,11 @@ const PokemonCard = (props)=>{
             }, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
                 lineNumber: 66,
-                columnNumber: 13
+                columnNumber: 30
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                fileName: "src/components/PokemonCard.js",
+                lineNumber: 71,
+                columnNumber: 41
             }, undefined)
         ]
     }, void 0, true, {
@@ -35015,15 +35027,18 @@ const Function = ()=>{
     _s();
     const [showfilter, setshowfilter] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "  m-6 p-2",
+        className: "  mx-16 p-2 my-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "w-fit border border-black p-1",
+                className: "w-fit border border-black p-1 font-bold",
                 onClick: ()=>{
                     setshowfilter(!showfilter);
                 },
-                children: "Filter \u25B6\uFE0F"
-            }, void 0, false, {
+                children: [
+                    "Filter ",
+                    showfilter ? "\uD83D\uDD3C" : "\uD83D\uDD3D"
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Function.js",
                 lineNumber: 10,
                 columnNumber: 13
@@ -35125,7 +35140,7 @@ const Search = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "text",
                 value: searchtext,
-                className: "border border-black",
+                className: "border border-black rounded-sm",
                 onChange: (e)=>{
                     setsearchtext(e.target.value);
                     console.log(searchtext);
@@ -35136,7 +35151,7 @@ const Search = ()=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "border border-black bg-blue-300 m-2 p-1",
+                className: "border border-black bg-blue-300 m-2 p-1 rounded-xl",
                 onClick: ()=>{
                     const searchValue = searchtext.toLowerCase();
                     const searchcards = pokemondata.filter((poke)=>poke.name.toLowerCase() === searchValue);
@@ -35204,18 +35219,21 @@ const Sort = ()=>{
         className: "flex",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "m-2 border border-black p-1",
+                className: "m-2 border border-black p-1 font-bold",
                 onClick: ()=>{
                     setshowsort(!showsort);
                 },
-                children: "Sort"
-            }, void 0, false, {
+                children: [
+                    "Sort ",
+                    showsort ? "\u25C0\uFE0F" : "\u25B6\uFE0F"
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Sort.js",
                 lineNumber: 37,
                 columnNumber: 3
             }, undefined),
             showsort ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex border border-black m-2 p-1",
+                className: "flex border border-black m-1.5 p-1",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "m-1",
@@ -35274,7 +35292,7 @@ const Sort = ()=>{
                     }, undefined),
                     "100-1",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "border border-black bg-blue-400 mx-1 p-0.5",
+                        className: "border border-black bg-blue-300  p-0.5 rounded-xl",
                         onClick: sortcards,
                         children: "Submit"
                     }, void 0, false, {
@@ -35334,12 +35352,15 @@ const NumberofCards = ()=>{
         className: "flex  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "border border-black m-2 p-1",
+                className: "border border-black m-2 p-1 font-bold",
                 onClick: ()=>{
                     setshownumberofcards(!shownumberofcards);
                 },
-                children: "Number Of Cards"
-            }, void 0, false, {
+                children: [
+                    "Number Of Cards ",
+                    shownumberofcards ? "\u25C0\uFE0F" : "\u25B6\uFE0F"
+                ]
+            }, void 0, true, {
                 fileName: "src/components/NumberofCards.js",
                 lineNumber: 10,
                 columnNumber: 13
@@ -35349,6 +35370,7 @@ const NumberofCards = ()=>{
                 children: [
                     " ",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: cardnumber,
                         onClick: ()=>{
@@ -35359,9 +35381,10 @@ const NumberofCards = ()=>{
                         lineNumber: 14,
                         columnNumber: 79
                     }, undefined),
-                    "5",
+                    " 5",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "checkbox",
+                        className: "mx-1",
                         value: cardnumber,
                         onClick: ()=>{
                             setcardnumber(10);
@@ -35374,6 +35397,7 @@ const NumberofCards = ()=>{
                     "10",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "checkbox",
+                        className: "mx-1",
                         value: cardnumber,
                         onClick: ()=>{
                             setcardnumber(15);
@@ -35385,7 +35409,7 @@ const NumberofCards = ()=>{
                     }, undefined),
                     "15",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "border border-black w-7",
+                        className: "border border-black w-7 h-4 mx-1",
                         type: "number",
                         onChange: (e)=>{
                             setcardnumber(e.target.value);
@@ -35395,8 +35419,9 @@ const NumberofCards = ()=>{
                         lineNumber: 23,
                         columnNumber: 13
                     }, undefined),
-                    "Custom",
+                    " Custom",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "border border-black mx-1  bg-blue-300  rounded-xl p-0.5",
                         onClick: ()=>{
                             const sortedpokemoncards = pokemondata.filter((poke, index)=>index < cardnumber);
                             setfilteredpokemondata(sortedpokemoncards);
@@ -35468,16 +35493,22 @@ const Filter = ()=>{
         className: "block",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "border border-black w-fit font-bold",
                 onClick: ()=>setfiltertype(!showfiltertype),
-                children: "Filter"
-            }, void 0, false, {
+                children: [
+                    "Type Filter ",
+                    showfiltertype ? "\uD83D\uDD3C" : "\uD83D\uDD3D"
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Filter.js",
                 lineNumber: 33,
                 columnNumber: 7
             }, undefined),
             showfiltertype && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "border border-black my-2 p-1",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "fire",
                         onClick: ()=>{
@@ -35494,6 +35525,7 @@ const Filter = ()=>{
                     " ",
                     "Fire",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "water",
                         onClick: ()=>{
@@ -35510,6 +35542,7 @@ const Filter = ()=>{
                     " ",
                     "Water",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "grass",
                         onClick: ()=>{
@@ -35526,6 +35559,7 @@ const Filter = ()=>{
                     " ",
                     "Grass",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "poison",
                         onClick: ()=>{
@@ -35542,6 +35576,7 @@ const Filter = ()=>{
                     " ",
                     "Poison",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "flying",
                         onClick: ()=>{
@@ -35558,6 +35593,7 @@ const Filter = ()=>{
                     " ",
                     "Flying",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "bug",
                         onClick: ()=>{
@@ -35574,6 +35610,7 @@ const Filter = ()=>{
                     " ",
                     "Bug",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "normal",
                         onClick: ()=>{
@@ -35590,6 +35627,7 @@ const Filter = ()=>{
                     " ",
                     "Normal",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "electric",
                         onClick: ()=>{
@@ -35606,6 +35644,7 @@ const Filter = ()=>{
                     " ",
                     "Electric",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "ground",
                         onClick: ()=>{
@@ -35622,6 +35661,7 @@ const Filter = ()=>{
                     " ",
                     "Ground",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "fairy",
                         onClick: ()=>{
@@ -35638,6 +35678,7 @@ const Filter = ()=>{
                     " ",
                     "Fairy",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "fighting",
                         onClick: ()=>{
@@ -35654,6 +35695,7 @@ const Filter = ()=>{
                     " ",
                     "Fighting",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "psychic",
                         onClick: ()=>{
@@ -35670,6 +35712,7 @@ const Filter = ()=>{
                     " ",
                     "psychic",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "rock",
                         onClick: ()=>{
@@ -35685,6 +35728,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Rock",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "steel",
                         onClick: ()=>{
@@ -35700,6 +35744,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Steel",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "ice",
                         onClick: ()=>{
@@ -35715,6 +35760,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Ice",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "ghost",
                         onClick: ()=>{
@@ -35730,6 +35776,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Ghost",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "dark",
                         onClick: ()=>{
@@ -35745,6 +35792,7 @@ const Filter = ()=>{
                     }, undefined),
                     " dark",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mx-1",
                         type: "checkbox",
                         value: "dragon",
                         onClick: ()=>{
@@ -35760,6 +35808,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Dragon",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "border border-black mx-1 my-2",
                         onClick: ()=>{
                             const filterPokemons = pokemondetailsfilter.filter((pokemon)=>pokemon.types.some((t)=>typevalues.includes(t.type.name)));
                             setfilteredpokemondata(filterPokemons);
@@ -35771,6 +35820,7 @@ const Filter = ()=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "border border-black mx-1",
                         onClick: ()=>{
                             settypevalues([]);
                         },
@@ -35825,6 +35875,7 @@ const PokemonDetails = ()=>{
     const types = pokemondata.types.map((typeObj)=>typeObj.type.name);
     const abilities = pokemondata.abilities.map((typeobj)=>typeobj.ability.name);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border border-black m-auto w-fit p-2 rounded-2xl shadow-2xl shadow-blue-400",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: [
@@ -35946,15 +35997,25 @@ const RandomPokemon = ()=>{
     _s();
     const { filteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-fit",
-        children: filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
-                pokemondata: poke
-            }, index, false, {
+        className: "w-fit m-auto",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-3xl font-bold my-4 text-blue-950",
+                children: "Random Pokemon"
+            }, void 0, false, {
                 fileName: "src/components/RandomPokemon.js",
                 lineNumber: 8,
-                columnNumber: 41
-            }, undefined))
-    }, void 0, false, {
+                columnNumber: 13
+            }, undefined),
+            filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                    pokemondata: poke
+                }, index, false, {
+                    fileName: "src/components/RandomPokemon.js",
+                    lineNumber: 9,
+                    columnNumber: 41
+                }, undefined))
+        ]
+    }, void 0, true, {
         fileName: "src/components/RandomPokemon.js",
         lineNumber: 7,
         columnNumber: 9
@@ -35998,22 +36059,30 @@ const Favourites = ()=>{
         localStorage.setItem("favourites", JSON.stringify(favouritedata));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-wrap",
+        className: "m-auto my-6 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Favourites Page"
+                className: "text-3xl text-center text-blue-950 font-bold my-6",
+                children: "Favourite Pokemons"
             }, void 0, false, {
                 fileName: "src/components/Favourites.js",
                 lineNumber: 15,
-                columnNumber: 7
+                columnNumber: 13
             }, undefined),
-            favouritesdata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
-                    pokemondata: poke
-                }, index, false, {
-                    fileName: "src/components/Favourites.js",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, undefined))
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap items-center justify-center",
+                children: favouritesdata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                        pokemondata: poke
+                    }, index, false, {
+                        fileName: "src/components/Favourites.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Favourites.js",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Favourites.js",
@@ -36058,22 +36127,30 @@ const Comparison = ()=>{
         localStorage.setItem("comparisions", JSON.stringify(comparisiondata2));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-wrap",
+        className: "m-auto",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Comparison page"
+                className: "text-3xl text-center text-blue-950 font-bold my-6",
+                children: "Comparision"
             }, void 0, false, {
                 fileName: "src/components/Comparison.js",
                 lineNumber: 14,
                 columnNumber: 7
             }, undefined),
-            comparisiondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
-                    pokemondata: poke
-                }, index, false, {
-                    fileName: "src/components/Comparison.js",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined))
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap items-center justify-center",
+                children: comparisiondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                        pokemondata: poke
+                    }, index, false, {
+                        fileName: "src/components/Comparison.js",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Comparison.js",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Comparison.js",
