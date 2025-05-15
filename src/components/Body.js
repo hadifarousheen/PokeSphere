@@ -1,16 +1,17 @@
-import React, { useEffect, useState ,useContext} from "react";
+import { useContext } from "react";
 import CardContext from "../utils/CardContext";
 import PokemonCard from "./PokemonCard";
 
-const Body=()=>{
-  const{pokemondata,setpokemondata,filteredpokemondata,setfilteredpokemondata}=useContext(CardContext);
+const Body = () => {
+  const { filteredpokemondata } = useContext(CardContext);
 
-    return (
-        <div className="flex flex-wrap">
-       {filteredpokemondata?.map((poke,index)=><PokemonCard key={poke.name} pokemondata={poke}/>)
-       }
-        </div>
-    )
-}
+  return (
+    <div className="flex flex-wrap">
+      {filteredpokemondata?.map((poke, index) => (
+        <PokemonCard key={poke.name} pokemondata={poke} />
+      ))}
+    </div>
+  );
+};
 
 export default Body;

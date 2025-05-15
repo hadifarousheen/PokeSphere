@@ -2,7 +2,7 @@ import { useState,useContext } from "react";
 import CardContext from "../utils/CardContext";
 
 const NumberofCards=()=>{
-    const{pokemondata,setpokemondata,filteredpokemondata,setfilteredpokemondata}=useContext(CardContext);
+    const{pokemondata,setfilteredpokemondata}=useContext(CardContext);
     const[shownumberofcards,setshownumberofcards]=useState(false);
     const[cardnumber,setcardnumber]=useState();
     return(

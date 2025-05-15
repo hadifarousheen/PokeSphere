@@ -3,17 +3,12 @@ import { useState, useContext, useEffect } from "react";
 
 const Filter = () => {
   const [showfiltertype, setfiltertype] = useState(false);
-  const [typevalues, settypevalues] = useState([]); // Array to store selected types
+  const [typevalues, settypevalues] = useState([]); 
   const [pokemondetailsfilter, setpokemondetailsfilter] = useState([]);
   const {
     pokemondata,
-    setfilteredpokemondata,
-    filteredpokemondata,
-    setpokemondata,
-    pokemondetails,
-    pokemoncompletedata,
+    setfilteredpokemondata
   } = useContext(CardContext);
-  // console.log(pokemondata)
 
   
   useEffect(() => {
@@ -29,8 +24,7 @@ const Filter = () => {
       responses.map((response) => response.json())
     );
 
-    // Store or return the data
-    // console.log(data);
+    
     setpokemondetailsfilter(data);
   }
 
@@ -162,15 +156,12 @@ const Filter = () => {
           }}/> Dragon
           <button
             onClick={() => {
-              // const filteredtypedata=pokemondetailsfilter.filter((poke)=>poke.types.type==typevalues)
-              // setfilteredpokemondata(filteredtypedata)
+              
               const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
                 pokemon.types.some((t) => typevalues.includes(t.type.name))
               );
       
               setfilteredpokemondata(filterPokemons);
-              // console.log(filterPokemons);
-              console.log(filteredpokemondata)
             }}
           >
             Filter

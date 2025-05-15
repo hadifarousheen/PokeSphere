@@ -11,28 +11,11 @@ const Sort = () => {
   const [showsort, setshowsort] = useState(false);
   const [sortval, setsortval] = useState();
 
-//   function sortcards() {
-//   let sortedcards = [...pokemondata]; // Create a copy to avoid mutating the original
-
-//   if (sortval === "num-desc") {
-//     sortedcards.sort((a, b) => parseInt(b.id) - parseInt(a.id));
-//     console.log(sortedcards);
-//   } else if (sortval === "num-asc") {
-//     sortedcards.sort((a, b) => a.id - b.id); // Ascending by numeric ID
-//   } else if (sortval === "alpha-asc") {
-//     sortedcards.sort((a, b) => a.name.localeCompare(b.name)); // A-Z
-//   } else if (sortval === "alpha-desc") {
-//     sortedcards.sort((a, b) => b.name.localeCompare(a.name)); // Z-A
-//   }
-
-//   setfilteredpokemondata(sortedcards);
-// }
 function sortcards() {
-  let sortedcards = [...pokemondata]; // Copy to avoid mutation
+  let sortedcards = [...pokemondata]; 
 
   if (sortval === "num-desc") {
-        // sortedcards.sort((a, b) => b.id - a.id); // Descending by numeric ID
-        // console.log(sortedcards)
+        
         sortedcards = pokemondata.map((item, index) => ({ ...item, index }))
         .sort((a, b) => b.index - a.index)
         .map(({ index, ...rest }) => rest);

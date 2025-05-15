@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 const PokemonCard=(props)=>{
 
   const{pokemondata}=props;
-        // if (!pokemondata) return <div>Loading...</div>;
 
-    const{name,url}=pokemondata;
+    const{url}=pokemondata;
     const[pokemondetails,setpokemondetails]=useState();
         const[imageurl,setimageurl]=useState();
         const[types,settypes]=useState();
         const[favouritetext,setfavouritetext]=useState("Add to Favourite");
         const[comparetext,setcomparetext]=useState("Compare");
+        const[favalltypes,setfavalltypes]=useState();
         const{pokemoncompletedata,setpokemoncompletedata,setfavouritesdata,setcomparisiondata,comparisiondata,setfilteredpokemondata}=useContext(CardContext)
     useEffect(()=>{
         fetchimageurl();
@@ -26,10 +26,12 @@ const PokemonCard=(props)=>{
 
         setimageurl(jsondata.sprites.front_shiny)
         setpokemondetails(jsondata);
-         const allTypes = jsondata.types.map((typeObj) => typeObj.type.name);
-        // console.log(allTypes);
-        settypes(allTypes);
-        // pokemoncompletedata.push(jsondata);
+         const allTypes = jsondata?.types.map((typeObj) => typeObj.type.name);
+                         settypes(allTypes);
+
+         const favalltypes=pokemondata?.types.map((typeObj) => typeObj.type.name);
+
+        setfavalltypes(favalltypes);
         }catch(error)
         {
 
@@ -41,31 +43,31 @@ const PokemonCard=(props)=>{
         
         <div className="border border-black m-2 p-2">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>   <div>
-            <span>{pokemondetails?.id}</span>
-            <span> {pokemondetails?.name}</span>
+            <span>{(pokemondetails?.id? pokemondetails?.id:pokemondata.id)}</span>
+            <span> {(pokemondetails?.name)?pokemondetails?.name:pokemondata.name}</span>
             <img className="m-auto h-30" 
-            src={imageurl}/>
-    <p>Type: {types?.join(", ")}</p>
+            src={(imageurl)?(imageurl):(pokemondata?.sprites?.front_shiny)}/>
+            
+
+    <p>Type: {(types && types.length > 0)
+    ? types.join(", ")
+    : (pokemondata.types 
+      ? pokemondata.types.map((t) => t.type.name).join(", ") 
+      : "Loading...")}</p>
     </div>
     </Link>   
             <button className="border border-black m-1 p-1" onClick={()=>{
                 setfavouritetext("Favourite");
                 const favouritedata=JSON.parse(localStorage.getItem('favourites'))
-                // setfavouritesdata(pokemondetails)
                 favouritedata.push(pokemondetails);
-                console.log(favouritedata);
-                setfilteredpokemondata(favouritedata);
                 localStorage.setItem('favourites',JSON.stringify(favouritedata));
                 
             }}>{favouritetext}</button>
             <button className="border border-black m-1 p-1" onClick={()=>{
-                // setcomparisiondata(pokemondetails);
                 const comparisions=JSON.parse(localStorage.getItem('comparisions'))
                 comparisions.push(pokemondetails)
-                // setcomparetext(prev => [...prev, pokemondetails])
                 setcomparetext("Selected");
                 localStorage.setItem('comparisions',JSON.stringify(comparisions))
-                // setfilteredpokemondata(comparisiondata)
             }}>{comparetext}</button>
         </div>
     )

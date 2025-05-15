@@ -3,9 +3,7 @@ import { useState,useContext } from "react";
 import CardContext from "../utils/CardContext";
 const Search=()=>{
     const[searchtext,setsearchtext]=useState("");
-    // const data=useContext(CardContext);
-    const{pokemondata,setpokemondata,filteredpokemondata,setfilteredpokemondata}=useContext(CardContext);
-    // console.log(data);
+    const{pokemondata,setfilteredpokemondata}=useContext(CardContext);
     return(
         <div>
             <input type="text" value={searchtext} className="border border-black" onChange={(e)=>{
