@@ -6,13 +6,13 @@ import { useState } from "react";
 const Function=()=>{
     const[showfilter,setshowfilter]=useState(false);
     return(
-        <div className="  mx-16 p-2 my-4">
-            <h1 className="w-fit border border-black p-1 font-bold"  onClick={()=>{
+        <div className="  mx-15 p-2 my-4">
+            <h1 className="w-fit border border-blue-950 p-1 font-bold rounded-sm shadow-3xl shadow-blue-700"  onClick={()=>{
                 setshowfilter(!showfilter)
             }}>Filter {showfilter?'🔼':'🔽'}</h1>
             <div >
             {showfilter?(
-                <div className="border border-black  w-11/12 mt-2 p-2">
+                <div className="border border-blue-950  w-11/12 mt-2 p-2 rounded-sm shadow-2xl shadow-blue-400">
                 <div className=" flex" >
              <Search/>
             <Sort/>

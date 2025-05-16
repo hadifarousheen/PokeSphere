@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 const PokemonCard=(props)=>{
 
   const{pokemondata}=props;
-
+//if(pokemondata){
     const{url}=pokemondata;
+//}
     const[pokemondetails,setpokemondetails]=useState();
         const[imageurl,setimageurl]=useState();
         const[types,settypes]=useState();
@@ -41,9 +42,9 @@ const PokemonCard=(props)=>{
    
     return (
         
-        <div className="border border-black text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
+        <div className="border border-black w-63 text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>   <div>
-            <span className="bg-blue-200">#{(pokemondetails?.id? pokemondetails?.id:pokemondata.id)}</span>
+            <span className="bg-blue-200 p-0.5">#{(pokemondetails?.id? pokemondetails?.id:pokemondata.id)}</span>
             <span > {(pokemondetails?.name)?pokemondetails?.name:pokemondata.name}</span>
             <img className="m-auto h-30" 
             src={(imageurl)?(imageurl):(pokemondata?.sprites?.front_shiny)}/>

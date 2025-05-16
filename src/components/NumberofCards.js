@@ -7,11 +7,11 @@ const NumberofCards=()=>{
     const[cardnumber,setcardnumber]=useState();
     return(
         <div className="flex  ">
-            <h1 className="border border-black m-2 p-1 font-bold" onClick={()=>{
+            <h1 className="border border-black m-2 p-1 font-bold rounded-sm" onClick={()=>{
                 setshownumberofcards(!shownumberofcards)
             }}>Number Of Cards {shownumberofcards?'◀️':'▶️'}</h1>
 
-            {shownumberofcards?(<div className="border border-black m-2 p-1"> <input className="mx-1" type="checkbox" value={cardnumber} onClick={()=>{
+            {shownumberofcards?(<div className="border border-black m-2 p-1 rounded-sm"> <input className="mx-1" type="checkbox" value={cardnumber} onClick={()=>{
                 setcardnumber(5);
             }}/> 5
             <input type="checkbox" className="mx-1" value={cardnumber} onClick={()=>{
