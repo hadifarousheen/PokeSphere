@@ -35,9 +35,14 @@
     --color-blue-300: oklch(80.9% .105 251.813);
     --color-blue-400: oklch(70.7% .165 254.624);
     --color-blue-500: oklch(62.3% .214 259.815);
+    --color-blue-700: oklch(48.8% .243 264.376);
     --color-blue-950: oklch(28.2% .091 267.935);
     --color-black: #000;
     --spacing: .25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
@@ -317,8 +322,8 @@
     margin-inline: calc(var(--spacing) * 1);
   }
 
-  .mx-16 {
-    margin-inline: calc(var(--spacing) * 16);
+  .mx-15 {
+    margin-inline: calc(var(--spacing) * 15);
   }
 
   .my-2 {
@@ -369,16 +374,16 @@
     height: calc(var(--spacing) * 30);
   }
 
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
-
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
 
   .w-11\/12 {
     width: 91.6667%;
+  }
+
+  .w-63 {
+    width: calc(var(--spacing) * 63);
   }
 
   .w-fit {
@@ -458,13 +463,27 @@
     padding: calc(var(--spacing) * 2);
   }
 
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+
   .text-center {
     text-align: center;
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
 
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 
   .font-bold {
@@ -498,6 +517,16 @@
     @supports (color: color-mix(in lab, red, red)) {
       & {
         --tw-shadow-color: color-mix(in oklab, var(--color-blue-400) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
+
+  .shadow-blue-700 {
+    --tw-shadow-color: oklch(48.8% .243 264.376);
+
+    @supports (color: color-mix(in lab, red, red)) {
+      & {
+        --tw-shadow-color: color-mix(in oklab, var(--color-blue-700) var(--tw-shadow-alpha), transparent);
       }
     }
   }

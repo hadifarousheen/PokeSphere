@@ -34861,7 +34861,9 @@ var _s = $RefreshSig$();
 const PokemonCard = (props)=>{
     _s();
     const { pokemondata } = props;
+    //if(pokemondata){
     const { url } = pokemondata;
+    //}
     const [pokemondetails, setpokemondetails] = (0, _react.useState)();
     const [imageurl, setimageurl] = (0, _react.useState)();
     const [types, settypes] = (0, _react.useState)();
@@ -34886,7 +34888,7 @@ const PokemonCard = (props)=>{
         } catch (error) {}
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
+        className: "border border-black w-63 text-shadow-blue-950 font-bold m-2 p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: "/details",
@@ -34898,14 +34900,14 @@ const PokemonCard = (props)=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-blue-200",
+                                className: "bg-blue-200 p-0.5",
                                 children: [
                                     "#",
                                     pokemondetails?.id ? pokemondetails?.id : pokemondata.id
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 46,
+                                lineNumber: 47,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -34915,7 +34917,7 @@ const PokemonCard = (props)=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -34923,7 +34925,7 @@ const PokemonCard = (props)=>{
                                 src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
                             }, void 0, false, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 48,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34933,19 +34935,19 @@ const PokemonCard = (props)=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 52,
+                                lineNumber: 53,
                                 columnNumber: 5
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 45,
+                        lineNumber: 46,
                         columnNumber: 70
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34959,11 +34961,11 @@ const PokemonCard = (props)=>{
                 children: favouritetext
             }, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 59,
+                lineNumber: 60,
                 columnNumber: 31
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 65,
+                lineNumber: 66,
                 columnNumber: 43
             }, undefined),
             pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34977,17 +34979,17 @@ const PokemonCard = (props)=>{
                 children: comparetext
             }, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 30
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 71,
+                lineNumber: 72,
                 columnNumber: 41
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PokemonCard.js",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 9
     }, undefined);
 };
@@ -35027,10 +35029,10 @@ const Function = ()=>{
     _s();
     const [showfilter, setshowfilter] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "  mx-16 p-2 my-4",
+        className: "  mx-15 p-2 my-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "w-fit border border-black p-1 font-bold",
+                className: "w-fit border border-blue-950 p-1 font-bold rounded-sm shadow-3xl shadow-blue-700",
                 onClick: ()=>{
                     setshowfilter(!showfilter);
                 },
@@ -35045,7 +35047,7 @@ const Function = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: showfilter ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "border border-black  w-11/12 mt-2 p-2",
+                    className: "border border-blue-950  w-11/12 mt-2 p-2 rounded-sm shadow-2xl shadow-blue-400",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: " flex",
@@ -35219,7 +35221,7 @@ const Sort = ()=>{
         className: "flex",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "m-2 border border-black p-1 font-bold",
+                className: "m-2 border border-black p-1 font-bold rounded-sm",
                 onClick: ()=>{
                     setshowsort(!showsort);
                 },
@@ -35233,7 +35235,7 @@ const Sort = ()=>{
                 columnNumber: 3
             }, undefined),
             showsort ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex border border-black m-1.5 p-1",
+                className: "flex border border-black m-1.5 p-1 rounded-sm",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "m-1",
@@ -35352,7 +35354,7 @@ const NumberofCards = ()=>{
         className: "flex  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "border border-black m-2 p-1 font-bold",
+                className: "border border-black m-2 p-1 font-bold rounded-sm",
                 onClick: ()=>{
                     setshownumberofcards(!shownumberofcards);
                 },
@@ -35366,7 +35368,7 @@ const NumberofCards = ()=>{
                 columnNumber: 13
             }, undefined),
             shownumberofcards ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black m-2 p-1",
+                className: "border border-black m-2 p-1 rounded-sm",
                 children: [
                     " ",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35379,7 +35381,7 @@ const NumberofCards = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/NumberofCards.js",
                         lineNumber: 14,
-                        columnNumber: 79
+                        columnNumber: 90
                     }, undefined),
                     " 5",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35493,7 +35495,7 @@ const Filter = ()=>{
         className: "block",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "border border-black w-fit font-bold",
+                className: "border border-black w-fit font-bold p-1 rounded-sm",
                 onClick: ()=>setfiltertype(!showfiltertype),
                 children: [
                     "Type Filter ",
@@ -35505,7 +35507,7 @@ const Filter = ()=>{
                 columnNumber: 7
             }, undefined),
             showfiltertype && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black my-2 p-1",
+                className: "border border-black my-2 p-1 rounded-sm",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "mx-1",
@@ -35808,7 +35810,7 @@ const Filter = ()=>{
                     }, undefined),
                     " Dragon",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "border border-black mx-1 my-2",
+                        className: "border border-black mx-1 my-2 rounded bg-blue-300 p-0.5",
                         onClick: ()=>{
                             const filterPokemons = pokemondetailsfilter.filter((pokemon)=>pokemon.types.some((t)=>typevalues.includes(t.type.name)));
                             setfilteredpokemondata(filterPokemons);
@@ -35820,7 +35822,7 @@ const Filter = ()=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "border border-black mx-1",
+                        className: "border border-black mx-1 rounded p-0.5  bg-blue-300",
                         onClick: ()=>{
                             settypevalues([]);
                         },
@@ -35875,19 +35877,18 @@ const PokemonDetails = ()=>{
     const types = pokemondata.types.map((typeObj)=>typeObj.type.name);
     const abilities = pokemondata.abilities.map((typeobj)=>typeobj.ability.name);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black m-auto w-fit p-2 rounded-2xl shadow-2xl shadow-blue-400",
+        className: "border border-black m-auto w-fit p-3 rounded-2xl shadow-2xl shadow-blue-400 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    "Name : ",
-                    pokemondata?.name
-                ]
-            }, void 0, true, {
+                className: "text-2xl font-bold",
+                children: pokemondata?.name
+            }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
                 lineNumber: 9,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "m-auto h-30",
                 src: pokemondata.sprites.front_shiny
             }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
@@ -35895,8 +35896,17 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Id : ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Id :"
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 12,
+                        columnNumber: 25
+                    }, undefined),
+                    " ",
                     pokemondata.id
                 ]
             }, void 0, true, {
@@ -35905,8 +35915,17 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Height : ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Height :"
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 13,
+                        columnNumber: 25
+                    }, undefined),
+                    " ",
                     pokemondata.height
                 ]
             }, void 0, true, {
@@ -35915,8 +35934,17 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Weight : ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Weight :"
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 14,
+                        columnNumber: 25
+                    }, undefined),
+                    " ",
                     pokemondata.weight
                 ]
             }, void 0, true, {
@@ -35925,8 +35953,16 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Base Experience : ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Base Experience : "
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 15,
+                        columnNumber: 25
+                    }, undefined),
                     pokemondata.base_experience
                 ]
             }, void 0, true, {
@@ -35935,9 +35971,18 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Types : ",
-                    types
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Types :"
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 16,
+                        columnNumber: 25
+                    }, undefined),
+                    " ",
+                    types.join(' , ')
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
@@ -35945,9 +35990,18 @@ const PokemonDetails = ()=>{
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
                 children: [
-                    "Abilitiess: ",
-                    abilities
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Abilitiess:"
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonDetails.js",
+                        lineNumber: 17,
+                        columnNumber: 25
+                    }, undefined),
+                    " ",
+                    abilities.join(' , ')
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
