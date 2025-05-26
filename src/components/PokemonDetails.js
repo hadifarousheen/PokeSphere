@@ -2,10 +2,9 @@ import { useLocation } from "react-router-dom";
 const PokemonDetails=()=>{
     const location = useLocation();
   const { pokemondata } = location.state || {};
-    console.log(pokemondata);
-    const types=pokemondata.types.map((typeObj) => typeObj.type.name);
+    const types=pokemondata?.types.map((typeObj) => typeObj.type.name);
     const abilities=pokemondata.abilities.map((typeobj)=>typeobj.ability.name)
-    return (<div className="border border-black m-auto w-fit p-3 rounded-2xl shadow-2xl shadow-blue-400 ">
+    return (<div className="border border-black m-auto w-fit p-3 rounded-2xl shadow-2xl shadow-blue-400 mt-10 ">
 <h1 className="text-2xl font-bold">{pokemondata?.name}</h1>
 <img className="m-auto h-30" src={pokemondata.sprites.front_shiny}/>
 

@@ -12,7 +12,7 @@ const Function=()=>{
             }}>Filter {showfilter?'🔼':'🔽'}</h1>
             <div >
             {showfilter?(
-                <div className="border border-blue-950  w-11/12 mt-2 p-2 rounded-sm shadow-2xl shadow-blue-400">
+                <div className="border border-blue-950 text-blue-950 mt-2 p-2 rounded-sm shadow-2xl shadow-blue-400">
                 <div className=" flex" >
              <Search/>
             <Sort/>

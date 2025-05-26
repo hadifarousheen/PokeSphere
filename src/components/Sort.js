@@ -42,8 +42,8 @@ function sortcards() {
     Sort {showsort?'◀️':'▶️'}
   </h1>
   {showsort ? (
-    <div className="flex border border-black m-1.5 p-1 rounded-sm">
-      <input className="m-1"
+    <div className="flex border border-black m-1.5 p-1 rounded-sm my-auto">
+      <input className="mx-1 my-auto"
         type="radio"
         name="sort"
         checked={sortval === "alpha-asc"}
@@ -51,8 +51,8 @@ function sortcards() {
           setsortval("alpha-asc");
         }}
       /> 
-      a-z
-      <input className="m-1"
+      <span className="my-auto">A-Z</span>
+      <input className="mx-1 my-auto"
         type="radio"
         name="sort"
         checked={sortval === "alpha-desc"}
@@ -60,8 +60,8 @@ function sortcards() {
           setsortval("alpha-desc");
         }}
       /> 
-      z-a
-      <input className="m-1"
+     <span className="my-auto">Z-A</span>
+      <input className="mx-1 my-auto"
         type="radio"
         name="sort"
         checked={sortval === "num-asc"}
@@ -69,8 +69,8 @@ function sortcards() {
           setsortval("num-asc");
         }}
       /> 
-      1-100
-      <input className="m-1"
+     <span className="my-auto">1-100</span> 
+      <input className="mx-1 my-auto"
         type="radio"
         name="sort"
         checked={sortval === "num-desc"}
@@ -79,8 +79,8 @@ function sortcards() {
         }}
         
       /> 
-      100-1
-      <button className="border border-black bg-blue-300  p-0.5 rounded-xl" onClick={sortcards}>
+    <span className="my-auto">100-1</span> 
+      <button className="border border-black bg-blue-300  p-0.5 rounded-xl mx-1" onClick={sortcards}>
         Submit
       </button>
     </div>

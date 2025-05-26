@@ -51,7 +51,7 @@ const App = () => {
       }}
     >
       <Header />
-      <Function />
+      {/* <Function /> */}
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/favourites" element={<Favourites />} />
