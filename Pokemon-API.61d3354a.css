@@ -346,6 +346,10 @@
     margin-top: calc(var(--spacing) * 2);
   }
 
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -376,10 +380,6 @@
 
   .w-7 {
     width: calc(var(--spacing) * 7);
-  }
-
-  .w-11\/12 {
-    width: 91.6667%;
   }
 
   .w-63 {
