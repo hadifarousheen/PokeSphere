@@ -36,9 +36,12 @@
     --color-blue-400: oklch(70.7% .165 254.624);
     --color-blue-500: oklch(62.3% .214 259.815);
     --color-blue-700: oklch(48.8% .243 264.376);
+    --color-blue-800: oklch(42.4% .199 265.638);
     --color-blue-950: oklch(28.2% .091 267.935);
     --color-black: #000;
     --spacing: .25rem;
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -48,6 +51,7 @@
     --font-weight-bold: 700;
     --radius-sm: .25rem;
     --radius-md: .375rem;
+    --radius-lg: .5rem;
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
@@ -298,20 +302,24 @@
 @layer components;
 
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+
+  .top-12 {
+    top: calc(var(--spacing) * 12);
+  }
+
+  .left-72 {
+    left: calc(var(--spacing) * 72);
+  }
+
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
 
-  .m-1\.5 {
-    margin: calc(var(--spacing) * 1.5);
-  }
-
   .m-2 {
     margin: calc(var(--spacing) * 2);
-  }
-
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
   }
 
   .m-auto {
@@ -322,8 +330,12 @@
     margin-inline: calc(var(--spacing) * 1);
   }
 
-  .mx-15 {
-    margin-inline: calc(var(--spacing) * 15);
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+
+  .my-1 {
+    margin-block: calc(var(--spacing) * 1);
   }
 
   .my-2 {
@@ -346,12 +358,20 @@
     margin-top: calc(var(--spacing) * 2);
   }
 
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
 
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
 
   .ml-2 {
@@ -370,8 +390,24 @@
     display: flex;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .h-4 {
     height: calc(var(--spacing) * 4);
+  }
+
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+
+  .h-28 {
+    height: calc(var(--spacing) * 28);
   }
 
   .h-30 {
@@ -382,8 +418,12 @@
     width: calc(var(--spacing) * 7);
   }
 
-  .w-63 {
-    width: calc(var(--spacing) * 63);
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+
+  .w-40 {
+    width: calc(var(--spacing) * 40);
   }
 
   .w-fit {
@@ -398,6 +438,10 @@
     align-items: center;
   }
 
+  .justify-between {
+    justify-content: space-between;
+  }
+
   .justify-center {
     justify-content: center;
   }
@@ -408,6 +452,10 @@
 
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
 
   .rounded-md {
@@ -467,6 +515,10 @@
     padding: calc(var(--spacing) * 3);
   }
 
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+
   .text-center {
     text-align: center;
   }
@@ -481,6 +533,11 @@
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
 
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -493,6 +550,10 @@
 
   .text-blue-950 {
     color: var(--color-blue-950);
+  }
+
+  .underline {
+    text-decoration-line: underline;
   }
 
   .shadow-xl\/20 {
@@ -531,6 +592,16 @@
     }
   }
 
+  .shadow-blue-800 {
+    --tw-shadow-color: oklch(42.4% .199 265.638);
+
+    @supports (color: color-mix(in lab, red, red)) {
+      & {
+        --tw-shadow-color: color-mix(in oklab, var(--color-blue-800) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
+
   .text-shadow-blue-950 {
     --tw-text-shadow-color: oklch(28.2% .091 267.935);
 
@@ -554,12 +625,161 @@
     }
   }
 
+  .hover\:bg-blue-300 {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          background-color: var(--color-blue-300);
+        }
+      }
+    }
+  }
+
+  .hover\:bg-blue-400 {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          background-color: var(--color-blue-400);
+        }
+      }
+    }
+  }
+
   .hover\:bg-blue-500 {
     &:hover {
       @media (hover: hover) {
         & {
           background-color: var(--color-blue-500);
         }
+      }
+    }
+  }
+
+  .md\:m-1\.5 {
+    @media (width >= 48rem) {
+      & {
+        margin: calc(var(--spacing) * 1.5);
+      }
+    }
+  }
+
+  .md\:m-2 {
+    @media (width >= 48rem) {
+      & {
+        margin: calc(var(--spacing) * 2);
+      }
+    }
+  }
+
+  .md\:m-4 {
+    @media (width >= 48rem) {
+      & {
+        margin: calc(var(--spacing) * 4);
+      }
+    }
+  }
+
+  .md\:mx-0 {
+    @media (width >= 48rem) {
+      & {
+        margin-inline: calc(var(--spacing) * 0);
+      }
+    }
+  }
+
+  .md\:mx-15 {
+    @media (width >= 48rem) {
+      & {
+        margin-inline: calc(var(--spacing) * 15);
+      }
+    }
+  }
+
+  .md\:my-4 {
+    @media (width >= 48rem) {
+      & {
+        margin-block: calc(var(--spacing) * 4);
+      }
+    }
+  }
+
+  .md\:block {
+    @media (width >= 48rem) {
+      & {
+        display: block;
+      }
+    }
+  }
+
+  .md\:flex {
+    @media (width >= 48rem) {
+      & {
+        display: flex;
+      }
+    }
+  }
+
+  .md\:hidden {
+    @media (width >= 48rem) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .md\:h-8 {
+    @media (width >= 48rem) {
+      & {
+        height: calc(var(--spacing) * 8);
+      }
+    }
+  }
+
+  .md\:h-30 {
+    @media (width >= 48rem) {
+      & {
+        height: calc(var(--spacing) * 30);
+      }
+    }
+  }
+
+  .md\:w-63 {
+    @media (width >= 48rem) {
+      & {
+        width: calc(var(--spacing) * 63);
+      }
+    }
+  }
+
+  .md\:p-0\.5 {
+    @media (width >= 48rem) {
+      & {
+        padding: calc(var(--spacing) * .5);
+      }
+    }
+  }
+
+  .md\:p-1 {
+    @media (width >= 48rem) {
+      & {
+        padding: calc(var(--spacing) * 1);
+      }
+    }
+  }
+
+  .md\:p-2 {
+    @media (width >= 48rem) {
+      & {
+        padding: calc(var(--spacing) * 2);
+      }
+    }
+  }
+
+  .md\:text-3xl {
+    @media (width >= 48rem) {
+      & {
+        font-size: var(--text-3xl);
+        line-height: var(--tw-leading, var(--text-3xl--line-height));
       }
     }
   }
