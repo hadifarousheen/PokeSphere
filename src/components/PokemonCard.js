@@ -55,7 +55,7 @@ const [favouritetext, setfavouritetext] = useState(() => {
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
         {" "}
         <div>
-          <span className="bg-blue-200 mx-1 md:mx-0 md:p-0.5 rounded-lg font-bold">
+          <span className="bg-blue-200 mx-1 md:mx-0  p-0.5 rounded-lg font-bold">
             #{pokemondetails?.id ? pokemondetails?.id : pokemondata.id}
           </span>
           <span className="font-bold">
