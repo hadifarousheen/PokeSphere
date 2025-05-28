@@ -32484,7 +32484,7 @@ const Header = ()=>{
                     columnNumber: 8
                 }, undefined),
                 showmenu && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "absolute top-12 left-72 bg-blue-300 w-30 text-sm",
+                    className: "absolute top-12 left-56 bg-blue-300 w-30 text-sm",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
@@ -35091,45 +35091,54 @@ const PokemonCard = (props)=>{
                 lineNumber: 55,
                 columnNumber: 7
             }, undefined),
-            pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "text-sm border border-black m-1 p-1 bg-blue-200 rounded-md",
-                onClick: ()=>{
-                    setfavouritetext("Added");
-                    localStorage.setItem(`favourite-${pokemondata.name}`, "Added");
-                    const favouritedata = JSON.parse(localStorage.getItem("favourites") || []);
-                    const presentid = favouritedata.find((item)=>item.id == pokemondetails.id);
-                    if (presentid == undefined) favouritedata.push(pokemondetails);
-                    localStorage.setItem("favourites", JSON.stringify(favouritedata));
-                },
-                children: favouritetext
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex",
+                children: [
+                    pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md",
+                        onClick: ()=>{
+                            setfavouritetext("Added");
+                            localStorage.setItem(`favourite-${pokemondata.name}`, "Added");
+                            const favouritedata = JSON.parse(localStorage.getItem("favourites") || []);
+                            const presentid = favouritedata.find((item)=>item.id == pokemondetails.id);
+                            if (presentid == undefined) favouritedata.push(pokemondetails);
+                            localStorage.setItem("favourites", JSON.stringify(favouritedata));
+                        },
+                        children: favouritetext
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonCard.js",
+                        lineNumber: 83,
+                        columnNumber: 9
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                        fileName: "src/components/PokemonCard.js",
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, undefined),
+                    pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: " text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-300 rounded-md",
+                        onClick: ()=>{
+                            const comparisions = JSON.parse(localStorage.getItem("comparisions") || []);
+                            setcomparetext("Selected");
+                            localStorage.setItem(`Compare-${pokemondata.name}`, "Selected");
+                            const present = comparisions.find((item)=>item.id == pokemondetails.id);
+                            if (present == undefined) comparisions?.push(pokemondetails);
+                            localStorage.setItem("comparisions", JSON.stringify(comparisions));
+                        },
+                        children: comparetext
+                    }, void 0, false, {
+                        fileName: "src/components/PokemonCard.js",
+                        lineNumber: 106,
+                        columnNumber: 9
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                        fileName: "src/components/PokemonCard.js",
+                        lineNumber: 125,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 81,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                fileName: "src/components/PokemonCard.js",
-                lineNumber: 101,
-                columnNumber: 9
-            }, undefined),
-            pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: " text-sm border border-black m-1 p-1 bg-blue-300 rounded-md",
-                onClick: ()=>{
-                    const comparisions = JSON.parse(localStorage.getItem("comparisions") || []);
-                    setcomparetext("Selected");
-                    localStorage.setItem(`Compare-${pokemondata.name}`, "Selected");
-                    const present = comparisions.find((item)=>item.id == pokemondetails.id);
-                    if (present == undefined) comparisions?.push(pokemondetails);
-                    localStorage.setItem("comparisions", JSON.stringify(comparisions));
-                },
-                children: comparetext
-            }, void 0, false, {
-                fileName: "src/components/PokemonCard.js",
-                lineNumber: 104,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                fileName: "src/components/PokemonCard.js",
-                lineNumber: 123,
-                columnNumber: 9
+                lineNumber: 80,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
