@@ -9,7 +9,7 @@ const Body = () => {
   return (
     <div>
         <Function />
-    <div className="flex flex-wrap m-4 items-center justify-center">
+    <div className="flex flex-wrap md:m-4 items-center justify-center">
       {filteredpokemondata?.map((poke, index) => (
         <PokemonCard key={poke.name} pokemondata={poke} />
       ))}

@@ -30,7 +30,7 @@ const Filter = () => {
 
   return (
     <div className="block">
-      <h1 className="border border-black w-fit font-bold p-1 rounded-sm" onClick={() => setfiltertype(!showfiltertype)}>Type Filter {showfiltertype?'🔼':'🔽'}</h1>
+      <h1 className="border border-black w-fit font-bold p-1 rounded-sm hover:bg-blue-400" onClick={() => setfiltertype(!showfiltertype)}>Type Filter {showfiltertype?'🔼':'🔽'}</h1>
 
       {showfiltertype && (
         <div className="border border-black my-2 p-1 rounded-sm">
@@ -154,7 +154,8 @@ const Filter = () => {
             settypevalues(prev => [...prev, "dragon"]);
 
           }}/> Dragon
-          <button className="border border-black mx-1 my-2 rounded bg-blue-300 p-0.5"
+          <div>
+          <button className="border border-black mx-1 my-2 rounded bg-blue-300 p-0.5 hover:bg-blue-400"
             onClick={() => {
               
               const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
@@ -166,9 +167,10 @@ const Filter = () => {
           >
             Filter
           </button>
-          <button className="border border-black mx-1 rounded p-0.5  bg-blue-300" onClick={()=>{
+          <button className="border border-black mx-1 rounded p-0.5  bg-blue-300 hover:bg-blue-400" onClick={()=>{
             settypevalues([])
           }}>Clear Filter</button>
+        </div>
         </div>
       )}
     </div>

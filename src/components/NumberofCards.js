@@ -7,7 +7,7 @@ const NumberofCards=()=>{
     const[cardnumber,setcardnumber]=useState();
     return(
         <div className="flex  ">
-            <h1 className="border border-black m-2 p-1 font-bold rounded-sm" onClick={()=>{
+            <h1 className="border border-black my-1 md:m-2 md:p-1 font-bold rounded-sm hover:bg-blue-300" onClick={()=>{
                 setshownumberofcards(!shownumberofcards)
             }}>Number Of Cards {shownumberofcards?'◀️':'▶️'}</h1>
 
@@ -23,7 +23,7 @@ const NumberofCards=()=>{
             <input className="border border-black w-7 h-4 mx-1" type="number" onChange={(e)=>{
                 setcardnumber(e.target.value);
             }}/> Custom
-            <button className="border border-black mx-1  bg-blue-300  rounded-xl p-0.5" onClick={()=>{
+            <button className="border border-black mx-1  bg-blue-300  rounded-xl p-0.5 hover:bg-blue-400" onClick={()=>{
           const sortedpokemoncards=pokemondata.filter((poke,index)=> index<cardnumber);
           setfilteredpokemondata(sortedpokemoncards);
             }}>Submit</button></div>):(<div></div>)}
