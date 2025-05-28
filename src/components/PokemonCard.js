@@ -77,10 +77,12 @@ const [favouritetext, setfavouritetext] = useState(() => {
           </p>
         </div>
       </Link>
+      <div className="flex">
       {pokemondetails ? (
+       
         <button
       
-          className="text-sm border border-black m-1 p-1 bg-blue-200 rounded-md"
+          className="text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md"
           onClick={() => {
             setfavouritetext("Added");
             localStorage.setItem(`favourite-${pokemondata.name}`, "Added");
@@ -102,7 +104,7 @@ const [favouritetext, setfavouritetext] = useState(() => {
       )}
       {pokemondetails ? (
         <button
-          className=" text-sm border border-black m-1 p-1 bg-blue-300 rounded-md"
+          className=" text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-300 rounded-md"
           onClick={() => {
             const comparisions = JSON.parse(
               localStorage.getItem("comparisions") || []
@@ -122,8 +124,10 @@ const [favouritetext, setfavouritetext] = useState(() => {
       ) : (
         <span></span>
       )}
+      </div>
     </div>
   );
+  
 };
 
 export default PokemonCard;

@@ -93,7 +93,7 @@ const Header = () => {
           </Link>
         </div>
        {
-        showmenu &&    <div className="absolute top-12 left-72 bg-blue-300 w-30 text-sm">
+        showmenu &&    <div className="absolute top-12 left-56 bg-blue-300 w-30 text-sm">
           <Link to="/">
             {" "}
             <h2
