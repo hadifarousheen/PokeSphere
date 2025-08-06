@@ -763,14 +763,6 @@
     }
   }
 
-  .md\:p-0\.5 {
-    @media (width >= 48rem) {
-      & {
-        padding: calc(var(--spacing) * .5);
-      }
-    }
-  }
-
   .md\:p-1 {
     @media (width >= 48rem) {
       & {

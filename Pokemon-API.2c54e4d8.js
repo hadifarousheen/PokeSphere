@@ -711,7 +711,7 @@ const App = ()=>{
         if (!localStorage.getItem("comparisions")) localStorage.setItem("comparisions", JSON.stringify([]));
     }, []);
     async function fetchData() {
-        const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
+        const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
         const data = await res.json();
         setpokemondata(data.results);
         setfilteredpokemondata(data.results);
@@ -732,7 +732,7 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 53,
+                lineNumber: 52,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -741,8 +741,32 @@ const App = ()=>{
                         path: "/",
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 56,
+                            lineNumber: 54,
                             columnNumber: 34
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 54,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/favourites",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 55,
+                            columnNumber: 44
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 55,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/details",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonDetailsDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 56,
+                            columnNumber: 41
                         }, void 0)
                     }, void 0, false, {
                         fileName: "src/App.js",
@@ -750,11 +774,11 @@ const App = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/favourites",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDefault.default), {}, void 0, false, {
+                        path: "/compare",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _comparisonDefault.default), {}, void 0, false, {
                             fileName: "src/App.js",
                             lineNumber: 57,
-                            columnNumber: 44
+                            columnNumber: 41
                         }, void 0)
                     }, void 0, false, {
                         fileName: "src/App.js",
@@ -762,51 +786,27 @@ const App = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/details",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonDetailsDefault.default), {}, void 0, false, {
+                        path: "/random",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _randomPokemonDefault.default), {}, void 0, false, {
                             fileName: "src/App.js",
                             lineNumber: 58,
-                            columnNumber: 41
+                            columnNumber: 40
                         }, void 0)
                     }, void 0, false, {
                         fileName: "src/App.js",
                         lineNumber: 58,
                         columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/compare",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _comparisonDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 59,
-                            columnNumber: 41
-                        }, void 0)
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 59,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/random",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _randomPokemonDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 60,
-                            columnNumber: 40
-                        }, void 0)
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 60,
-                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 55,
+                lineNumber: 53,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 39,
+        lineNumber: 38,
         columnNumber: 5
     }, undefined);
 };
@@ -816,12 +816,12 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById("roo
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 69,
+        lineNumber: 67,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 68,
+    lineNumber: 66,
     columnNumber: 3
 }, undefined));
 var _c;
@@ -32354,7 +32354,7 @@ var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     const [showmenu, setshowmenu] = (0, _react.useState)(false);
-    const { pokemondata, setfilteredpokemondata, setcomparisiondata, setfavouritesdata } = (0, _react.useContext)((0, _cardContextDefault.default));
+    const { pokemondata, setfilteredpokemondata, filteredpokemondata, setcomparisiondata, setfavouritesdata } = (0, _react.useContext)((0, _cardContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "bg-blue-400 p-2 mb-2 shadow-xl/20",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
@@ -32365,7 +32365,7 @@ const Header = ()=>{
                     children: "Pokemon API"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 15,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -32376,7 +32376,7 @@ const Header = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 16,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -32394,13 +32394,13 @@ const Header = ()=>{
                                     children: "Get All Cards"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 22,
+                                    lineNumber: 24,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 20,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32417,13 +32417,13 @@ const Header = ()=>{
                                     children: "Favourites"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 33,
+                                    lineNumber: 35,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 31,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32440,13 +32440,13 @@ const Header = ()=>{
                                     children: "Comparision"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 51,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 49,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32468,23 +32468,23 @@ const Header = ()=>{
                                     children: "Random Pokemon"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 70,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 68,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 19,
+                    lineNumber: 21,
                     columnNumber: 8
                 }, undefined),
                 showmenu && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "absolute top-12 left-56 bg-blue-300 w-30 text-sm",
+                    className: "absolute top-12 left-56 bg-blue-300 w-30 text-sm rounded-lg",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
@@ -32498,13 +32498,13 @@ const Header = ()=>{
                                     children: "Get All Cards"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 99,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 97,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32521,13 +32521,13 @@ const Header = ()=>{
                                     children: "Favourites"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 110,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 108,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32544,13 +32544,13 @@ const Header = ()=>{
                                     children: "Comparision"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 128,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 126,
+                            lineNumber: 128,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32566,40 +32566,39 @@ const Header = ()=>{
                                             if (randomPokemon) setfilteredpokemondata([
                                                 randomPokemon
                                             ]);
-                                            else console.warn("Random selection failed: undefined at index", randomIndex);
-                                        } else console.warn("Pokemon data not loaded yet.");
+                                        }
                                     },
                                     children: "Random Pokemon"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 147,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 145,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 96,
+                    lineNumber: 98,
                     columnNumber: 24
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Header.js",
-            lineNumber: 14,
+            lineNumber: 16,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 13,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "Kffzs++iWHq3F4IDIRMcGW4Wgns=");
+_s(Header, "TBPhCa10/XzbrmIJl5UTUoNLdmo=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -34933,27 +34932,27 @@ const Body = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 11,
-                columnNumber: 9
+                lineNumber: 10,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap md:m-4 items-center justify-center",
-                children: filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                children: filteredpokemondata?.map((poke)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                         pokemondata: poke
                     }, poke.name, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 14,
-                        columnNumber: 9
+                        lineNumber: 13,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 12,
-                columnNumber: 5
+                lineNumber: 11,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 10,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
@@ -34987,9 +34986,7 @@ var _s = $RefreshSig$();
 const PokemonCard = (props)=>{
     _s();
     const { pokemondata } = props;
-    //if(pokemondata){
     const { url } = pokemondata;
-    //}
     const [pokemondetails, setpokemondetails] = (0, _react.useState)();
     const [imageurl, setimageurl] = (0, _react.useState)();
     const [types, settypes] = (0, _react.useState)();
@@ -35012,7 +35009,6 @@ const PokemonCard = (props)=>{
             const jsondata = await data.json();
             setpokemoncompletedata(jsondata);
             setimageurl(jsondata.sprites.front_shiny);
-            // console.log(jsondata)
             setpokemondetails(jsondata);
             const allTypes = jsondata?.types.map((typeObj)=>typeObj.type.name);
             settypes(allTypes);
@@ -35033,14 +35029,14 @@ const PokemonCard = (props)=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-blue-200 mx-1 md:mx-0 md:p-0.5 rounded-lg font-bold",
+                                className: "bg-blue-200 mx-1 md:mx-0  p-0.5 rounded-lg font-bold",
                                 children: [
                                     "#",
                                     pokemondetails?.id ? pokemondetails?.id : pokemondata.id
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 58,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -35051,7 +35047,7 @@ const PokemonCard = (props)=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 61,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -35059,7 +35055,7 @@ const PokemonCard = (props)=>{
                                 src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
                             }, void 0, false, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 65,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35069,26 +35065,26 @@ const PokemonCard = (props)=>{
                                         children: "Types : "
                                     }, void 0, false, {
                                         fileName: "src/components/PokemonCard.js",
-                                        lineNumber: 71,
-                                        columnNumber: 12
+                                        lineNumber: 65,
+                                        columnNumber: 13
                                     }, undefined),
                                     types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : "Loading..."
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PokemonCard.js",
-                                lineNumber: 70,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 57,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 55,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35107,12 +35103,12 @@ const PokemonCard = (props)=>{
                         children: favouritetext
                     }, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 83,
-                        columnNumber: 9
+                        lineNumber: 76,
+                        columnNumber: 11
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 103,
-                        columnNumber: 9
+                        lineNumber: 97,
+                        columnNumber: 11
                     }, undefined),
                     pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: " text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-300 rounded-md",
@@ -35127,27 +35123,27 @@ const PokemonCard = (props)=>{
                         children: comparetext
                     }, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 106,
-                        columnNumber: 9
+                        lineNumber: 100,
+                        columnNumber: 11
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 125,
-                        columnNumber: 9
+                        lineNumber: 124,
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 80,
+                lineNumber: 74,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PokemonCard.js",
-        lineNumber: 54,
+        lineNumber: 48,
         columnNumber: 5
     }, undefined);
 };
-_s(PokemonCard, "e6Ke5vz9fiiZ9PGn3Ykh1marSHE=");
+_s(PokemonCard, "hgNgI4F+SS1JFIlzoRjVFb3eYi0=");
 _c = PokemonCard;
 exports.default = PokemonCard;
 var _c;
@@ -35197,7 +35193,7 @@ const Function = ()=>{
             }, void 0, true, {
                 fileName: "src/components/Function.js",
                 lineNumber: 10,
-                columnNumber: 13
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: showfilter ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35208,60 +35204,60 @@ const Function = ()=>{
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                                     fileName: "src/components/Function.js",
-                                    lineNumber: 17,
-                                    columnNumber: 14
+                                    lineNumber: 22,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sortDefault.default), {}, void 0, false, {
                                     fileName: "src/components/Function.js",
-                                    lineNumber: 18,
-                                    columnNumber: 13
+                                    lineNumber: 23,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _numberofCardsDefault.default), {}, void 0, false, {
                                     fileName: "src/components/Function.js",
-                                    lineNumber: 19,
-                                    columnNumber: 13
+                                    lineNumber: 24,
+                                    columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Function.js",
-                            lineNumber: 16,
-                            columnNumber: 17
+                            lineNumber: 21,
+                            columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "block",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filterDefault.default), {}, void 0, false, {
                                 fileName: "src/components/Function.js",
-                                lineNumber: 22,
-                                columnNumber: 13
+                                lineNumber: 27,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Function.js",
-                            lineNumber: 21,
+                            lineNumber: 26,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Function.js",
-                    lineNumber: 15,
-                    columnNumber: 17
+                    lineNumber: 20,
+                    columnNumber: 11
                 }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                     fileName: "src/components/Function.js",
-                    lineNumber: 25,
-                    columnNumber: 22
+                    lineNumber: 31,
+                    columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Function.js",
-                lineNumber: 13,
-                columnNumber: 13
+                lineNumber: 18,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Function.js",
         lineNumber: 9,
-        columnNumber: 9
+        columnNumber: 5
     }, undefined);
 };
-_s(Function, "rjP3/vBWeGqJrjlCh4jh3O0YSGU=");
+_s(Function, "pHxF8nu9AEOwhE5c3e/i+TBgTCU=");
 _c = Function;
 exports.default = Function;
 var _c;
@@ -35303,8 +35299,8 @@ const Search = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/Search.js",
-                lineNumber: 9,
-                columnNumber: 13
+                lineNumber: 8,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 className: "border border-black bg-blue-300 p-0.5 mx-1 md:m-2 md:p-1 rounded-xl hover:bg-blue-400",
@@ -35316,17 +35312,17 @@ const Search = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Search.js",
-                lineNumber: 12,
-                columnNumber: 13
+                lineNumber: 16,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Search.js",
-        lineNumber: 8,
-        columnNumber: 9
+        lineNumber: 7,
+        columnNumber: 5
     }, undefined);
 };
-_s(Search, "WYzVdSiEUGWNShQN1wYKyuSwLK8=");
+_s(Search, "SjLUa3ZVNxz/2KgVUn2IGEIDcb8=");
 _c = Search;
 exports.default = Search;
 var _c;
@@ -35384,8 +35380,8 @@ const Sort = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Sort.js",
-                lineNumber: 37,
-                columnNumber: 3
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined),
             showsort ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "md:flex border border-black md:m-1.5 md:p-1 rounded-sm my-auto",
@@ -35400,16 +35396,16 @@ const Sort = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
-                        lineNumber: 46,
-                        columnNumber: 7
+                        lineNumber: 43,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "my-auto",
                         children: "A-Z"
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
-                        lineNumber: 54,
-                        columnNumber: 7
+                        lineNumber: 52,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "mx-1 my-auto",
@@ -35421,16 +35417,16 @@ const Sort = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
-                        lineNumber: 55,
-                        columnNumber: 7
+                        lineNumber: 53,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "my-auto",
                         children: "Z-A"
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
-                        lineNumber: 63,
-                        columnNumber: 6
+                        lineNumber: 62,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "mx-1 my-auto",
@@ -35442,8 +35438,8 @@ const Sort = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
-                        lineNumber: 64,
-                        columnNumber: 7
+                        lineNumber: 63,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "my-auto",
@@ -35451,7 +35447,7 @@ const Sort = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
                         lineNumber: 72,
-                        columnNumber: 6
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         className: "mx-1 my-auto",
@@ -35464,7 +35460,7 @@ const Sort = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
                         lineNumber: 73,
-                        columnNumber: 7
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "my-auto",
@@ -35472,7 +35468,7 @@ const Sort = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
                         lineNumber: 82,
-                        columnNumber: 5
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "border border-black bg-blue-300  p-1 px-2 rounded-xl mx-1 hover:bg-blue-400",
@@ -35481,26 +35477,26 @@ const Sort = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/Sort.js",
                         lineNumber: 83,
-                        columnNumber: 7
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Sort.js",
-                lineNumber: 45,
-                columnNumber: 5
+                lineNumber: 42,
+                columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                 fileName: "src/components/Sort.js",
-                lineNumber: 88,
-                columnNumber: 5
+                lineNumber: 91,
+                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Sort.js",
-        lineNumber: 36,
-        columnNumber: 1
+        lineNumber: 32,
+        columnNumber: 5
     }, undefined);
 };
-_s(Sort, "zftrvN7dERK5cj4ObkeVPlemHCA=");
+_s(Sort, "asPb/d3//k2ih7N7MFFS9bgzPbw=");
 _c = Sort;
 exports.default = Sort;
 var _c;
@@ -35664,6 +35660,26 @@ const Filter = ()=>{
     const [typevalues, settypevalues] = (0, _react.useState)([]);
     const [pokemondetailsfilter, setpokemondetailsfilter] = (0, _react.useState)([]);
     const { pokemondata, setfilteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
+    const types = [
+        "fire",
+        "water",
+        "grass",
+        "poison",
+        "flying",
+        "bug",
+        "normal",
+        "electric",
+        "ground",
+        "fairy",
+        "fighting",
+        "psychic",
+        "rock",
+        "steel",
+        "ice",
+        "ghost",
+        "dark",
+        "dragon"
+    ];
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -35684,312 +35700,41 @@ const Filter = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Filter.js",
-                lineNumber: 33,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             showfiltertype && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "border border-black my-2 p-1 rounded-sm",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "fire",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "fire"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 37,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Fire",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "water",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "water"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 45,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Water",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "grass",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "grass"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 53,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Grass",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "poison",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "poison"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 61,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Poison",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "flying",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "flying"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 69,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Flying",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "bug",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "bug"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 77,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Bug",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "normal",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "normal"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 85,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Normal",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "electric",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "electric"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 93,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Electric",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "ground",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "ground"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 101,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Ground",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "fairy",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "fairy"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 109,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Fairy",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "fighting",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "fighting"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 117,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "Fighting",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "psychic",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "psychic"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 125,
-                        columnNumber: 11
-                    }, undefined),
-                    " ",
-                    "psychic",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "rock",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "rock"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 133,
-                        columnNumber: 11
-                    }, undefined),
-                    " Rock",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "steel",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "steel"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 137,
-                        columnNumber: 11
-                    }, undefined),
-                    " Steel",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "ice",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "ice"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 141,
-                        columnNumber: 11
-                    }, undefined),
-                    " Ice",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "ghost",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "ghost"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 145,
-                        columnNumber: 11
-                    }, undefined),
-                    " Ghost",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "dark",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "dark"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 149,
-                        columnNumber: 11
-                    }, undefined),
-                    " dark",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "mx-1",
-                        type: "checkbox",
-                        value: "dragon",
-                        onClick: ()=>{
-                            settypevalues((prev)=>[
-                                    ...prev,
-                                    "dragon"
-                                ]);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Filter.js",
-                        lineNumber: 153,
-                        columnNumber: 11
-                    }, undefined),
-                    " Dragon",
+                    types?.map((type, index)=>{
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: [
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    className: "mx-1",
+                                    type: "checkbox",
+                                    value: type,
+                                    onClick: ()=>{
+                                        settypevalues((prev)=>[
+                                                ...prev,
+                                                type
+                                            ]);
+                                    }
+                                }, index, false, {
+                                    fileName: "src/components/Filter.js",
+                                    lineNumber: 59,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    children: type
+                                }, index, false, {
+                                    fileName: "src/components/Filter.js",
+                                    lineNumber: 68,
+                                    columnNumber: 17
+                                }, undefined)
+                            ]
+                        }, void 0, true);
+                    }),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -36001,8 +35746,8 @@ const Filter = ()=>{
                                 children: "Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 158,
-                                columnNumber: 11
+                                lineNumber: 73,
+                                columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "border border-black mx-1 rounded p-0.5  bg-blue-300 hover:bg-blue-400",
@@ -36012,29 +35757,29 @@ const Filter = ()=>{
                                 children: "Clear Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 170,
-                                columnNumber: 11
+                                lineNumber: 85,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Filter.js",
-                        lineNumber: 157,
+                        lineNumber: 72,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Filter.js",
-                lineNumber: 36,
+                lineNumber: 54,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Filter.js",
-        lineNumber: 32,
+        lineNumber: 45,
         columnNumber: 5
     }, undefined);
 };
-_s(Filter, "sGSKWWwou0LoE8UcM/Dvg3KWSGU=");
+_s(Filter, "x2VfZCjd9fPgaLGmbuoa3r6BUQw=");
 _c = Filter;
 exports.default = Filter;
 var _c;
@@ -36079,7 +35824,7 @@ const Favourites = ()=>{
             }, void 0, false, {
                 fileName: "src/components/Favourites.js",
                 lineNumber: 14,
-                columnNumber: 13
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap items-center justify-center",
@@ -36087,13 +35832,13 @@ const Favourites = ()=>{
                         pokemondata: poke
                     }, index, false, {
                         fileName: "src/components/Favourites.js",
-                        lineNumber: 18,
-                        columnNumber: 9
+                        lineNumber: 19,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Favourites.js",
-                lineNumber: 16,
-                columnNumber: 5
+                lineNumber: 17,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
@@ -36127,8 +35872,6 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _cardContext = require("../utils/CardContext");
 var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
-var _pokemonCard = require("./PokemonCard");
-var _pokemonCardDefault = parcelHelpers.interopDefault(_pokemonCard);
 var _comparisionDetails = require("./ComparisionDetails");
 var _comparisionDetailsDefault = parcelHelpers.interopDefault(_comparisionDetails);
 var _s = $RefreshSig$();
@@ -36148,7 +35891,7 @@ const Comparison = ()=>{
                 children: "Comparision"
             }, void 0, false, {
                 fileName: "src/components/Comparison.js",
-                lineNumber: 15,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36158,17 +35901,17 @@ const Comparison = ()=>{
                     }, index, false, {
                         fileName: "src/components/Comparison.js",
                         lineNumber: 19,
-                        columnNumber: 6
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Comparison.js",
-                lineNumber: 16,
-                columnNumber: 5
+                lineNumber: 17,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Comparison.js",
-        lineNumber: 14,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };
@@ -36183,7 +35926,7 @@ $RefreshReg$(_c, "Comparison");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./PokemonCard":"eRgsR","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./ComparisionDetails":"fOOQo"}],"fOOQo":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./ComparisionDetails":"fOOQo","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fOOQo":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$408c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$408c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36209,32 +35952,32 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 7,
-                columnNumber: 9
+                lineNumber: 9,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 className: "text-2xl font-bold mx-2",
                 children: pokemondata?.name
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 8,
-                columnNumber: 1
+                lineNumber: 12,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "m-auto h-30",
                 src: pokemondata.sprites.front_shiny
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 9,
-                columnNumber: 1
+                lineNumber: 13,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-xl font-bold underline",
                 children: "Sprites"
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 10,
-                columnNumber: 1
+                lineNumber: 14,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex",
@@ -36244,30 +35987,30 @@ const ComparisionDetails = ({ pokemondata })=>{
                         src: pokemondata.sprites.front_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 12,
-                        columnNumber: 1
+                        lineNumber: 16,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
                         src: pokemondata.sprites.back_shiny
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 13,
-                        columnNumber: 1
+                        lineNumber: 17,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
                         src: pokemondata.sprites.back_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 14,
-                        columnNumber: 1
+                        lineNumber: 18,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 11,
-                columnNumber: 1
+                lineNumber: 15,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36277,16 +36020,16 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Height :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 17,
-                        columnNumber: 25
+                        lineNumber: 21,
+                        columnNumber: 9
                     }, undefined),
                     " ",
                     pokemondata.height
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 17,
-                columnNumber: 1
+                lineNumber: 20,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36296,16 +36039,16 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Weight :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 18,
-                        columnNumber: 25
+                        lineNumber: 24,
+                        columnNumber: 9
                     }, undefined),
                     " ",
                     pokemondata.weight
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 18,
-                columnNumber: 1
+                lineNumber: 23,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36315,15 +36058,15 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Base Experience : "
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 19,
-                        columnNumber: 25
+                        lineNumber: 27,
+                        columnNumber: 9
                     }, undefined),
                     pokemondata.base_experience
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 19,
-                columnNumber: 1
+                lineNumber: 26,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36333,16 +36076,16 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Types :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 20,
-                        columnNumber: 25
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined),
                     " ",
-                    types.join(' , ')
+                    types.join(" , ")
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 20,
-                columnNumber: 1
+                lineNumber: 30,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36352,22 +36095,22 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Abilitiess:"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 21,
-                        columnNumber: 25
+                        lineNumber: 34,
+                        columnNumber: 9
                     }, undefined),
                     " ",
-                    abilities.join(' , ')
+                    abilities.join(" , ")
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 21,
-                columnNumber: 1
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ComparisionDetails.js",
-        lineNumber: 6,
-        columnNumber: 7
+        lineNumber: 8,
+        columnNumber: 5
     }, undefined);
 };
 _c = ComparisionDetails;
@@ -36411,7 +36154,7 @@ const PokemonDetails = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 9,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -36419,24 +36162,24 @@ const PokemonDetails = ()=>{
                 children: pokemondata?.name
             }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 10,
-                columnNumber: 1
+                lineNumber: 15,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "m-auto h-30",
                 src: pokemondata.sprites.front_shiny
             }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 11,
-                columnNumber: 1
+                lineNumber: 16,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-xl font-bold underline",
                 children: "Sprites"
             }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 12,
-                columnNumber: 1
+                lineNumber: 17,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex",
@@ -36446,30 +36189,30 @@ const PokemonDetails = ()=>{
                         src: pokemondata.sprites.front_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 14,
-                        columnNumber: 1
+                        lineNumber: 19,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
                         src: pokemondata.sprites.back_shiny
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 15,
-                        columnNumber: 1
+                        lineNumber: 20,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
                         src: pokemondata.sprites.back_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 16,
-                        columnNumber: 1
+                        lineNumber: 21,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 13,
-                columnNumber: 1
+                lineNumber: 18,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36479,16 +36222,16 @@ const PokemonDetails = ()=>{
                         children: "Height :"
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 19,
-                        columnNumber: 25
+                        lineNumber: 24,
+                        columnNumber: 9
                     }, undefined),
                     " ",
                     pokemondata.height
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 19,
-                columnNumber: 1
+                lineNumber: 23,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36498,16 +36241,16 @@ const PokemonDetails = ()=>{
                         children: "Weight :"
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 20,
-                        columnNumber: 25
+                        lineNumber: 27,
+                        columnNumber: 9
                     }, undefined),
                     " ",
                     pokemondata.weight
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 20,
-                columnNumber: 1
+                lineNumber: 26,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36517,15 +36260,15 @@ const PokemonDetails = ()=>{
                         children: "Base Experience : "
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 21,
-                        columnNumber: 25
+                        lineNumber: 30,
+                        columnNumber: 9
                     }, undefined),
                     pokemondata.base_experience
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 21,
-                columnNumber: 1
+                lineNumber: 29,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36535,16 +36278,16 @@ const PokemonDetails = ()=>{
                         children: "Types :"
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 22,
-                        columnNumber: 25
+                        lineNumber: 34,
+                        columnNumber: 9
                     }, undefined),
                     " ",
-                    types.join(' , ')
+                    types.join(" , ")
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 22,
-                columnNumber: 1
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "text-xl",
@@ -36554,22 +36297,22 @@ const PokemonDetails = ()=>{
                         children: "Abilitiess:"
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
-                        lineNumber: 23,
-                        columnNumber: 25
+                        lineNumber: 37,
+                        columnNumber: 9
                     }, undefined),
                     " ",
-                    abilities.join(' , ')
+                    abilities.join(" , ")
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonDetails.js",
-                lineNumber: 23,
-                columnNumber: 1
+                lineNumber: 36,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PokemonDetails.js",
-        lineNumber: 8,
-        columnNumber: 13
+        lineNumber: 11,
+        columnNumber: 5
     }, undefined);
 };
 _s(PokemonDetails, "pkHmaVRPskBaU4tMJuJJpV42k1I=", false, function() {
@@ -36616,23 +36359,23 @@ const RandomPokemon = ()=>{
             }, void 0, false, {
                 fileName: "src/components/RandomPokemon.js",
                 lineNumber: 8,
-                columnNumber: 13
+                columnNumber: 7
             }, undefined),
             filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                     pokemondata: poke
                 }, index, false, {
                     fileName: "src/components/RandomPokemon.js",
-                    lineNumber: 9,
-                    columnNumber: 41
+                    lineNumber: 12,
+                    columnNumber: 9
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/components/RandomPokemon.js",
         lineNumber: 7,
-        columnNumber: 9
+        columnNumber: 5
     }, undefined);
 };
-_s(RandomPokemon, "HRtqFmBa2LAHNIZo8xbQ0BGwV84=");
+_s(RandomPokemon, "ixU8hNCrZVYu+feuzkULrSq8q7w=");
 _c = RandomPokemon;
 exports.default = RandomPokemon;
 var _c;
