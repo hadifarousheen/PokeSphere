@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CardContext from "../utils/CardContext";
 import { Link } from "react-router-dom";
 const Header = () => {
@@ -6,9 +6,11 @@ const Header = () => {
   const {
     pokemondata,
     setfilteredpokemondata,
+    filteredpokemondata,
     setcomparisiondata,
     setfavouritesdata,
   } = useContext(CardContext);
+
   return (
     <div className="bg-blue-400 p-2 mb-2 shadow-xl/20">
       <nav className="flex flex-wrap justify-between">
@@ -154,15 +156,8 @@ const Header = () => {
                   const randomPokemon = pokemondata[randomIndex];
                   if (randomPokemon) {
                     setfilteredpokemondata([randomPokemon]);
-                  } else {
-                    console.warn(
-                      "Random selection failed: undefined at index",
-                      randomIndex
-                    );
-                  }
-                } else {
-                  console.warn("Pokemon data not loaded yet.");
-                }
+                  } 
+                } 
               }}
             >
               Random Pokemon
