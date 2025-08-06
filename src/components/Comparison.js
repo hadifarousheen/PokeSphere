@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import CardContext from "../utils/CardContext";
-import PokemonCard from "./PokemonCard";
 import ComparisionDetails from "./ComparisionDetails";
 const Comparison = () => {
   const { comparisiondata, setcomparisiondata } = useContext(CardContext);
@@ -12,13 +11,15 @@ const Comparison = () => {
   }, []);
   return (
     <div className="">
-      <h1 className="text-3xl text-center text-blue-950 font-bold my-6">Comparision</h1>
-    <div className="flex flex-wrap justify-center ">
-      
-      {comparisiondata?.map((poke, index) => (
-     <ComparisionDetails key={index} pokemondata={poke} />
-      ))}
-    </div></div>
+      <h1 className="text-3xl text-center text-blue-950 font-bold my-6">
+        Comparision
+      </h1>
+      <div className="flex flex-wrap justify-center ">
+        {comparisiondata?.map((poke, index) => (
+          <ComparisionDetails key={index} pokemondata={poke} />
+        ))}
+      </div>
+    </div>
   );
 };
 

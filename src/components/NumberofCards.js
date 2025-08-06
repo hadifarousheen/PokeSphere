@@ -26,9 +26,7 @@ const NumberofCards=()=>{
             <button className="border border-black mx-1  bg-blue-300  rounded-xl p-0.5 hover:bg-blue-400" onClick={()=>{
           const sortedpokemoncards=pokemondata.filter((poke,index)=> index<cardnumber);
           setfilteredpokemondata(sortedpokemoncards);
-            }}>Submit</button></div>):(<div></div>)}
-
-           
+            }}>Submit</button></div>):(<div></div>)} 
         </div>
     )
 }

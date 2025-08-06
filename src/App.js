@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Routes, Route } from "react-router-dom";
@@ -29,7 +28,7 @@ const App = () => {
   }, []);
 
   async function fetchData() {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
     const data = await res.json();
     setpokemondata(data.results);
     setfilteredpokemondata(data.results);
@@ -51,7 +50,6 @@ const App = () => {
       }}
     >
       <Header />
-      {/* <Function /> */}
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/favourites" element={<Favourites />} />
