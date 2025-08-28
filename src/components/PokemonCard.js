@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import CardContext from "../utils/CardContext";
 import { Link } from "react-router-dom";
+import ShimmerCard from "./ShimmerCard";
 
 const PokemonCard = (props) => {
   const { pokemondata } = props;
@@ -43,7 +44,8 @@ const PokemonCard = (props) => {
       setfavalltypes(favalltypes);
     } catch (error) {}
   }
-
+if(!pokemondetails)
+  return <ShimmerCard/>
   return (
     <div className="border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
