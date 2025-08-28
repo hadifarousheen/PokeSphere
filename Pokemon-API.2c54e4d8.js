@@ -32356,7 +32356,7 @@ const Header = ()=>{
     const [showmenu, setshowmenu] = (0, _react.useState)(false);
     const { pokemondata, setfilteredpokemondata, filteredpokemondata, setcomparisiondata, setfavouritesdata } = (0, _react.useContext)((0, _cardContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-blue-400 p-2 mb-2 shadow-xl/20",
+        className: "bg-blue-400 p-2 mb-2 shadow-xl/20 text-black",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
             className: "flex flex-wrap justify-between",
             children: [
@@ -32387,7 +32387,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500 ",
+                                    className: "border border-blue-950 m-1 p-1.5 rounded font-bold shadow-xl hover:bg-blue-500 ",
                                     onClick: ()=>{
                                         setfilteredpokemondata(pokemondata);
                                     },
@@ -32408,7 +32408,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         const favouritedata = JSON.parse(localStorage.getItem("favourites"));
                                         setfavouritesdata(favouritedata);
@@ -32431,7 +32431,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         const comparisiondata2 = JSON.parse(localStorage.getItem("comparisions"));
                                         setcomparisiondata(comparisiondata2);
@@ -32454,7 +32454,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         if (pokemondata && pokemondata.length > 0) {
                                             const randomIndex = Math.floor(Math.random() * pokemondata.length);
@@ -32484,14 +32484,14 @@ const Header = ()=>{
                     columnNumber: 8
                 }, undefined),
                 showmenu && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "absolute top-12 left-56 bg-blue-300 w-30 text-sm rounded-lg",
+                    className: "absolute top-12 right-0 bg-blue-300 w-30 text-sm ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500 ",
+                                    className: "border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500 ",
                                     onClick: ()=>{
                                         setfilteredpokemondata(pokemondata);
                                     },
@@ -32512,7 +32512,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         const favouritedata = JSON.parse(localStorage.getItem("favourites"));
                                         setfavouritesdata(favouritedata);
@@ -32535,7 +32535,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1 rounded font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         const comparisiondata2 = JSON.parse(localStorage.getItem("comparisions"));
                                         setcomparisiondata(comparisiondata2);
@@ -32558,7 +32558,7 @@ const Header = ()=>{
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500",
+                                    className: "border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500",
                                     onClick: ()=>{
                                         if (pokemondata && pokemondata.length > 0) {
                                             const randomIndex = Math.floor(Math.random() * pokemondata.length);
@@ -34982,6 +34982,8 @@ var _react = require("react");
 var _cardContext = require("../utils/CardContext");
 var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
 var _reactRouterDom = require("react-router-dom");
+var _shimmerCard = require("./ShimmerCard");
+var _shimmerCardDefault = parcelHelpers.interopDefault(_shimmerCard);
 var _s = $RefreshSig$();
 const PokemonCard = (props)=>{
     _s();
@@ -35016,6 +35018,11 @@ const PokemonCard = (props)=>{
             setfavalltypes(favalltypes);
         } catch (error) {}
     }
+    if (!pokemondetails) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+        fileName: "src/components/PokemonCard.js",
+        lineNumber: 48,
+        columnNumber: 10
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
         children: [
@@ -35024,71 +35031,75 @@ const PokemonCard = (props)=>{
                 state: {
                     pokemondata: pokemondetails
                 },
-                children: [
-                    " ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-blue-200 mx-1 md:mx-0  p-0.5 rounded-lg font-bold",
-                                children: [
-                                    "#",
-                                    pokemondetails?.id ? pokemondetails?.id : pokemondata.id
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/PokemonCard.js",
-                                lineNumber: 52,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "font-bold",
-                                children: [
-                                    " ",
-                                    pokemondetails?.name ? pokemondetails?.name : pokemondata.name
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/PokemonCard.js",
-                                lineNumber: 55,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "m-auto h-28 md:h-30",
-                                src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
-                            }, void 0, false, {
-                                fileName: "src/components/PokemonCard.js",
-                                lineNumber: 59,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "font-bold",
-                                        children: "Types : "
-                                    }, void 0, false, {
-                                        fileName: "src/components/PokemonCard.js",
-                                        lineNumber: 65,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : "Loading..."
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/PokemonCard.js",
-                                lineNumber: 64,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/PokemonCard.js",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "bg-blue-200   p-1 rounded-lg font-bold",
+                                    children: [
+                                        "# ",
+                                        pokemondetails?.id ? pokemondetails?.id : pokemondata.id
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/PokemonCard.js",
+                                    lineNumber: 55,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-bold ml-auto",
+                                    children: pokemondetails?.name ? pokemondetails?.name : pokemondata.name
+                                }, void 0, false, {
+                                    fileName: "src/components/PokemonCard.js",
+                                    lineNumber: 58,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/PokemonCard.js",
+                            lineNumber: 54,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "m-auto h-28 md:h-30",
+                            src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
+                        }, void 0, false, {
+                            fileName: "src/components/PokemonCard.js",
+                            lineNumber: 63,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "text-center",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-bold",
+                                    children: "Types : "
+                                }, void 0, false, {
+                                    fileName: "src/components/PokemonCard.js",
+                                    lineNumber: 69,
+                                    columnNumber: 13
+                                }, undefined),
+                                types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : ""
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/PokemonCard.js",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/PokemonCard.js",
+                    lineNumber: 53,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 49,
+                lineNumber: 51,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex",
+                className: "flex justify-center",
                 children: [
                     pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md",
@@ -35103,11 +35114,11 @@ const PokemonCard = (props)=>{
                         children: favouritetext
                     }, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 76,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 97,
+                        lineNumber: 101,
                         columnNumber: 11
                     }, undefined),
                     pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35123,23 +35134,23 @@ const PokemonCard = (props)=>{
                         children: comparetext
                     }, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 100,
+                        lineNumber: 104,
                         columnNumber: 11
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                         fileName: "src/components/PokemonCard.js",
-                        lineNumber: 124,
+                        lineNumber: 128,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PokemonCard.js",
-                lineNumber: 74,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PokemonCard.js",
-        lineNumber: 48,
+        lineNumber: 50,
         columnNumber: 5
     }, undefined);
 };
@@ -35154,7 +35165,94 @@ $RefreshReg$(_c, "PokemonCard");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iBRzM":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./ShimmerCard":"lbEaz"}],"lbEaz":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$a69f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$a69f.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a69f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerCard = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                            fileName: "src/components/ShimmerCard.js",
+                            lineNumber: 6,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                            fileName: "src/components/ShimmerCard.js",
+                            lineNumber: 7,
+                            columnNumber: 17
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerCard.js",
+                    lineNumber: 5,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
+                }, void 0, false, {
+                    fileName: "src/components/ShimmerCard.js",
+                    lineNumber: 9,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-center  mt-3 md:mt-5 ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerCard.js",
+                            lineNumber: 11,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerCard.js",
+                            lineNumber: 12,
+                            columnNumber: 17
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerCard.js",
+                    lineNumber: 10,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ShimmerCard.js",
+            lineNumber: 4,
+            columnNumber: 10
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/ShimmerCard.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = ShimmerCard;
+exports.default = ShimmerCard;
+var _c;
+$RefreshReg$(_c, "ShimmerCard");
+
+  $parcel$ReactRefreshHelpers$a69f.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iBRzM":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$ea1c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$ea1c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
