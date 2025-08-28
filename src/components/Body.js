@@ -9,8 +9,8 @@ const Body = () => {
     <div>
       <Function />
       <div className="flex flex-wrap md:m-4 items-center justify-center">
-        {filteredpokemondata?.map((poke) => (
-          <PokemonCard key={poke.name} pokemondata={poke} />
+        {filteredpokemondata?.map((poke,index) => (
+          <PokemonCard key={index} pokemondata={poke} />
         ))}
       </div>
     </div>

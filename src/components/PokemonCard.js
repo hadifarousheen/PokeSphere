@@ -26,9 +26,11 @@ const PokemonCard = (props) => {
     comparisiondata,
     setfilteredpokemondata,
   } = useContext(CardContext);
-  useEffect(() => {
+ useEffect(() => {
+  if (pokemondata?.url) {
     fetchimageurl();
-  }, []);
+  }
+}, [pokemondata]);
   async function fetchimageurl() {
     try {
       const data = await fetch(url);
@@ -44,12 +46,13 @@ const PokemonCard = (props) => {
       setfavalltypes(favalltypes);
     } catch (error) {}
   }
-if(!pokemondetails)
+  if(!pokemondata)
+    return <ShimmerCard/>
+if(!pokemondetails )
   return <ShimmerCard/>
   return (
     <div className="border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
-      
         <div>
           <div className="flex">
           <span className="bg-blue-200   p-1 rounded-lg font-bold">

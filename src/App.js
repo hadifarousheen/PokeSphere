@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import Function from "./components/Function";
 import Favourites from "./components/Favourites";
 import Comparison from "./components/Comparison";
 import PokemonDetails from "./components/PokemonDetails";
@@ -14,8 +13,8 @@ const App = () => {
   const [pokemondata, setpokemondata] = useState();
   const [filteredpokemondata, setfilteredpokemondata] = useState();
   const [pokemoncompletedata, setpokemoncompletedata] = useState([]);
-  const [favouritesdata, setfavouritesdata] = useState();
-  const [comparisiondata, setcomparisiondata] = useState();
+  const [favouritesdata, setfavouritesdata] = useState([]);
+  const [comparisiondata, setcomparisiondata] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -38,15 +37,15 @@ const App = () => {
     <CardContext.Provider
       value={{
         pokemondata:pokemondata,
-        setpokemondata,
+        setpokemondata:setpokemondata,
         filteredpokemondata:filteredpokemondata,
         setfilteredpokemondata,
-        pokemoncompletedata,
-        setpokemoncompletedata,
-        favouritesdata,
-        setfavouritesdata,
-        comparisiondata,
-        setcomparisiondata,
+        pokemoncompletedata:pokemoncompletedata,
+        setpokemoncompletedata:setpokemoncompletedata,
+        favouritesdata:favouritesdata,
+        setfavouritesdata:setfavouritesdata,
+        comparisiondata:comparisiondata,
+        setcomparisiondata:setcomparisiondata,
       }}
     >
       <Header />
