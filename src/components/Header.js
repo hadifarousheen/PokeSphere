@@ -12,7 +12,7 @@ const Header = () => {
   } = useContext(CardContext);
 
   return (
-    <div className="bg-blue-400 p-2 mb-2 shadow-xl/20">
+    <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black">
       <nav className="flex flex-wrap justify-between">
         <h1 className="text-xl md:text-3xl font-bold ml-2">Pokemon API</h1>
         <img className="md:hidden h-8 " src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png" onClick={()=>{
@@ -22,7 +22,7 @@ const Header = () => {
           <Link to="/">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500 "
+              className="border border-blue-950 m-1 p-1.5 rounded font-bold shadow-xl hover:bg-blue-500 "
               onClick={() => {
                 setfilteredpokemondata(pokemondata);
               }}
@@ -33,7 +33,7 @@ const Header = () => {
           <Link to="/favourites">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 const favouritedata = JSON.parse(
                   localStorage.getItem("favourites")
@@ -51,7 +51,7 @@ const Header = () => {
           <Link to="/compare">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 const comparisiondata2 = JSON.parse(
                   localStorage.getItem("comparisions")
@@ -70,7 +70,7 @@ const Header = () => {
           <Link to="/random">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1.5 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1.5 rounded  font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 if (pokemondata && pokemondata.length > 0) {
                   const randomIndex = Math.floor(
@@ -95,11 +95,11 @@ const Header = () => {
           </Link>
         </div>
        {
-        showmenu &&    <div className="absolute top-12 left-56 bg-blue-300 w-30 text-sm rounded-lg">
+        showmenu &&    <div className="absolute top-12 right-0 bg-blue-300 w-30 text-sm ">
           <Link to="/">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500 "
+              className="border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500 "
               onClick={() => {
                 setfilteredpokemondata(pokemondata);
               }}
@@ -110,7 +110,7 @@ const Header = () => {
           <Link to="/favourites">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 const favouritedata = JSON.parse(
                   localStorage.getItem("favourites")
@@ -128,7 +128,7 @@ const Header = () => {
           <Link to="/compare">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1 rounded font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 const comparisiondata2 = JSON.parse(
                   localStorage.getItem("comparisions")
@@ -147,7 +147,7 @@ const Header = () => {
           <Link to="/random">
             {" "}
             <h2
-              className="border border-blue-950 m-1 p-1 rounded text-blue-950 font-bold shadow-xl hover:bg-blue-500"
+              className="border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500"
               onClick={() => {
                 if (pokemondata && pokemondata.length > 0) {
                   const randomIndex = Math.floor(
