@@ -47,31 +47,33 @@ const PokemonCard = (props) => {
   return (
     <div className="border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
-        {" "}
+      
         <div>
-          <span className="bg-blue-200 mx-1 md:mx-0  p-0.5 rounded-lg font-bold">
-            #{pokemondetails?.id ? pokemondetails?.id : pokemondata.id}
+          <div className="flex">
+          <span className="bg-blue-200   p-1 rounded-lg font-bold">
+            # {pokemondetails?.id ? pokemondetails?.id : pokemondata.id}
           </span>
-          <span className="font-bold">
-            {" "}
+          <span className="font-bold ml-auto">
+         
             {pokemondetails?.name ? pokemondetails?.name : pokemondata.name}
           </span>
+          </div>
           <img
             className="m-auto h-28 md:h-30"
             src={imageurl ? imageurl : pokemondata?.sprites?.front_shiny}
           />
 
-          <p>
+          <p className="text-center">
             <span className="font-bold">Types : </span>
             {types && types.length > 0
               ? types.join(", ")
               : pokemondata.types
               ? pokemondata.types.map((t) => t.type.name).join(", ")
-              : "Loading..."}
+              : ""}
           </p>
         </div>
       </Link>
-      <div className="flex">
+      <div className="flex justify-center">
         {pokemondetails ? (
           <button
             className="text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md"
