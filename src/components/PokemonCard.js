@@ -46,8 +46,7 @@ const PokemonCard = (props) => {
       setfavalltypes(favalltypes);
     } catch (error) {}
   }
-  if(!pokemondata)
-    return <ShimmerCard/>
+ 
 if(!pokemondetails )
   return <ShimmerCard/>
   return (

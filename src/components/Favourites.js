@@ -1,6 +1,6 @@
-import PokemonCard from "./PokemonCard";
 import { useContext, useEffect } from "react";
 import CardContext from "../utils/CardContext";
+import FavouritesDisplay from "./FavouritesDisplay";
 
 const Favourites = () => {
   const { favouritesdata, setfavouritesdata } = useContext(CardContext);
@@ -16,7 +16,7 @@ const Favourites = () => {
       </h1>
       <div className="flex flex-wrap items-center justify-center">
         {favouritesdata?.map((poke, index) => (
-          <PokemonCard key={index} pokemondata={poke} />
+          <FavouritesDisplay key={index} pokemondata={poke} />
         ))}
       </div>
     </div>

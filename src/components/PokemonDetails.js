@@ -4,7 +4,7 @@ const PokemonDetails = () => {
   const { pokemondata } = location.state || {};
   console.log(pokemondata);
   const types = pokemondata?.types.map((typeObj) => typeObj.type.name);
-  const abilities = pokemondata.abilities.map(
+  const abilities = pokemondata?.abilities?.map(
     (typeobj) => typeobj.ability.name
   );
   return (

@@ -44,20 +44,20 @@ const Filter = () => {
   return (
     <div className="block">
       <h1
-        className="border border-black w-fit font-bold p-1 rounded-sm hover:bg-blue-400"
+        className="bg-blue-300 shadow-md shadow-blue-700  border border-blue-950 w-fit font-bold p-1 rounded-lg text-black hover:bg-blue-400"
         onClick={() => setfiltertype(!showfiltertype)}
       >
         Type Filter {showfiltertype ? "🔼" : "🔽"}
       </h1>
 
       {showfiltertype && (
-        <div className="border border-black my-2 p-1 rounded-sm">
+        <div className="border border-blue-950 my-2 p-1 rounded-lg shadow-md shadow-blue-700 font-bold text-black">
           {types?.map((type, index) => {
             return (
               <>
                 {" "}
                 <input
-                  className="mx-1"
+                  className="mx-0.5"
                   type="checkbox"
                   value={type}
                   key={index}
@@ -71,7 +71,7 @@ const Filter = () => {
           })}
           <div>
             <button
-              className="border border-black mx-1 my-2 rounded bg-blue-300 p-0.5 hover:bg-blue-400"
+              className="border border-blue-950 mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400"
               onClick={() => {
                 const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
                   pokemon.types.some((t) => typevalues.includes(t.type.name))
@@ -83,7 +83,7 @@ const Filter = () => {
               Filter
             </button>
             <button
-              className="border border-black mx-1 rounded p-0.5  bg-blue-300 hover:bg-blue-400"
+              className="border border-blue-950 text-blue-900 mx-1 rounded-lg p-0.5  bg-blue-300 hover:bg-blue-400"
               onClick={() => {
                 settypevalues([]);
               }}

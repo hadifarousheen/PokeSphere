@@ -6,27 +6,27 @@ const NumberofCards=()=>{
     const[shownumberofcards,setshownumberofcards]=useState(false);
     const[cardnumber,setcardnumber]=useState();
     return(
-        <div className="flex  ">
-            <h1 className="border border-black my-1 md:m-2 md:p-1 font-bold rounded-sm hover:bg-blue-300" onClick={()=>{
+        <div className="flex">
+            <h1 className="border border-blue-950 text-black my-1 md:m-2 md:p-1 font-bold rounded-lg bg-blue-300 shadow-md shadow-blue-700 hover:bg-blue-400" onClick={()=>{
                 setshownumberofcards(!shownumberofcards)
             }}>Number Of Cards {shownumberofcards?'◀️':'▶️'}</h1>
 
-            {shownumberofcards?(<div className="border border-black m-2 p-1 rounded-sm"> <input className="mx-1" type="checkbox" value={cardnumber} onClick={()=>{
+            {shownumberofcards && (<div className="border border-blue-950 rounded-lg  py-1 px-1 mt-auto mb-auto font-bold text-black"> <input className="mx-0.5" type="checkbox" value={cardnumber} onClick={()=>{
                 setcardnumber(5);
             }}/> 5
-            <input type="checkbox" className="mx-1" value={cardnumber} onClick={()=>{
+            <input type="checkbox" className="mx-0.5" value={cardnumber} onClick={()=>{
                 setcardnumber(10)
             }}/>10
-            <input type="checkbox" className="mx-1" value={cardnumber} onClick={()=>{
+            <input type="checkbox" className="mx-0.5" value={cardnumber} onClick={()=>{
                 setcardnumber(15)
             }}/>15
-            <input className="border border-black w-7 h-4 mx-1" type="number" onChange={(e)=>{
+            <input className="border border-black w-6 h-4 mx-0.5 " type="number" onChange={(e)=>{
                 setcardnumber(e.target.value);
             }}/> Custom
-            <button className="border border-black mx-1  bg-blue-300  rounded-xl p-0.5 hover:bg-blue-400" onClick={()=>{
+            <button className="border border-blue-950 text-blue-900 px-0.5  bg-blue-300  rounded-lg  hover:bg-blue-400 mx-0.5" onClick={()=>{
           const sortedpokemoncards=pokemondata.filter((poke,index)=> index<cardnumber);
           setfilteredpokemondata(sortedpokemoncards);
-            }}>Submit</button></div>):(<div></div>)} 
+            }}>Submit</button></div>)} 
         </div>
     )
 }

@@ -31,7 +31,7 @@ const Sort = () => {
   return (
     <div className="flex">
       <h1
-        className=" w-fit  my-1 md:m-2 border border-black p-1 font-bold rounded-sm hover:bg-blue-300"
+        className="text-black w-fit  my-1 md:m-2 border border-blue-950 p-1 font-bold rounded-lg bg-blue-300 shadow-md shadow-blue-700 hover:bg-blue-400"
         onClick={() => {
           setshowsort(!showsort);
         }}
@@ -39,9 +39,9 @@ const Sort = () => {
         Sort {showsort ? "◀️" : "▶️"}
       </h1>
       {showsort ? (
-        <div className="md:flex border border-black md:m-1.5 md:p-1 rounded-sm my-auto">
+        <div className="md:flex border border-blue-950 font-bold text-black md:mx-1.5 md:px-1 rounded-lg my-auto">
           <input
-            className="mx-1 my-auto"
+            className="mx-1 my-auto "
             type="radio"
             name="sort"
             checked={sortval === "alpha-asc"}
@@ -81,7 +81,7 @@ const Sort = () => {
           />
           <span className="my-auto">100-1</span>
           <button
-            className="border border-black bg-blue-300  p-1 px-2 rounded-xl mx-1 hover:bg-blue-400"
+            className="border border-blue-950 text-blue-900 bg-blue-300  my-1 px-1 rounded-lg mx-1 hover:bg-blue-400"
             onClick={sortcards}
           >
             Sort
