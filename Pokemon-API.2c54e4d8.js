@@ -697,8 +697,8 @@ var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
-    const [pokemondata, setpokemondata] = (0, _react.useState)();
-    const [filteredpokemondata, setfilteredpokemondata] = (0, _react.useState)();
+    const [pokemondata, setpokemondata] = (0, _react.useState)([]);
+    const [filteredpokemondata, setfilteredpokemondata] = (0, _react.useState)([]);
     const [pokemoncompletedata, setpokemoncompletedata] = (0, _react.useState)([]);
     const [favouritesdata, setfavouritesdata] = (0, _react.useState)([]);
     const [comparisiondata, setcomparisiondata] = (0, _react.useState)([]);
@@ -807,7 +807,7 @@ const App = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(App, "QVQYosn0HCXWW7FR1ooNhM8aNv4=");
+_s(App, "lIczfQPoQGHHsTIRmESnj38FOP0=");
 _c = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
@@ -34820,39 +34820,65 @@ var _pokemonCard = require("./PokemonCard");
 var _pokemonCardDefault = parcelHelpers.interopDefault(_pokemonCard);
 var _function = require("./Function");
 var _functionDefault = parcelHelpers.interopDefault(_function);
+var _pagination = require("./Pagination");
+var _paginationDefault = parcelHelpers.interopDefault(_pagination);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const { filteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
+    const [currentPage, setCurrentPage] = (0, _react.useState)(1);
+    const { filteredpokemondata, pokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
+    const PAGE_SIZE = 20;
+    const totalPokemons = pokemondata?.length;
+    const noOfPages = Math.ceil(totalPokemons / PAGE_SIZE);
+    const start = currentPage * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 10,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap md:m-4 items-center justify-center",
-                children: filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                children: filteredpokemondata?.slice(start, end).map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                         pokemondata: poke
                     }, index, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 13,
+                        lineNumber: 21,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 11,
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-white mt-8 mb-4",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paginationDefault.default), {
+                    start: start,
+                    end: end,
+                    currentPage: currentPage,
+                    setCurrentPage: setCurrentPage,
+                    noOfPages: noOfPages
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 9,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "ixU8hNCrZVYu+feuzkULrSq8q7w=");
+_s(Body, "uJ7YFJ6zzzMnWfJE5DtDlxKH4XY=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34863,7 +34889,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./PokemonCard":"eRgsR","./Function":"iBRzM","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eRgsR":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./PokemonCard":"eRgsR","./Function":"iBRzM","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Pagination":"ozIoh"}],"eRgsR":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$be94 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$be94.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -34922,7 +34948,7 @@ const PokemonCard = (props)=>{
         columnNumber: 10
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
+        className: " border-blue-950 w-40 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: "/details",
@@ -34946,7 +34972,7 @@ const PokemonCard = (props)=>{
                                     columnNumber: 11
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    className: "font-bold ml-auto",
+                                    className: "font-bold ml-auto md:text-xl text-blue-950",
                                     children: pokemondetails?.name ? pokemondetails?.name : pokemondata.name
                                 }, void 0, false, {
                                     fileName: "src/components/PokemonCard.js",
@@ -34968,10 +34994,10 @@ const PokemonCard = (props)=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            className: "text-center",
+                            className: "text-center text-blue-900 md:text-lg",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    className: "font-bold",
+                                    className: "font-bold text-blue-950",
                                     children: "Types : "
                                 }, void 0, false, {
                                     fileName: "src/components/PokemonCard.js",
@@ -35000,7 +35026,7 @@ const PokemonCard = (props)=>{
                 className: "flex justify-center",
                 children: [
                     pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md",
+                        className: "text-sm font-bold shadow-md shadow-blue-700  border border-blue-950 m-0.5 md:m-1 p-1 bg-blue-200 rounded-md hover:bg-blue-600 hover:text-white",
                         onClick: ()=>{
                             setfavouritetext("Added");
                             localStorage.setItem(`favourite-${pokemondata.name}`, "Added");
@@ -35020,7 +35046,7 @@ const PokemonCard = (props)=>{
                         columnNumber: 11
                     }, undefined),
                     pokemondetails ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: " text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-300 rounded-md",
+                        className: " text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white",
                         onClick: ()=>{
                             const comparisions = JSON.parse(localStorage.getItem("comparisions") || []);
                             setcomparetext("Selected");
@@ -35782,7 +35808,90 @@ $RefreshReg$(_c, "Filter");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../utils/CardContext":"fcxDq","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kTQ7Q":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../utils/CardContext":"fcxDq","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ozIoh":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8247 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8247.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8247.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages })=>{
+    const handleChange = (n)=>{
+        setCurrentPage(n);
+    };
+    const goToNextPage = ()=>{
+        setCurrentPage((prev)=>prev + 1);
+    };
+    const goToPrevPage = ()=>{
+        setCurrentPage((prev)=>prev - 1);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                disabled: currentPage == 0,
+                onClick: ()=>{
+                    goToPrevPage();
+                },
+                className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
+                children: "\u25C0"
+            }, void 0, false, {
+                fileName: "src/components/Pagination.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            [
+                ...Array(noOfPages).keys()
+            ].map((n)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    onClick: ()=>{
+                        handleChange(n);
+                    },
+                    className: `rounded-md shadow-2xl hover:bg-white font-bold mx-2 px-2 py-1 bg-blue-300 cursor-pointer ${currentPage === n && "bg-blue-600 text-white"}`,
+                    children: n
+                }, n, false, {
+                    fileName: "src/components/Pagination.js",
+                    lineNumber: 24,
+                    columnNumber: 11
+                }, undefined);
+            }),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                disabled: currentPage == noOfPages - 1,
+                onClick: ()=>{
+                    goToNextPage();
+                },
+                className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
+                children: [
+                    " ",
+                    "\u25B6"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Pagination.js",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Pagination.js",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Pagination;
+exports.default = Pagination;
+var _c;
+$RefreshReg$(_c, "Pagination");
+
+  $parcel$ReactRefreshHelpers$8247.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kTQ7Q":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$3c6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$3c6c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;

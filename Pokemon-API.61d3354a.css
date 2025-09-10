@@ -2,6 +2,9 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
@@ -20,9 +23,6 @@
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
     }
   }
 }
@@ -35,14 +35,18 @@
     --color-blue-300: oklch(80.9% .105 251.813);
     --color-blue-400: oklch(70.7% .165 254.624);
     --color-blue-500: oklch(62.3% .214 259.815);
+    --color-blue-600: oklch(54.6% .245 262.881);
     --color-blue-700: oklch(48.8% .243 264.376);
     --color-blue-800: oklch(42.4% .199 265.638);
     --color-blue-900: oklch(37.9% .146 265.522);
     --color-blue-950: oklch(28.2% .091 267.935);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: .25rem;
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -383,6 +387,10 @@
     margin-bottom: calc(var(--spacing) * 2);
   }
 
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
@@ -439,6 +447,14 @@
     height: calc(var(--spacing) * 40);
   }
 
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+
+  .h-60 {
+    height: calc(var(--spacing) * 60);
+  }
+
   .w-1\/2 {
     width: 50%;
   }
@@ -465,6 +481,17 @@
 
   .w-full {
     width: 100%;
+  }
+
+  .scale-105 {
+    --tw-scale-x: 105%;
+    --tw-scale-y: 105%;
+    --tw-scale-z: 105%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
   }
 
   .flex-wrap {
@@ -522,6 +549,11 @@
     border-width: 1px;
   }
 
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+
   .border-black {
     border-color: var(--color-black);
   }
@@ -540,6 +572,14 @@
 
   .bg-blue-400 {
     background-color: var(--color-blue-400);
+  }
+
+  .bg-blue-600 {
+    background-color: var(--color-blue-600);
+  }
+
+  .bg-white {
+    background-color: var(--color-white);
   }
 
   .p-0\.5 {
@@ -568,6 +608,10 @@
 
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
+  }
+
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
 
   .py-1 {
@@ -617,6 +661,10 @@
 
   .text-blue-950 {
     color: var(--color-blue-950);
+  }
+
+  .text-white {
+    color: var(--color-white);
   }
 
   .underline {
@@ -697,6 +745,27 @@
     }
   }
 
+  .hover\:border {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          border-style: var(--tw-border-style);
+          border-width: 1px;
+        }
+      }
+    }
+  }
+
+  .hover\:bg-blue-300 {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          background-color: var(--color-blue-300);
+        }
+      }
+    }
+  }
+
   .hover\:bg-blue-400 {
     &:hover {
       @media (hover: hover) {
@@ -712,6 +781,36 @@
       @media (hover: hover) {
         & {
           background-color: var(--color-blue-500);
+        }
+      }
+    }
+  }
+
+  .hover\:bg-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          background-color: var(--color-blue-600);
+        }
+      }
+    }
+  }
+
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        & {
+          color: var(--color-white);
         }
       }
     }
@@ -829,6 +928,22 @@
     }
   }
 
+  .md\:h-58 {
+    @media (width >= 48rem) {
+      & {
+        height: calc(var(--spacing) * 58);
+      }
+    }
+  }
+
+  .md\:h-60 {
+    @media (width >= 48rem) {
+      & {
+        height: calc(var(--spacing) * 60);
+      }
+    }
+  }
+
   .md\:h-63 {
     @media (width >= 48rem) {
       & {
@@ -877,6 +992,42 @@
       }
     }
   }
+
+  .md\:text-lg {
+    @media (width >= 48rem) {
+      & {
+        font-size: var(--text-lg);
+        line-height: var(--tw-leading, var(--text-lg--line-height));
+      }
+    }
+  }
+
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      & {
+        font-size: var(--text-xl);
+        line-height: var(--tw-leading, var(--text-xl--line-height));
+      }
+    }
+  }
+}
+
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 
 @property --tw-border-style {
@@ -978,23 +1129,5 @@
   syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
-}
-
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 /*# sourceMappingURL=Pokemon-API.61d3354a.css.map */
