@@ -34826,17 +34826,26 @@ var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [currentPage, setCurrentPage] = (0, _react.useState)(1);
+    const [isMobile, setIsMobile] = (0, _react.useState)(false);
     const { filteredpokemondata, pokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
-    const PAGE_SIZE = 20;
+    const PAGE_SIZE = isMobile ? 80 : 20;
     const totalPokemons = pokemondata?.length;
     const noOfPages = Math.ceil(totalPokemons / PAGE_SIZE);
     const start = currentPage * PAGE_SIZE;
     const end = start + PAGE_SIZE;
+    (0, _react.useEffect)(()=>{
+        const handleResize = ()=>{
+            setIsMobile(window.innerWidth < 500);
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return ()=>window.removeEventListener('resize', handleResize);
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 18,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34845,12 +34854,12 @@ const Body = ()=>{
                         pokemondata: poke
                     }, index, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 21,
+                        lineNumber: 32,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34863,22 +34872,22 @@ const Body = ()=>{
                     noOfPages: noOfPages
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 25,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 24,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 17,
+        lineNumber: 28,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "uJ7YFJ6zzzMnWfJE5DtDlxKH4XY=");
+_s(Body, "fDRBK4IMN9SzpbURiBlM9WB365c=");
 _c = Body;
 exports.default = Body;
 var _c;
