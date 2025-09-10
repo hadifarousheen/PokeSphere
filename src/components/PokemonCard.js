@@ -50,14 +50,14 @@ const PokemonCard = (props) => {
 if(!pokemondetails )
   return <ShimmerCard/>
   return (
-    <div className="border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ">
+    <div className=" border-blue-950 w-40 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
         <div>
           <div className="flex">
           <span className="bg-blue-200   p-1 rounded-lg font-bold">
             # {pokemondetails?.id ? pokemondetails?.id : pokemondata.id}
           </span>
-          <span className="font-bold ml-auto">
+          <span className="font-bold ml-auto md:text-xl text-blue-950">
          
             {pokemondetails?.name ? pokemondetails?.name : pokemondata.name}
           </span>
@@ -67,8 +67,8 @@ if(!pokemondetails )
             src={imageurl ? imageurl : pokemondata?.sprites?.front_shiny}
           />
 
-          <p className="text-center">
-            <span className="font-bold">Types : </span>
+          <p className="text-center text-blue-900 md:text-lg">
+            <span className="font-bold text-blue-950">Types : </span>
             {types && types.length > 0
               ? types.join(", ")
               : pokemondata.types
@@ -80,7 +80,7 @@ if(!pokemondetails )
       <div className="flex justify-center">
         {pokemondetails ? (
           <button
-            className="text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-200 rounded-md"
+            className="text-sm font-bold shadow-md shadow-blue-700  border border-blue-950 m-0.5 md:m-1 p-1 bg-blue-200 rounded-md hover:bg-blue-600 hover:text-white"
             onClick={() => {
               setfavouritetext("Added");
               localStorage.setItem(`favourite-${pokemondata.name}`, "Added");
@@ -104,7 +104,7 @@ if(!pokemondetails )
         )}
         {pokemondetails ? (
           <button
-            className=" text-sm border border-black m-0.5 md:m-1 p-1 bg-blue-300 rounded-md"
+            className=" text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white"
             onClick={() => {
               const comparisions = JSON.parse(
                 localStorage.getItem("comparisions") || []
