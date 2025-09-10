@@ -10,8 +10,8 @@ import RandomPokemon from "./components/RandomPokemon";
 import CardContext from "./utils/CardContext";
 
 const App = () => {
-  const [pokemondata, setpokemondata] = useState();
-  const [filteredpokemondata, setfilteredpokemondata] = useState();
+  const [pokemondata, setpokemondata] = useState([]);
+  const [filteredpokemondata, setfilteredpokemondata] = useState([]);
   const [pokemoncompletedata, setpokemoncompletedata] = useState([]);
   const [favouritesdata, setfavouritesdata] = useState([]);
   const [comparisiondata, setcomparisiondata] = useState([]);
