@@ -39,7 +39,7 @@ const Sort = () => {
         Sort {showsort ? "◀️" : "▶️"}
       </h1>
       {showsort ? (
-        <div className="md:flex border border-blue-950 font-bold text-black md:mx-1.5 md:px-1 rounded-lg my-auto">
+        <div className="md:flex border border-blue-950 font-bold mx-1.5 text-black md:px-1 rounded-lg my-auto">
           <input
             className="mx-1 my-auto "
             type="radio"

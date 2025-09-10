@@ -16,7 +16,7 @@ const Comparison = () => {
       </h1>
       <div className="flex flex-wrap justify-center ">
         {comparisiondata?.map((poke, index) => (
-          <ComparisionDetails key={index} pokemondata={poke} />
+          <ComparisionDetails key={poke.id} pokemondata={poke} />
         ))}
       </div>
     </div>

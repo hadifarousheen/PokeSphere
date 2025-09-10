@@ -30,7 +30,7 @@ const App = () => {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
     const data = await res.json();
     setpokemondata(data.results);
-    setfilteredpokemondata(data.results);
+    // setfilteredpokemondata(data.results);
   }
 
   return (

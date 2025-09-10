@@ -46,7 +46,7 @@ const generateRandomPokemon = () => {
             <h2
               className={`${showmenu ?"border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500":"border border-blue-950 m-1 p-1.5 rounded font-bold shadow-xl hover:bg-blue-500"}`}
               onClick={() => {
-                setfilteredpokemondata(pokemondata);
+                setfilteredpokemondata([]);
               }}
             >
               Get All Cards

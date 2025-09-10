@@ -28,11 +28,17 @@ const Body = () => {
     <div>
       <Function />
       <div className="flex flex-wrap md:m-4 items-center justify-center">
-        {filteredpokemondata?.slice(start, end).map((poke, index) => (
-          <PokemonCard key={index} pokemondata={poke} />
-        ))}
+        {
+          filteredpokemondata.length!=0?(filteredpokemondata?.map((poke, index) => (
+          <PokemonCard key={poke.name} pokemondata={poke} />
+        ))):pokemondata?.slice(start, end).map((poke, index) => (
+          <PokemonCard key={poke.name} pokemondata={poke} />
+        ))
+        }
+        
       </div>
-      <div className="bg-white mt-8 mb-4">
+     {
+      filteredpokemondata.length==0 &&  <div className="bg-white mt-8 mb-4">
         <Pagination
           start={start}
           end={end}
@@ -41,6 +47,7 @@ const Body = () => {
           noOfPages={noOfPages}
         />
       </div>
+     }
     </div>
   );
 };

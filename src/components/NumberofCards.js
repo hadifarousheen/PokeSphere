@@ -11,7 +11,7 @@ const NumberofCards=()=>{
                 setshownumberofcards(!shownumberofcards)
             }}>Number Of Cards {shownumberofcards?'◀️':'▶️'}</h1>
 
-            {shownumberofcards && (<div className="border border-blue-950 rounded-lg  py-1 px-1 mt-auto mb-auto font-bold text-black"> <input className="mx-0.5" type="checkbox" value={cardnumber} onClick={()=>{
+            {shownumberofcards && (<div className="border  border-blue-950 rounded-lg  py-1 px-1 mt-auto mb-auto font-bold text-black"> <input className="mx-0.5" type="checkbox" value={cardnumber} onClick={()=>{
                 setcardnumber(5);
             }}/> 5
             <input type="checkbox" className="mx-0.5" value={cardnumber} onClick={()=>{
