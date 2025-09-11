@@ -16,7 +16,7 @@ const Favourites = () => {
       </h1>
       <div className="flex flex-wrap items-center justify-center">
         {favouritesdata?.map((poke, index) => (
-          <FavouritesDisplay key={poke.id} pokemondata={poke} />
+          <FavouritesDisplay key={poke.id} pokemondata={poke} favouritesdata={favouritesdata} setfavouritesdata={setfavouritesdata} />
         ))}
       </div>
     </div>

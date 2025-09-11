@@ -9,11 +9,11 @@ const PokemonDetails = () => {
   );
   return (
     <div className="bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-10 ">
-      <span className="text-xl bg-blue-400 p-0.5 font-bold rounded-lg">
+      <span className="text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white">
         #{pokemondata.id}
       </span>
       <span className="text-2xl font-bold float-right text-blue-950">{pokemondata?.name}</span>
-      <img className="m-auto h-30" src={pokemondata.sprites.front_shiny} />
+      <img className="ml-auto h-30 " src={pokemondata.sprites.front_shiny} />
       <h1 className="text-xl font-bold text-blue-950 hover:underline">Sprites</h1>
       <div className="flex ">
         <img className="md:m-auto h-30  w-25 md:w-30 " src={pokemondata.sprites.front_default} />

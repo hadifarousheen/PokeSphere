@@ -5,7 +5,7 @@ import Function from "./Function";
 import Pagination from "./Pagination";
 
 const Body = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const[isMobile,setIsMobile]=useState(false);
   const { filteredpokemondata, pokemondata } = useContext(CardContext);
   const PAGE_SIZE = (isMobile ? 80:20);

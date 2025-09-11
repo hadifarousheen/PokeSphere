@@ -73,7 +73,7 @@ const Filter = () => {
           </div>
           <div className="ml-1 block">
             <button
-              className="border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400"
+              className="border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400 font-bold"
               onClick={() => {
                 const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
                   pokemon.types.some((t) => typevalues.includes(t.type.name))
@@ -85,7 +85,7 @@ const Filter = () => {
               Filter
             </button>
             <button
-              className=" border border-blue-950 text-blue-900 mx-1 rounded-lg px-2 md:p-0.5  bg-blue-300 hover:bg-blue-400"
+              className=" border border-blue-950 text-blue-900 mx-1 rounded-lg px-2 md:p-0.5  bg-blue-300 hover:bg-blue-400 font-bold"
               onClick={() => {
                 settypevalues([]);
               }}
