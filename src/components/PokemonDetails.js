@@ -16,9 +16,9 @@ const PokemonDetails = () => {
       <img className="m-auto h-30" src={pokemondata.sprites.front_shiny} />
       <h1 className="text-xl font-bold text-blue-950 hover:underline">Sprites</h1>
       <div className="flex">
-        <img className="m-auto h-30" src={pokemondata.sprites.front_default} />
-        <img className="m-auto h-30" src={pokemondata.sprites.back_shiny} />
-        <img className="m-auto h-30" src={pokemondata.sprites.back_default} />
+        <img className="md:m-auto h-30" src={pokemondata.sprites.front_default} />
+        <img className="md:m-auto h-30" src={pokemondata.sprites.back_shiny} />
+        <img className="md:m-auto h-30" src={pokemondata.sprites.back_default} />
       </div>
      
       <h2 className="text-xl text-blue-900 ">

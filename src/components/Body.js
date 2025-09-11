@@ -16,7 +16,7 @@ const Body = () => {
 
   useEffect(()=>{
     const handleResize=()=>{
-      setIsMobile(window.innerWidth <500)
+      setIsMobile(window.innerWidth <700)
     }
     window.addEventListener('resize',handleResize)
     handleResize()
