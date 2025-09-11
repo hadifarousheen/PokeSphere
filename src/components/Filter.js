@@ -44,14 +44,15 @@ const Filter = () => {
   return (
     <div className="block">
       <h1
-        className="bg-blue-300 shadow-md shadow-blue-700  border border-blue-950 w-fit font-bold p-1 rounded-lg text-black hover:bg-blue-400"
+        className="bg-blue-300 mt-2 md:mt-0 shadow-md shadow-blue-700  border border-blue-950 w-fit font-bold p-1 rounded-lg text-black hover:bg-blue-400"
         onClick={() => setfiltertype(!showfiltertype)}
       >
         Type Filter {showfiltertype ? "🔼" : "🔽"}
       </h1>
 
       {showfiltertype && (
-        <div className="grid grid-rows-3 grid-cols-6 md:block border border-blue-950 my-2 p-1 rounded-lg shadow-md shadow-blue-700 font-bold text-black">
+        <div className="border border-blue-950 shadow-md shadow-blue-700 rounded-lg my-2">
+        <div className="grid  grid-cols-4 md:block  my-2 p-1   font-bold text-black">
           {types?.map((type,index) => {
             return (
               <span key={type}>
@@ -69,7 +70,8 @@ const Filter = () => {
               </span>
             );
           })}
-          <div className="inline">
+          </div>
+          <div className="ml-1 block">
             <button
               className="border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400"
               onClick={() => {
