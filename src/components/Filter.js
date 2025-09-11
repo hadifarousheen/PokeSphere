@@ -51,7 +51,7 @@ const Filter = () => {
       </h1>
 
       {showfiltertype && (
-        <div className="grid grid-rows-6 grid-cols-4 md:block border border-blue-950 my-2 p-1 rounded-lg shadow-md shadow-blue-700 font-bold text-black">
+        <div className="grid grid-rows-3 grid-cols-6 md:block border border-blue-950 my-2 p-1 rounded-lg shadow-md shadow-blue-700 font-bold text-black">
           {types?.map((type,index) => {
             return (
               <span key={type}>
