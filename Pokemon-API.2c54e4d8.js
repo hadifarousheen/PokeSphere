@@ -34835,7 +34835,7 @@ const Body = ()=>{
     const end = start + PAGE_SIZE;
     (0, _react.useEffect)(()=>{
         const handleResize = ()=>{
-            setIsMobile(window.innerWidth < 500);
+            setIsMobile(window.innerWidth < 700);
         };
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -35565,10 +35565,10 @@ const NumberofCards = ()=>{
     const [shownumberofcards, setshownumberofcards] = (0, _react.useState)(false);
     const [cardnumber, setcardnumber] = (0, _react.useState)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex",
+        className: " md:flex",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "border border-blue-950 text-black my-1 md:m-2 md:p-1 font-bold rounded-lg bg-blue-300 shadow-md shadow-blue-700 hover:bg-blue-400",
+                className: "w-1/2 md:w-fit border border-blue-950 text-black my-1 md:m-2 md:p-1 font-bold rounded-lg bg-blue-300 shadow-md shadow-blue-700 hover:bg-blue-400",
                 onClick: ()=>{
                     setshownumberofcards(!shownumberofcards);
                 },
@@ -35582,7 +35582,7 @@ const NumberofCards = ()=>{
                 columnNumber: 13
             }, undefined),
             shownumberofcards && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border  border-blue-950 rounded-lg  py-1 px-1 mt-auto mb-auto font-bold text-black",
+                className: "w-fit border  border-blue-950 rounded-lg  py-1 px-1 mt-2 mb-2 md:mt-auto md:mb-auto font-bold text-black",
                 children: [
                     " ",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35595,7 +35595,7 @@ const NumberofCards = ()=>{
                     }, void 0, false, {
                         fileName: "src/components/NumberofCards.js",
                         lineNumber: 14,
-                        columnNumber: 137
+                        columnNumber: 159
                     }, undefined),
                     " 5",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35725,7 +35725,7 @@ const Filter = ()=>{
         className: "block",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "bg-blue-300 shadow-md shadow-blue-700  border border-blue-950 w-fit font-bold p-1 rounded-lg text-black hover:bg-blue-400",
+                className: "bg-blue-300 mt-2 md:mt-0 shadow-md shadow-blue-700  border border-blue-950 w-fit font-bold p-1 rounded-lg text-black hover:bg-blue-400",
                 onClick: ()=>setfiltertype(!showfiltertype),
                 children: [
                     "Type Filter ",
@@ -35737,43 +35737,50 @@ const Filter = ()=>{
                 columnNumber: 7
             }, undefined),
             showfiltertype && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "grid grid-rows-6 grid-cols-4 md:block border border-blue-950 my-2 p-1 rounded-lg shadow-md shadow-blue-700 font-bold text-black",
+                className: "border border-blue-950 shadow-md shadow-blue-700 rounded-lg my-2",
                 children: [
-                    types?.map((type, index)=>{
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: [
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    className: "mx-0.5",
-                                    type: "checkbox",
-                                    value: type,
-                                    onClick: ()=>{
-                                        settypevalues((prev)=>[
-                                                ...prev,
-                                                type
-                                            ]);
-                                    }
-                                }, void 0, false, {
-                                    fileName: "src/components/Filter.js",
-                                    lineNumber: 59,
-                                    columnNumber: 17
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: type
-                                }, void 0, false, {
-                                    fileName: "src/components/Filter.js",
-                                    lineNumber: 68,
-                                    columnNumber: 17
-                                }, undefined)
-                            ]
-                        }, type, true, {
-                            fileName: "src/components/Filter.js",
-                            lineNumber: 57,
-                            columnNumber: 15
-                        }, undefined);
-                    }),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "inline",
+                        className: "grid  grid-cols-4 md:block  my-2 p-1   font-bold text-black",
+                        children: types?.map((type, index)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: [
+                                    " ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        className: "mx-0.5",
+                                        type: "checkbox",
+                                        value: type,
+                                        onClick: ()=>{
+                                            settypevalues((prev)=>[
+                                                    ...prev,
+                                                    type
+                                                ]);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "src/components/Filter.js",
+                                        lineNumber: 60,
+                                        columnNumber: 17
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: type
+                                    }, void 0, false, {
+                                        fileName: "src/components/Filter.js",
+                                        lineNumber: 69,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, type, true, {
+                                fileName: "src/components/Filter.js",
+                                lineNumber: 58,
+                                columnNumber: 15
+                            }, undefined);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/Filter.js",
+                        lineNumber: 55,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "ml-1 block",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400",
@@ -35784,7 +35791,7 @@ const Filter = ()=>{
                                 children: "Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 73,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35795,13 +35802,13 @@ const Filter = ()=>{
                                 children: "Clear Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 85,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Filter.js",
-                        lineNumber: 72,
+                        lineNumber: 74,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -36448,7 +36455,7 @@ const PokemonDetails = ()=>{
                 className: "flex",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "m-auto h-30",
+                        className: "md:m-auto h-30",
                         src: pokemondata.sprites.front_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
@@ -36456,7 +36463,7 @@ const PokemonDetails = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "m-auto h-30",
+                        className: "md:m-auto h-30",
                         src: pokemondata.sprites.back_shiny
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
@@ -36464,7 +36471,7 @@ const PokemonDetails = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "m-auto h-30",
+                        className: "md:m-auto h-30",
                         src: pokemondata.sprites.back_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
