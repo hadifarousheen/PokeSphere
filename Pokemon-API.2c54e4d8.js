@@ -34825,7 +34825,7 @@ var _paginationDefault = parcelHelpers.interopDefault(_pagination);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [currentPage, setCurrentPage] = (0, _react.useState)(1);
+    const [currentPage, setCurrentPage] = (0, _react.useState)(0);
     const [isMobile, setIsMobile] = (0, _react.useState)(false);
     const { filteredpokemondata, pokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     const PAGE_SIZE = isMobile ? 80 : 20;
@@ -34893,7 +34893,7 @@ const Body = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "fDRBK4IMN9SzpbURiBlM9WB365c=");
+_s(Body, "yS66+Gvzmls146BW0NXyhQPZm38=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34963,7 +34963,7 @@ const PokemonCard = (props)=>{
         columnNumber: 10
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " border-blue-950 w-40 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ",
+        className: " border-blue-950 w-45 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: "/details",
@@ -35783,7 +35783,7 @@ const Filter = ()=>{
                         className: "ml-1 block",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400",
+                                className: "border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400 font-bold",
                                 onClick: ()=>{
                                     const filterPokemons = pokemondetailsfilter.filter((pokemon)=>pokemon.types.some((t)=>typevalues.includes(t.type.name)));
                                     setfilteredpokemondata(filterPokemons);
@@ -35795,7 +35795,7 @@ const Filter = ()=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: " border border-blue-950 text-blue-900 mx-1 rounded-lg px-2 md:p-0.5  bg-blue-300 hover:bg-blue-400",
+                                className: " border border-blue-950 text-blue-900 mx-1 rounded-lg px-2 md:p-0.5  bg-blue-300 hover:bg-blue-400 font-bold",
                                 onClick: ()=>{
                                     settypevalues([]);
                                 },
@@ -35957,7 +35957,9 @@ const Favourites = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap items-center justify-center",
                 children: favouritesdata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDisplayDefault.default), {
-                        pokemondata: poke
+                        pokemondata: poke,
+                        favouritesdata: favouritesdata,
+                        setfavouritesdata: setfavouritesdata
                     }, poke.id, false, {
                         fileName: "src/components/Favourites.js",
                         lineNumber: 19,
@@ -36004,7 +36006,7 @@ var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const FavouritesDisplay = (props)=>{
     _s();
-    const { pokemondata } = props;
+    const { pokemondata, favouritesdata } = props;
     const { url } = pokemondata;
     const [pokemondetails, setpokemondetails] = (0, _react.useState)();
     const [imageurl, setimageurl] = (0, _react.useState)();
@@ -36037,83 +36039,99 @@ const FavouritesDisplay = (props)=>{
             setfavalltypes(favalltypes);
         } catch (error) {}
     }
+    const removeFromFavourite = (id, pokemonName)=>{
+        const afterRemoval = favouritesdata.filter((poke)=>poke.id !== id);
+        const localStorageFavourites = JSON.parse(localStorage.getItem('favourites'));
+        const updatedlocalStorageFavourites = localStorageFavourites.filter((poke)=>poke.id !== id);
+        localStorage.setItem('favourites', JSON.stringify(updatedlocalStorageFavourites));
+        localStorage.removeItem('favourite-' + pokemonName);
+        setfavouritesdata(afterRemoval);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            to: "/details",
-            state: {
-                pokemondata: pokemondetails
-            },
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-blue-200   p-1 rounded-lg font-bold",
-                                children: [
-                                    "# ",
-                                    pokemondata.id
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/FavouritesDisplay.js",
-                                lineNumber: 52,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "font-bold ml-auto",
-                                children: pokemondata.name
-                            }, void 0, false, {
-                                fileName: "src/components/FavouritesDisplay.js",
-                                lineNumber: 55,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FavouritesDisplay.js",
-                        lineNumber: 51,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "m-auto h-28 md:h-30",
-                        src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
+        className: "hover:border hover:border-blue-950 w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "bg-blue-200   p-1 rounded-lg font-bold",
+                            children: [
+                                "# ",
+                                pokemondata.id
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/FavouritesDisplay.js",
+                            lineNumber: 62,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold ml-auto",
+                            children: pokemondata.name
+                        }, void 0, false, {
+                            fileName: "src/components/FavouritesDisplay.js",
+                            lineNumber: 65,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/FavouritesDisplay.js",
+                    lineNumber: 61,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "m-auto h-28 md:h-30",
+                    src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
+                }, void 0, false, {
+                    fileName: "src/components/FavouritesDisplay.js",
+                    lineNumber: 70,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-center text-blue-900",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold text-blue-950",
+                            children: "Types : "
+                        }, void 0, false, {
+                            fileName: "src/components/FavouritesDisplay.js",
+                            lineNumber: 76,
+                            columnNumber: 13
+                        }, undefined),
+                        types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : ""
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/FavouritesDisplay.js",
+                    lineNumber: 75,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-center",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            removeFromFavourite(pokemondata.id, pokemondata.name);
+                        },
+                        className: " text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ",
+                        children: "Remove"
                     }, void 0, false, {
                         fileName: "src/components/FavouritesDisplay.js",
-                        lineNumber: 60,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "text-center",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "font-bold",
-                                children: "Types : "
-                            }, void 0, false, {
-                                fileName: "src/components/FavouritesDisplay.js",
-                                lineNumber: 66,
-                                columnNumber: 13
-                            }, undefined),
-                            types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : ""
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FavouritesDisplay.js",
-                        lineNumber: 65,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/FavouritesDisplay.js",
-                lineNumber: 50,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
+                }, void 0, false, {
+                    fileName: "src/components/FavouritesDisplay.js",
+                    lineNumber: 83,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/FavouritesDisplay.js",
-            lineNumber: 49,
-            columnNumber: 7
+            lineNumber: 60,
+            columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/FavouritesDisplay.js",
-        lineNumber: 48,
+        lineNumber: 58,
         columnNumber: 1
     }, undefined);
 };
@@ -36207,30 +36225,43 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _cardContext = require("../utils/CardContext");
+var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
+var _s = $RefreshSig$();
 const ComparisionDetails = ({ pokemondata })=>{
-    console.log(pokemondata);
+    _s();
+    const { comparisiondata, setcomparisiondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     const types = pokemondata?.types.map((typeObj)=>typeObj.type.name);
     const abilities = pokemondata.abilities.map((typeobj)=>typeobj.ability.name);
+    const removeFromComparision = (id, pokemonName)=>{
+        const afterRemoval = comparisiondata.filter((poke)=>poke.id !== id);
+        const localStorageComparision = JSON.parse(localStorage.getItem('comparisions'));
+        const updatedlocalStorageComparisions = localStorageComparision.filter((poke)=>poke.id !== id);
+        localStorage.setItem('comparisions', JSON.stringify(updatedlocalStorageComparisions));
+        localStorage.removeItem('Compare-' + pokemonName);
+        setcomparisiondata(afterRemoval);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "mx-2 w-fit p-3 rounded-2xl shadow-2xl shadow-blue-400 mt-8 ",
+        className: "mx-2 w-fit p-3 rounded-2xl shadow-2xl shadow-blue-800 mt-4 hover:border hover:border-blue-950 text-blue-950",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "text-xl bg-blue-200 p-0.5 font-bold rounded-lg",
+                className: "text-xl bg-blue-200 p-1 font-bold rounded-lg",
                 children: [
                     "#",
                     pokemondata.id
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 9,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "text-2xl font-bold mx-2 ml-auto text-blue-950",
+                className: "text-2xl font-bold float-right text-blue-950",
                 children: pokemondata?.name
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 12,
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -36238,15 +36269,15 @@ const ComparisionDetails = ({ pokemondata })=>{
                 src: pokemondata.sprites.front_shiny
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 13,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-xl font-bold underline",
+                className: "text-xl font-bold hover:underline",
                 children: "Sprites"
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 14,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36257,7 +36288,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                         src: pokemondata.sprites.front_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 16,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -36265,7 +36296,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                         src: pokemondata.sprites.back_shiny
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 17,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -36273,24 +36304,24 @@ const ComparisionDetails = ({ pokemondata })=>{
                         src: pokemondata.sprites.back_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 18,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 15,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl text-center",
+                className: "text-xl ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "font-bold text-blue-950",
                         children: "Height :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 21,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined),
                     " ",
@@ -36298,7 +36329,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 20,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -36309,7 +36340,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Weight :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 24,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     " ",
@@ -36317,7 +36348,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 23,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -36328,14 +36359,14 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Base Experience : "
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 27,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
                     pokemondata.base_experience
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 26,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -36346,7 +36377,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Types :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 31,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, undefined),
                     " ",
@@ -36354,7 +36385,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 30,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -36365,7 +36396,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Abilitiess:"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 34,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, undefined),
                     " ",
@@ -36373,16 +36404,35 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 33,
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        removeFromComparision(pokemondata.id, pokemondata.name);
+                    },
+                    className: "w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ",
+                    children: "Remove"
+                }, void 0, false, {
+                    fileName: "src/components/ComparisionDetails.js",
+                    lineNumber: 49,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/ComparisionDetails.js",
+                lineNumber: 48,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ComparisionDetails.js",
-        lineNumber: 8,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
+_s(ComparisionDetails, "GWlWx/N6pLnWdSde+HaHEI5+t7M=");
 _c = ComparisionDetails;
 exports.default = ComparisionDetails;
 var _c;
@@ -36393,7 +36443,7 @@ $RefreshReg$(_c, "ComparisionDetails");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ahCsz":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","../utils/CardContext":"fcxDq"}],"ahCsz":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$5c98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$5c98.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36417,7 +36467,7 @@ const PokemonDetails = ()=>{
         className: "bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-10 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "text-xl bg-blue-400 p-0.5 font-bold rounded-lg",
+                className: "text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white",
                 children: [
                     "#",
                     pokemondata.id
@@ -36436,7 +36486,7 @@ const PokemonDetails = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "m-auto h-30",
+                className: "ml-auto h-30 ",
                 src: pokemondata.sprites.front_shiny
             }, void 0, false, {
                 fileName: "src/components/PokemonDetails.js",
@@ -36452,10 +36502,10 @@ const PokemonDetails = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex",
+                className: "flex ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "md:m-auto h-30",
+                        className: "md:m-auto h-30  w-25 md:w-30 ",
                         src: pokemondata.sprites.front_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
@@ -36463,7 +36513,7 @@ const PokemonDetails = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "md:m-auto h-30",
+                        className: "md:m-auto h-30 w-25 md:w-30 ",
                         src: pokemondata.sprites.back_shiny
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
@@ -36471,7 +36521,7 @@ const PokemonDetails = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "md:m-auto h-30",
+                        className: "md:m-auto h-30 w-25 md:w-30  ",
                         src: pokemondata.sprites.back_default
                     }, void 0, false, {
                         fileName: "src/components/PokemonDetails.js",
