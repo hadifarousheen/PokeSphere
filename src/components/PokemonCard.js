@@ -50,7 +50,7 @@ const PokemonCard = (props) => {
 if(!pokemondetails )
   return <ShimmerCard/>
   return (
-    <div className=" border-blue-950 w-45 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ">
+    <div className=" border-blue-950 w-40 h-60 m-1  md:w-63  md:h-58   text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 hover:border ">
       <Link to="/details" state={{ pokemondata: pokemondetails }}>
         <div>
           <div className="flex">
