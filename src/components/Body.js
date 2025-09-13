@@ -39,7 +39,7 @@ const Body = () => {
         
       </div>
      {
-      filteredpokemondata.length==0 || pokemondata.length==0 &&  <div className="bg-white mt-8 mb-4">
+      pokemondata.length==0|| filteredpokemondata.length==0  &&  <div className="bg-white mt-8 mb-4">
         <Pagination
           start={start}
           end={end}
