@@ -34868,7 +34868,7 @@ const Body = ()=>{
                 lineNumber: 31,
                 columnNumber: 7
             }, undefined),
-            filteredpokemondata.length == 0 || pokemondata.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            pokemondata.length == 0 || filteredpokemondata.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "bg-white mt-8 mb-4",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paginationDefault.default), {
                     start: start,
