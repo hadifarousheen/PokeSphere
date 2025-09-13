@@ -392,8 +392,8 @@
     margin-top: calc(var(--spacing) * 10);
   }
 
-  .mr-auto {
-    margin-right: auto;
+  .mt-auto {
+    margin-top: auto;
   }
 
   .mb-2 {
@@ -496,10 +496,6 @@
     width: calc(var(--spacing) * 40);
   }
 
-  .w-45 {
-    width: calc(var(--spacing) * 45);
-  }
-
   .w-fit {
     width: fit-content;
   }
@@ -518,6 +514,10 @@
 
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .flex-col {
+    flex-direction: column;
   }
 
   .flex-wrap {
@@ -690,10 +690,6 @@
 
   .text-white {
     color: var(--color-white);
-  }
-
-  .underline {
-    text-decoration-line: underline;
   }
 
   .shadow-xl\/20 {
