@@ -4,8 +4,6 @@ import CardContext from "../utils/CardContext";
 const Sort = () => {
   const {
     pokemondata,
-    setpokemondata,
-    filteredpokemondata,
     setfilteredpokemondata,
   } = useContext(CardContext);
   const [showsort, setshowsort] = useState(false);

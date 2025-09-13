@@ -1,4 +1,4 @@
-import { useContext, useState,useEffect } from "react";
+import { useContext, useState} from "react";
 import CardContext from "../utils/CardContext";
 import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
@@ -8,14 +8,9 @@ const Header = () => {
     pokemondata,
     setfilteredpokemondata,
     setcomparisiondata,
-    filteredpokemondata,
     setfavouritesdata,
   } = useContext(CardContext);
-  useEffect(() => {
-  console.log("New Pokemon:", filteredpokemondata);
-}, [filteredpokemondata]);
-
-
+ 
 const generateRandomPokemon = () => {
   if (!pokemondata || pokemondata.length === 0) return;
 
@@ -25,10 +20,6 @@ const generateRandomPokemon = () => {
    setfilteredpokemondata([{ ...randomPokemon, _key: Date.now() }]);
   navigate("/random");
 };
-
-
-
-
 
   return (
     <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black">

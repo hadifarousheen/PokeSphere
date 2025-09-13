@@ -55,7 +55,7 @@ const FavouritesDisplay=(props)=>{
   setfavouritesdata(afterRemoval);
   }
     return (
-<div className="hover:border hover:border-blue-950 w-40 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 ">
+<div className="hover:border hover:border-blue-950 w-40 h-60 md:h-58 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 ">
       {/* <Link to="/details" state={{ pokemondata: pokemondetails }}> */}
         <div>
           <div className="flex">
@@ -83,7 +83,7 @@ const FavouritesDisplay=(props)=>{
           <div className="flex justify-center">
           <button onClick={()=>{
             removeFromFavourite(pokemondata.id,pokemondata.name)
-          }} className=" text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ">Remove</button>
+          }} className="w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ">Remove</button>
         </div>
         </div>
       {/* </Link> */}

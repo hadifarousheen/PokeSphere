@@ -3,6 +3,7 @@ import CardContext from "../utils/CardContext";
 import PokemonCard from "./PokemonCard";
 import Function from "./Function";
 import Pagination from "./Pagination";
+import ShimmerCard from "./ShimmerCard";
 
 const Body = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -31,14 +32,14 @@ const Body = () => {
         {
           filteredpokemondata.length!=0?(filteredpokemondata?.map((poke, index) => (
           <PokemonCard key={poke.name} pokemondata={poke} />
-        ))):pokemondata?.slice(start, end).map((poke, index) => (
+        ))):(pokemondata.length==0 ?(<ShimmerCard/>):pokemondata?.slice(start, end).map((poke, index) => (
           <PokemonCard key={poke.name} pokemondata={poke} />
-        ))
+        )))
         }
         
       </div>
      {
-      filteredpokemondata.length==0 &&  <div className="bg-white mt-8 mb-4">
+      filteredpokemondata.length==0 || pokemondata.length==0 &&  <div className="bg-white mt-8 mb-4">
         <Pagination
           start={start}
           end={end}

@@ -18,7 +18,7 @@ const Search = () => {
         onClick={() => {
           const searchValue = searchtext.toLowerCase();
           const searchcards = pokemondata.filter(
-            (poke) => poke.name.toLowerCase() === searchValue
+            (poke) => poke.name.toLowerCase().includes(searchValue)
           );
           setfilteredpokemondata(searchcards);
         }}

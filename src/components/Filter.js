@@ -1,11 +1,11 @@
 import CardContext from "../utils/CardContext";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 
 const Filter = () => {
   const [showfiltertype, setfiltertype] = useState(false);
   const [typevalues, settypevalues] = useState([]);
-  const [pokemondetailsfilter, setpokemondetailsfilter] = useState([]);
   const { pokemondata, setfilteredpokemondata } = useContext(CardContext);
+  // const[isChecked,setIsChecked]=useState(false);
   const types = [
     "fire",
     "water",
@@ -27,20 +27,6 @@ const Filter = () => {
     "dragon",
   ];
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  async function fetchData() {
-    const responses = await Promise.all(
-      pokemondata.map((pokemon) => fetch(pokemon.url))
-    );
-    const data = await Promise.all(
-      responses.map((response) => response.json())
-    );
-    setpokemondetailsfilter(data);
-  }
-
   return (
     <div className="block">
       <h1
@@ -61,7 +47,6 @@ const Filter = () => {
                   className="mx-0.5"
                   type="checkbox"
                   value={type}
-                 
                   onClick={() => {
                     settypevalues((prev) => [...prev, type]);
                   }}
@@ -75,10 +60,9 @@ const Filter = () => {
             <button
               className="border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400 font-bold"
               onClick={() => {
-                const filterPokemons = pokemondetailsfilter.filter((pokemon) =>
+                const filterPokemons = pokemondata.filter((pokemon) =>
                   pokemon.types.some((t) => typevalues.includes(t.type.name))
                 );
-
                 setfilteredpokemondata(filterPokemons);
               }}
             >

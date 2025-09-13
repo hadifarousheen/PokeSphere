@@ -12,7 +12,6 @@ import CardContext from "./utils/CardContext";
 const App = () => {
   const [pokemondata, setpokemondata] = useState([]);
   const [filteredpokemondata, setfilteredpokemondata] = useState([]);
-  const [pokemoncompletedata, setpokemoncompletedata] = useState([]);
   const [favouritesdata, setfavouritesdata] = useState([]);
   const [comparisiondata, setcomparisiondata] = useState([]);
 
@@ -27,10 +26,15 @@ const App = () => {
   }, []);
 
   async function fetchData() {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
-    const data = await res.json();
-    setpokemondata(data.results);
-    // setfilteredpokemondata(data.results);
+    const allPokemons = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
+    const allPokemonsJson = await allPokemons?.json();
+  const completePokemonsData = await Promise.all(allPokemonsJson.results?.map((pokemon) => fetch(pokemon.url)))
+    const completePokemonsDataJson = await Promise.all(
+completePokemonsData?.map((response) => response.json())
+    );
+    console.log(completePokemonsDataJson);
+   setpokemondata(completePokemonsDataJson);
+  
   }
 
   return (
@@ -40,8 +44,6 @@ const App = () => {
         setpokemondata:setpokemondata,
         filteredpokemondata:filteredpokemondata,
         setfilteredpokemondata,
-        pokemoncompletedata:pokemoncompletedata,
-        setpokemoncompletedata:setpokemoncompletedata,
         favouritesdata:favouritesdata,
         setfavouritesdata:setfavouritesdata,
         comparisiondata:comparisiondata,
