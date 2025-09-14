@@ -728,7 +728,7 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 53,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -737,44 +737,8 @@ const App = ()=>{
                         path: "/",
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 55,
-                            columnNumber: 34
-                        }, void 0)
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 55,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/favourites",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 56,
-                            columnNumber: 44
-                        }, void 0)
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 56,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/details",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonDetailsDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 57,
-                            columnNumber: 41
-                        }, void 0)
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 57,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/compare",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _comparisonDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
                             lineNumber: 58,
-                            columnNumber: 41
+                            columnNumber: 34
                         }, void 0)
                     }, void 0, false, {
                         fileName: "src/App.js",
@@ -782,27 +746,63 @@ const App = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/random",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _randomPokemonDefault.default), {}, void 0, false, {
+                        path: "/favourites",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDefault.default), {}, void 0, false, {
                             fileName: "src/App.js",
                             lineNumber: 59,
-                            columnNumber: 40
+                            columnNumber: 44
                         }, void 0)
                     }, void 0, false, {
                         fileName: "src/App.js",
                         lineNumber: 59,
                         columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/details",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonDetailsDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 60,
+                            columnNumber: 41
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 60,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/compare",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _comparisonDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 61,
+                            columnNumber: 41
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/random",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _randomPokemonDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 62,
+                            columnNumber: 40
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 62,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 54,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 41,
+        lineNumber: 44,
         columnNumber: 5
     }, undefined);
 };
@@ -812,12 +812,12 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById("roo
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 68,
+        lineNumber: 71,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 67,
+    lineNumber: 70,
     columnNumber: 3
 }, undefined));
 var _c;
@@ -32370,8 +32370,8 @@ const Header = ()=>{
             className: "flex flex-wrap justify-between",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "text-xl md:text-3xl font-bold ml-2",
-                    children: "Pokemon API"
+                    className: "text-xl md:text-3xl font-bold ml-2 font",
+                    children: "PokeSphere"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
                     lineNumber: 27,
@@ -32401,12 +32401,12 @@ const Header = ()=>{
                                 children: "Get All Cards"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 37,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 36,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32421,12 +32421,12 @@ const Header = ()=>{
                                 children: "Favourites"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 47,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 46,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32441,12 +32441,12 @@ const Header = ()=>{
                                 children: "Comparision"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 64,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 63,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -32458,19 +32458,19 @@ const Header = ()=>{
                                 children: "Random Pokemon"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 85,
+                                lineNumber: 105,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 82,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 31,
-                    columnNumber: 8
+                    lineNumber: 35,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
@@ -32484,7 +32484,7 @@ const Header = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "m9Afz8ZGY00lsk0Gq7WHr4jpUG0=", false, function() {
+_s(Header, "aS4NCbesG2rKotFH8TwXi82F18c=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -34833,39 +34833,39 @@ const Body = ()=>{
         const handleResize = ()=>{
             setIsMobile(window.innerWidth < 700);
         };
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
         handleResize();
-        return ()=>window.removeEventListener('resize', handleResize);
+        return ()=>window.removeEventListener("resize", handleResize);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap md:m-4 items-center justify-center",
-                children: filteredpokemondata.length != 0 ? filteredpokemondata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                children: filteredpokemondata.length != 0 ? filteredpokemondata?.map((poke)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                         pokemondata: poke
                     }, poke.name, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 34,
-                        columnNumber: 11
+                        lineNumber: 33,
+                        columnNumber: 13
                     }, undefined)) : pokemondata.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 35,
-                    columnNumber: 38
-                }, undefined) : pokemondata?.slice(start, end).map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
+                    lineNumber: 36,
+                    columnNumber: 11
+                }, undefined) : pokemondata?.slice(start, end).map((poke)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                         pokemondata: poke
                     }, poke.name, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 36,
-                        columnNumber: 11
+                        lineNumber: 40,
+                        columnNumber: 28
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 31,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             pokemondata.length == 0 || filteredpokemondata.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34878,22 +34878,22 @@ const Body = ()=>{
                     noOfPages: noOfPages
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 43,
-                    columnNumber: 9
+                    lineNumber: 46,
+                    columnNumber: 13
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 42,
-                columnNumber: 66
+                lineNumber: 45,
+                columnNumber: 11
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 29,
+        lineNumber: 28,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "yS66+Gvzmls146BW0NXyhQPZm38=");
+_s(Body, "9dqCkJTM0HBKjoCtssUB/BQx24Q=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -35567,7 +35567,6 @@ const Filter = ()=>{
     const [showfiltertype, setfiltertype] = (0, _react.useState)(false);
     const [typevalues, settypevalues] = (0, _react.useState)([]);
     const { pokemondata, setfilteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
-    // const[isChecked,setIsChecked]=useState(false);
     const types = [
         "fire",
         "water",
@@ -35600,7 +35599,7 @@ const Filter = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Filter.js",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             showfiltertype && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35624,26 +35623,26 @@ const Filter = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "src/components/Filter.js",
-                                        lineNumber: 46,
+                                        lineNumber: 45,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: type
                                     }, void 0, false, {
                                         fileName: "src/components/Filter.js",
-                                        lineNumber: 54,
+                                        lineNumber: 53,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, type, true, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 44,
+                                lineNumber: 43,
                                 columnNumber: 15
                             }, undefined);
                         })
                     }, void 0, false, {
                         fileName: "src/components/Filter.js",
-                        lineNumber: 41,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35658,7 +35657,7 @@ const Filter = ()=>{
                                 children: "Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 60,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35669,25 +35668,25 @@ const Filter = ()=>{
                                 children: "Clear Filter"
                             }, void 0, false, {
                                 fileName: "src/components/Filter.js",
-                                lineNumber: 71,
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Filter.js",
-                        lineNumber: 59,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Filter.js",
-                lineNumber: 40,
+                lineNumber: 39,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Filter.js",
-        lineNumber: 31,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
@@ -35797,10 +35796,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const ShimmerCard = ()=>{
+    const shimmerArray = new Array(12).fill("*");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-wrap justify-center",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: shimmerArray.map((val, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35808,25 +35807,25 @@ const ShimmerCard = ()=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                                 fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 6,
+                                lineNumber: 8,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                                 fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 7,
+                                lineNumber: 9,
                                 columnNumber: 17
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 5,
+                        lineNumber: 7,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
                     }, void 0, false, {
                         fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 9,
+                        lineNumber: 11,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35836,671 +35835,31 @@ const ShimmerCard = ()=>{
                                 className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
                             }, void 0, false, {
                                 fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 11,
+                                lineNumber: 13,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
                             }, void 0, false, {
                                 fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 12,
+                                lineNumber: 14,
                                 columnNumber: 17
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 10,
+                        lineNumber: 12,
                         columnNumber: 13
                     }, undefined)
                 ]
-            }, void 0, true, {
+            }, index, true, {
                 fileName: "src/components/ShimmerCard.js",
-                lineNumber: 4,
-                columnNumber: 10
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 17,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 18,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 16,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 20,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 22,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 23,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 21,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 15,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 28,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 29,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 27,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 31,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 33,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 34,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 32,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 26,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 39,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 40,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 38,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 42,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 44,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 45,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 43,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 37,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 50,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 51,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 49,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 53,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 55,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 56,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 54,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 48,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 61,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 62,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 60,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 64,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 66,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 67,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 65,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 59,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 72,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 73,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 71,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 75,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 77,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 78,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 76,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 70,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 83,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 84,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 82,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 86,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 88,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 89,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 87,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 81,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 94,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 95,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 93,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 97,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 99,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 100,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 98,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 92,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 105,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 106,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 104,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 108,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 110,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 111,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 109,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 103,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 116,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 117,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 115,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 119,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 121,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 122,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 120,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 114,
-                columnNumber: 14
-            }, undefined),
-            " ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border border-black w-40 m-1 h-40  md:w-63 md:h-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex bg-blue-200 w-full h-4  md:h-8 rounded-lg",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 126,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 127,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 125,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-auto mt-3 md:mt-9 h-20 w-1/2 md:h-30 bg-blue-200 rounded-lg"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 129,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center  mt-3 md:mt-5 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-l-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 131,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-blue-200 h-4 md:h-6 w-20 rounded-r-lg"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 132,
-                                columnNumber: 17
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 130,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 124,
-                columnNumber: 20
-            }, undefined)
-        ]
-    }, void 0, true, {
+                lineNumber: 6,
+                columnNumber: 44
+            }, undefined))
+    }, void 0, false, {
         fileName: "src/components/ShimmerCard.js",
-        lineNumber: 3,
+        lineNumber: 4,
         columnNumber: 9
     }, undefined);
 };
@@ -36552,10 +35911,10 @@ const Favourites = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap items-center justify-center",
-                children: favouritesdata?.map((poke, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDisplayDefault.default), {
+                children: favouritesdata?.map((poke)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favouritesDisplayDefault.default), {
                         pokemondata: poke,
-                        favouritesdata: favouritesdata,
-                        setfavouritesdata: setfavouritesdata
+                        setfavouritesdata: setfavouritesdata,
+                        favouritesdata: favouritesdata
                     }, poke.id, false, {
                         fileName: "src/components/Favourites.js",
                         lineNumber: 19,
@@ -36596,142 +35955,107 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _cardContext = require("../utils/CardContext");
-var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
-var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-const FavouritesDisplay = (props)=>{
+const FavouritesDisplay = ({ pokemondata, setfavouritesdata, favouritesdata })=>{
     _s();
-    const { pokemondata, favouritesdata } = props;
-    const { url } = pokemondata;
-    const [pokemondetails, setpokemondetails] = (0, _react.useState)();
-    const [imageurl, setimageurl] = (0, _react.useState)();
-    const [types, settypes] = (0, _react.useState)();
+    const { id, name, sprites } = pokemondata;
+    const { front_shiny } = sprites;
     const [favouritetext, setfavouritetext] = (0, _react.useState)(()=>{
         const stored = localStorage.getItem(`favourite-${pokemondata.name}`);
         return stored || "Favourite";
     });
-    const [comparetext, setcomparetext] = (0, _react.useState)(()=>{
-        const stored = localStorage.getItem(`Compare-${pokemondata.name}`);
-        return stored || "Compare";
-    });
-    const [favalltypes, setfavalltypes] = (0, _react.useState)();
-    const { pokemoncompletedata, setpokemoncompletedata, setfavouritesdata, setcomparisiondata, comparisiondata, setfilteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
-    (0, _react.useEffect)(()=>{
-        if (pokemondata?.url) fetchimageurl();
-    }, [
-        pokemondata
-    ]);
-    async function fetchimageurl() {
-        try {
-            const data = await fetch(url);
-            const jsondata = await data.json();
-            setpokemoncompletedata(jsondata);
-            setimageurl(jsondata.sprites.front_shiny);
-            setpokemondetails(jsondata);
-            const allTypes = jsondata?.types.map((typeObj)=>typeObj.type.name);
-            settypes(allTypes);
-            const favalltypes = pokemondata?.types.map((typeObj)=>typeObj.type.name);
-            setfavalltypes(favalltypes);
-        } catch (error) {}
-    }
+    const types = pokemondata?.types.map((typeObj)=>typeObj.type.name);
     const removeFromFavourite = (id, pokemonName)=>{
         const afterRemoval = favouritesdata.filter((poke)=>poke.id !== id);
-        const localStorageFavourites = JSON.parse(localStorage.getItem('favourites'));
+        const localStorageFavourites = JSON.parse(localStorage.getItem("favourites"));
         const updatedlocalStorageFavourites = localStorageFavourites.filter((poke)=>poke.id !== id);
-        localStorage.setItem('favourites', JSON.stringify(updatedlocalStorageFavourites));
-        localStorage.removeItem('favourite-' + pokemonName);
+        localStorage.setItem("favourites", JSON.stringify(updatedlocalStorageFavourites));
+        localStorage.removeItem("favourite-" + pokemonName);
         setfavouritesdata(afterRemoval);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "hover:border hover:border-blue-950 w-40 h-60 md:h-58 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "bg-blue-200   p-1 rounded-lg font-bold",
-                            children: [
-                                "# ",
-                                pokemondata.id
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/FavouritesDisplay.js",
-                            lineNumber: 62,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "font-bold ml-auto",
-                            children: pokemondata.name
-                        }, void 0, false, {
-                            fileName: "src/components/FavouritesDisplay.js",
-                            lineNumber: 65,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/FavouritesDisplay.js",
-                    lineNumber: 61,
-                    columnNumber: 11
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "m-auto h-28 md:h-30",
-                    src: imageurl ? imageurl : pokemondata?.sprites?.front_shiny
-                }, void 0, false, {
-                    fileName: "src/components/FavouritesDisplay.js",
-                    lineNumber: 70,
-                    columnNumber: 11
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "text-center text-blue-900",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "font-bold text-blue-950",
-                            children: "Types : "
-                        }, void 0, false, {
-                            fileName: "src/components/FavouritesDisplay.js",
-                            lineNumber: 76,
-                            columnNumber: 13
-                        }, undefined),
-                        types && types.length > 0 ? types.join(", ") : pokemondata.types ? pokemondata.types.map((t)=>t.type.name).join(", ") : ""
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/FavouritesDisplay.js",
-                    lineNumber: 75,
-                    columnNumber: 11
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-center",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>{
-                            removeFromFavourite(pokemondata.id, pokemondata.name);
-                        },
-                        className: "w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ",
-                        children: "Remove"
+        className: "hover:border hover:border-blue-950 w-40 h-60 md:h-58 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 flex flex-col ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "bg-blue-200   p-1 rounded-lg font-bold",
+                        children: [
+                            "# ",
+                            id
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FavouritesDisplay.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold ml-auto",
+                        children: name
                     }, void 0, false, {
                         fileName: "src/components/FavouritesDisplay.js",
-                        lineNumber: 84,
-                        columnNumber: 11
+                        lineNumber: 29,
+                        columnNumber: 9
                     }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FavouritesDisplay.js",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "m-auto h-28 md:h-30",
+                src: front_shiny
+            }, void 0, false, {
+                fileName: "src/components/FavouritesDisplay.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-center text-blue-900",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold text-blue-950",
+                        children: "Types : "
+                    }, void 0, false, {
+                        fileName: "src/components/FavouritesDisplay.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    types
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FavouritesDisplay.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex  justify-end mt-auto",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        removeFromFavourite(id, name);
+                    },
+                    className: "w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ",
+                    children: "Remove"
                 }, void 0, false, {
                     fileName: "src/components/FavouritesDisplay.js",
-                    lineNumber: 83,
-                    columnNumber: 11
+                    lineNumber: 37,
+                    columnNumber: 9
                 }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/FavouritesDisplay.js",
-            lineNumber: 60,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false, {
+            }, void 0, false, {
+                fileName: "src/components/FavouritesDisplay.js",
+                lineNumber: 36,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/FavouritesDisplay.js",
-        lineNumber: 58,
-        columnNumber: 1
+        lineNumber: 26,
+        columnNumber: 5
     }, undefined);
 };
-_s(FavouritesDisplay, "hgNgI4F+SS1JFIlzoRjVFb3eYi0=");
+_s(FavouritesDisplay, "UPb7N7T1FqSNfd09VtNaupEY+Fc=");
 _c = FavouritesDisplay;
 exports.default = FavouritesDisplay;
 var _c;
@@ -36742,7 +36066,7 @@ $RefreshReg$(_c, "FavouritesDisplay");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2zpOF":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2zpOF":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$cb18 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$cb18.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36827,15 +36151,17 @@ var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
 var _s = $RefreshSig$();
 const ComparisionDetails = ({ pokemondata })=>{
     _s();
+    const { id, name, sprites, height, weight, base_experience } = pokemondata;
+    const { front_shiny, front_default, back_default, back_shiny } = sprites;
     const { comparisiondata, setcomparisiondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     const types = pokemondata?.types.map((typeObj)=>typeObj.type.name);
     const abilities = pokemondata.abilities.map((typeobj)=>typeobj.ability.name);
     const removeFromComparision = (id, pokemonName)=>{
         const afterRemoval = comparisiondata.filter((poke)=>poke.id !== id);
-        const localStorageComparision = JSON.parse(localStorage.getItem('comparisions'));
+        const localStorageComparision = JSON.parse(localStorage.getItem("comparisions"));
         const updatedlocalStorageComparisions = localStorageComparision.filter((poke)=>poke.id !== id);
-        localStorage.setItem('comparisions', JSON.stringify(updatedlocalStorageComparisions));
-        localStorage.removeItem('Compare-' + pokemonName);
+        localStorage.setItem("comparisions", JSON.stringify(updatedlocalStorageComparisions));
+        localStorage.removeItem("Compare-" + pokemonName);
         setcomparisiondata(afterRemoval);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36845,27 +36171,27 @@ const ComparisionDetails = ({ pokemondata })=>{
                 className: "text-xl bg-blue-200 p-1 font-bold rounded-lg",
                 children: [
                     "#",
-                    pokemondata.id
+                    id
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 21,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 className: "text-2xl font-bold float-right text-blue-950",
-                children: pokemondata?.name
+                children: name
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 24,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "m-auto h-30",
-                src: pokemondata.sprites.front_shiny
+                src: front_shiny
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 25,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -36873,7 +36199,7 @@ const ComparisionDetails = ({ pokemondata })=>{
                 children: "Sprites"
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 26,
+                lineNumber: 36,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36881,32 +36207,32 @@ const ComparisionDetails = ({ pokemondata })=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
-                        src: pokemondata.sprites.front_default
+                        src: front_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 28,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
-                        src: pokemondata.sprites.back_shiny
+                        src: back_shiny
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 29,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "m-auto h-30",
-                        src: pokemondata.sprites.back_default
+                        src: back_default
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 30,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 27,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -36917,67 +36243,11 @@ const ComparisionDetails = ({ pokemondata })=>{
                         children: "Height :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, undefined),
-                    " ",
-                    pokemondata.height
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 32,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "font-bold",
-                        children: "Weight :"
-                    }, void 0, false, {
-                        fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, undefined),
-                    " ",
-                    pokemondata.weight
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 35,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "font-bold",
-                        children: "Base Experience : "
-                    }, void 0, false, {
-                        fileName: "src/components/ComparisionDetails.js",
-                        lineNumber: 39,
-                        columnNumber: 9
-                    }, undefined),
-                    pokemondata.base_experience
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 38,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "font-bold",
-                        children: "Types :"
-                    }, void 0, false, {
-                        fileName: "src/components/ComparisionDetails.js",
                         lineNumber: 43,
                         columnNumber: 9
                     }, undefined),
                     " ",
-                    types.join(" , ")
+                    height
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
@@ -36989,10 +36259,66 @@ const ComparisionDetails = ({ pokemondata })=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "font-bold",
-                        children: "Abilitiess:"
+                        children: "Weight :"
                     }, void 0, false, {
                         fileName: "src/components/ComparisionDetails.js",
                         lineNumber: 46,
+                        columnNumber: 9
+                    }, undefined),
+                    " ",
+                    weight
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ComparisionDetails.js",
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Base Experience : "
+                    }, void 0, false, {
+                        fileName: "src/components/ComparisionDetails.js",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined),
+                    base_experience
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ComparisionDetails.js",
+                lineNumber: 48,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Types :"
+                    }, void 0, false, {
+                        fileName: "src/components/ComparisionDetails.js",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, undefined),
+                    " ",
+                    types.join(" , ")
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ComparisionDetails.js",
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: "Abilitiess:"
+                    }, void 0, false, {
+                        fileName: "src/components/ComparisionDetails.js",
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     " ",
@@ -37000,35 +36326,35 @@ const ComparisionDetails = ({ pokemondata })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 45,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex justify-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     onClick: ()=>{
-                        removeFromComparision(pokemondata.id, pokemondata.name);
+                        removeFromComparision(id, name);
                     },
                     className: "w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ",
                     children: "Remove"
                 }, void 0, false, {
                     fileName: "src/components/ComparisionDetails.js",
-                    lineNumber: 49,
-                    columnNumber: 11
+                    lineNumber: 59,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/ComparisionDetails.js",
-                lineNumber: 48,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ComparisionDetails.js",
-        lineNumber: 20,
+        lineNumber: 28,
         columnNumber: 5
     }, undefined);
 };
-_s(ComparisionDetails, "GWlWx/N6pLnWdSde+HaHEI5+t7M=");
+_s(ComparisionDetails, "YpkhLNxblqIY6PSDDnqujm0lKl4=");
 _c = ComparisionDetails;
 exports.default = ComparisionDetails;
 var _c;
