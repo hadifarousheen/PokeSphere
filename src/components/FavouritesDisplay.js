@@ -55,9 +55,7 @@ const FavouritesDisplay=(props)=>{
   setfavouritesdata(afterRemoval);
   }
     return (
-<div className="hover:border hover:border-blue-950 w-40 h-60 md:h-58 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 ">
-      {/* <Link to="/details" state={{ pokemondata: pokemondetails }}> */}
-        <div>
+<div className="hover:border hover:border-blue-950 w-40 h-60 md:h-58 m-1  md:w-63 text-shadow-blue-950 p-2  md:m-2 md:p-2 rounded-xl shadow-2xl shadow-blue-400 hover:scale-105 text-blue-950 flex flex-col ">
           <div className="flex">
           <span className="bg-blue-200   p-1 rounded-lg font-bold">
             # {pokemondata.id}
@@ -80,13 +78,11 @@ const FavouritesDisplay=(props)=>{
               ? pokemondata.types.map((t) => t.type.name).join(", ")
               : ""}
           </p>
-          <div className="flex justify-center">
+          <div className="flex  justify-end mt-auto">
           <button onClick={()=>{
             removeFromFavourite(pokemondata.id,pokemondata.name)
           }} className="w-full text-sm border shadow-md shadow-blue-700  border-blue-950 font-bold m-0.5 md:m-1 p-1 bg-blue-300 rounded-md hover:bg-blue-600 hover:text-white ">Remove</button>
         </div>
-        </div>
-      {/* </Link> */}
       </div>
     )
 }

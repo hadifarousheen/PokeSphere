@@ -24,7 +24,7 @@ const generateRandomPokemon = () => {
   return (
     <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black">
       <nav className="flex flex-wrap justify-between">
-        <h1 className="text-xl md:text-3xl font-bold ml-2">Pokemon API</h1>
+        <h1 className="text-xl md:text-3xl font-bold ml-2 font">PokeSphere</h1>
         <img className="md:hidden h-8 " src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png" onClick={()=>{
           setshowmenu(!showmenu);
         }}/>
