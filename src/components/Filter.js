@@ -5,7 +5,6 @@ const Filter = () => {
   const [showfiltertype, setfiltertype] = useState(false);
   const [typevalues, settypevalues] = useState([]);
   const { pokemondata, setfilteredpokemondata } = useContext(CardContext);
-  // const[isChecked,setIsChecked]=useState(false);
   const types = [
     "fire",
     "water",

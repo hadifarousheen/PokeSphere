@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -26,28 +26,31 @@ const App = () => {
   }, []);
 
   async function fetchData() {
-    const allPokemons = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
+    const allPokemons = await fetch(
+      "https://pokeapi.co/api/v2/pokemon?limit=500"
+    );
     const allPokemonsJson = await allPokemons?.json();
-  const completePokemonsData = await Promise.all(allPokemonsJson.results?.map((pokemon) => fetch(pokemon.url)))
+    const completePokemonsData = await Promise.all(
+      allPokemonsJson.results?.map((pokemon) => fetch(pokemon.url))
+    );
     const completePokemonsDataJson = await Promise.all(
-completePokemonsData?.map((response) => response.json())
+      completePokemonsData?.map((response) => response.json())
     );
     console.log(completePokemonsDataJson);
-   setpokemondata(completePokemonsDataJson);
-  
+    setpokemondata(completePokemonsDataJson);
   }
 
   return (
     <CardContext.Provider
       value={{
-        pokemondata:pokemondata,
-        setpokemondata:setpokemondata,
-        filteredpokemondata:filteredpokemondata,
+        pokemondata: pokemondata,
+        setpokemondata: setpokemondata,
+        filteredpokemondata: filteredpokemondata,
         setfilteredpokemondata,
-        favouritesdata:favouritesdata,
-        setfavouritesdata:setfavouritesdata,
-        comparisiondata:comparisiondata,
-        setcomparisiondata:setcomparisiondata,
+        favouritesdata: favouritesdata,
+        setfavouritesdata: setfavouritesdata,
+        comparisiondata: comparisiondata,
+        setcomparisiondata: setcomparisiondata,
       }}
     >
       <Header />
