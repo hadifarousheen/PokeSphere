@@ -25,7 +25,7 @@ const Body = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mt-16">
       <Function />
       <div className="flex flex-wrap md:m-4 items-center justify-center">
         {filteredpokemondata.length != 0 ? (

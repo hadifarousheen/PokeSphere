@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black">
+    <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full">
       <nav className="flex flex-wrap justify-between">
         <h1 className="text-xl md:text-3xl font-bold ml-2 font">PokeSphere</h1>
         <img
