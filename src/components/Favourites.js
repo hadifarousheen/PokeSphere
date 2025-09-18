@@ -10,7 +10,7 @@ const Favourites = () => {
     localStorage.setItem("favourites", JSON.stringify(favouritedata));
   }, []);
   return (
-    <div className="m-auto my-6 ">
+    <div className="m-auto my-6 mt-18 ">
       <h1 className="text-3xl text-center text-blue-950 font-bold my-6">
         Favourite Pokemons
       </h1>
