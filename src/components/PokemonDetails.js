@@ -9,8 +9,8 @@ const PokemonDetails = () => {
     (typeobj) => typeobj.ability.name
   );
   return (
-    <div className="bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-10 ">
-      <span className="text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white">
+    <div className="bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-20 ">
+      <span className="text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white ">
         #{id}
       </span>
       <span className="text-2xl font-bold float-right text-blue-950">{name}</span>
