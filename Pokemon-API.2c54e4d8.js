@@ -32365,7 +32365,7 @@ const Header = ()=>{
         navigate("/random");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-blue-400 p-2 mb-2 shadow-xl/20 text-black",
+        className: "bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
             className: "flex flex-wrap justify-between",
             children: [
@@ -34838,6 +34838,7 @@ const Body = ()=>{
         return ()=>window.removeEventListener("resize", handleResize);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mt-16",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
@@ -35899,7 +35900,7 @@ const Favourites = ()=>{
         localStorage.setItem("favourites", JSON.stringify(favouritedata));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "m-auto my-6 ",
+        className: "m-auto my-6 mt-18 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-3xl text-center text-blue-950 font-bold my-6",
@@ -36092,11 +36093,11 @@ const Comparison = ()=>{
         localStorage.setItem("comparisions", JSON.stringify(comparisiondata2));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "",
+        className: "mt-18",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-3xl text-center text-blue-950 font-bold my-6",
-                children: "Comparision"
+                children: "Pokemons to Compare"
             }, void 0, false, {
                 fileName: "src/components/Comparison.js",
                 lineNumber: 14,
@@ -36387,10 +36388,10 @@ const PokemonDetails = ()=>{
     const types = pokemondata?.types.map((typeObj)=>typeObj.type.name);
     const abilities = pokemondata?.abilities?.map((typeobj)=>typeobj.ability.name);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-10 ",
+        className: "bg-blue-100 hover:border border-blue-950 m-auto w-11/12 md:w-fit p-3 rounded-2xl shadow-xl shadow-blue-800 mt-20 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white",
+                className: "text-xl bg-blue-400 p-0.5 font-bold rounded-lg hover:bg-blue-900 hover:text-white ",
                 children: [
                     "#",
                     id
@@ -36595,7 +36596,7 @@ const RandomPokemon = ()=>{
     const { filteredpokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
     const randomPoke = filteredpokemondata?.[0];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-fit m-auto mt-10",
+        className: "w-fit m-auto mt-18",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-3xl font-bold my-4 text-blue-950 mb-10",
