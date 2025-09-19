@@ -27,7 +27,7 @@ const Header = () => {
       <nav className="flex flex-wrap justify-between">
         <h1 className="text-xl md:text-3xl font-bold ml-2 font">PokeSphere</h1>
         <img
-          className="block z-50 relative  md:hidden h-8 "
+          className="block z-50  md:hidden h-8 "
           src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png"
           onClick={() => {
             setshowmenu(!showmenu);
