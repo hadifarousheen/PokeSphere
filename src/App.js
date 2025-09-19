@@ -8,6 +8,7 @@ import Comparison from "./components/Comparison";
 import PokemonDetails from "./components/PokemonDetails";
 import RandomPokemon from "./components/RandomPokemon";
 import CardContext from "./utils/CardContext";
+import Container from "./components/Container";
 
 const App = () => {
   const [pokemondata, setpokemondata] = useState([]);
@@ -55,11 +56,13 @@ const App = () => {
     >
       <Header />
       <Routes>
-        <Route path="/" element={<Body />} />
+        <Route path="/" element={<Body />} >
+        <Route index element={<Container/>}/>
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/details" element={<PokemonDetails />} />
         <Route path="/compare" element={<Comparison />} />
         <Route path="/random" element={<RandomPokemon />} />
+        </Route>
       </Routes>
     </CardContext.Provider>
   );
