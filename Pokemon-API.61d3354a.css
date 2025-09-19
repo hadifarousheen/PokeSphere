@@ -316,10 +316,6 @@
     position: fixed;
   }
 
-  .relative {
-    position: relative;
-  }
-
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -330,10 +326,6 @@
 
   .right-0 {
     right: calc(var(--spacing) * 0);
-  }
-
-  .z-40 {
-    z-index: 40;
   }
 
   .z-50 {
