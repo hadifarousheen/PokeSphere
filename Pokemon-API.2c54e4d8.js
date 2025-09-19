@@ -711,7 +711,6 @@ const App = ()=>{
         const allPokemonsJson = await allPokemons?.json();
         const completePokemonsData = await Promise.all(allPokemonsJson.results?.map((pokemon)=>fetch(pokemon.url)));
         const completePokemonsDataJson = await Promise.all(completePokemonsData?.map((response)=>response.json()));
-        console.log(completePokemonsDataJson);
         setpokemondata(completePokemonsDataJson);
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardContextDefault.default).Provider, {
@@ -32374,18 +32373,18 @@ const Header = ()=>{
                     children: "PokeSphere"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "md:hidden h-8 ",
+                    className: "block z-50 relative  md:hidden h-8 ",
                     src: "https://cdn-icons-png.flaticon.com/128/5358/5358649.png",
                     onClick: ()=>{
                         setshowmenu(!showmenu);
                     }
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 28,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -32397,16 +32396,17 @@ const Header = ()=>{
                                 className: `${showmenu ? "border border-blue-950 m-1 p-1 rounded  font-bold shadow-xl hover:bg-blue-500" : "border border-blue-950 m-1 p-1.5 rounded font-bold shadow-xl hover:bg-blue-500"}`,
                                 onClick: ()=>{
                                     setfilteredpokemondata([]);
+                                    setshowmenu(false);
                                 },
                                 children: "Get All Cards"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 43,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 42,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32417,16 +32417,17 @@ const Header = ()=>{
                                     const favouritedata = JSON.parse(localStorage.getItem("favourites"));
                                     setfavouritesdata(favouritedata);
                                     localStorage.setItem("favourites", JSON.stringify(favouritedata));
+                                    setshowmenu(false);
                                 },
                                 children: "Favourites"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 57,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 56,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32437,16 +32438,17 @@ const Header = ()=>{
                                     const comparisiondata2 = JSON.parse(localStorage.getItem("comparisions"));
                                     setcomparisiondata(comparisiondata2);
                                     localStorage.setItem("comparisions", JSON.stringify(comparisiondata2));
+                                    setshowmenu(false);
                                 },
                                 children: "Comparision"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 78,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 77,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -32458,29 +32460,29 @@ const Header = ()=>{
                                 children: "Random Pokemon"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 105,
+                                lineNumber: 109,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 100,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 35,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Header.js",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
@@ -34842,7 +34844,7 @@ const Body = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34851,22 +34853,22 @@ const Body = ()=>{
                         pokemondata: poke
                     }, poke.name, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 33,
+                        lineNumber: 34,
                         columnNumber: 13
                     }, undefined)) : pokemondata.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 36,
+                    lineNumber: 37,
                     columnNumber: 11
                 }, undefined) : pokemondata?.slice(start, end).map((poke)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonCardDefault.default), {
                         pokemondata: poke
                     }, poke.name, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 40,
+                        lineNumber: 41,
                         columnNumber: 28
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             pokemondata.length == 0 || filteredpokemondata.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34879,18 +34881,18 @@ const Body = ()=>{
                     noOfPages: noOfPages
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 46,
+                    lineNumber: 47,
                     columnNumber: 13
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 11
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -34905,7 +34907,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./PokemonCard":"eRgsR","./Function":"iBRzM","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Pagination":"ozIoh","./ShimmerCard":"lbEaz"}],"eRgsR":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./PokemonCard":"eRgsR","./Function":"iBRzM","./Pagination":"ozIoh","./ShimmerCard":"lbEaz","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eRgsR":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$be94 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$be94.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -34924,7 +34926,6 @@ const PokemonCard = ({ pokemondata })=>{
     const { id, name, sprites, types } = pokemondata;
     const { front_shiny } = sprites;
     const alltypes = types.map((type)=>type.type.name);
-    console.log(alltypes);
     const [favouritetext, setfavouritetext] = (0, _react.useState)(()=>{
         const stored = localStorage.getItem(`favourite-${pokemondata.name}`);
         return stored || "Favourite";
@@ -35944,7 +35945,7 @@ $RefreshReg$(_c, "Favourites");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./FavouritesDisplay":"hl2Vh"}],"hl2Vh":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","./FavouritesDisplay":"hl2Vh","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"hl2Vh":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$7e6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$7e6c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36366,7 +36367,7 @@ $RefreshReg$(_c, "ComparisionDetails");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","../utils/CardContext":"fcxDq"}],"ahCsz":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ahCsz":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$5c98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$5c98.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
