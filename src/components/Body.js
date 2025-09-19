@@ -14,6 +14,7 @@ const Body = () => {
   const noOfPages = Math.ceil(totalPokemons / PAGE_SIZE);
   const start = currentPage * PAGE_SIZE;
   const end = start + PAGE_SIZE;
+  
 
   useEffect(() => {
     const handleResize = () => {

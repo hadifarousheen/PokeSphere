@@ -6,7 +6,7 @@ const PokemonCard = ({pokemondata}) => {
   const {id, name, sprites,types} = pokemondata;
   const{front_shiny}=sprites;
   const alltypes=types.map((type)=>type.type.name);
-  console.log(alltypes);
+ 
   const [favouritetext, setfavouritetext] = useState(() => {
     const stored = localStorage.getItem(`favourite-${pokemondata.name}`);
     return stored || "Favourite";

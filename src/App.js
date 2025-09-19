@@ -36,7 +36,7 @@ const App = () => {
     const completePokemonsDataJson = await Promise.all(
       completePokemonsData?.map((response) => response.json())
     );
-    console.log(completePokemonsDataJson);
+   
     setpokemondata(completePokemonsDataJson);
   }
 

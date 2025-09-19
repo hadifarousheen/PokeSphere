@@ -20,13 +20,14 @@ const Header = () => {
     setfilteredpokemondata([{ ...randomPokemon, _key: Date.now() }]);
     navigate("/random");
   };
+  
 
   return (
     <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full">
       <nav className="flex flex-wrap justify-between">
         <h1 className="text-xl md:text-3xl font-bold ml-2 font">PokeSphere</h1>
         <img
-          className="md:hidden h-8 "
+          className="block z-50 relative  md:hidden h-8 "
           src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png"
           onClick={() => {
             setshowmenu(!showmenu);
@@ -48,6 +49,7 @@ const Header = () => {
               }`}
               onClick={() => {
                 setfilteredpokemondata([]);
+                 setshowmenu(false)
               }}
             >
               Get All Cards
@@ -69,6 +71,7 @@ const Header = () => {
                   "favourites",
                   JSON.stringify(favouritedata)
                 );
+                setshowmenu(false)
               }}
             >
               Favourites
@@ -91,6 +94,7 @@ const Header = () => {
                   "comparisions",
                   JSON.stringify(comparisiondata2)
                 );
+                 setshowmenu(false)
               }}
             >
               Comparision
