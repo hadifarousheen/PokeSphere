@@ -412,8 +412,8 @@
     margin-top: calc(var(--spacing) * 18);
   }
 
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
   }
 
   .mt-auto {
@@ -558,6 +558,10 @@
 
   .justify-end {
     justify-content: flex-end;
+  }
+
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
   }
 
   .overflow-x-scroll {
@@ -1083,14 +1087,6 @@
     @media (width >= 48rem) {
       & {
         overflow-x: hidden;
-      }
-    }
-  }
-
-  .md\:p-0\.5 {
-    @media (width >= 48rem) {
-      & {
-        padding: calc(var(--spacing) * .5);
       }
     }
   }
