@@ -709,7 +709,7 @@ const App = ()=>{
         if (!localStorage.getItem("comparisions")) localStorage.setItem("comparisions", JSON.stringify([]));
     }, []);
     async function fetchData() {
-        const allPokemons = await fetch("https://pokeapi.co/api/v2/pokemon?limit=500");
+        const allPokemons = await fetch("https://pokeapi.co/api/v2/pokemon?limit=200");
         const allPokemonsJson = await allPokemons?.json();
         const completePokemonsData = await Promise.all(allPokemonsJson.results?.map((pokemon)=>fetch(pokemon.url)));
         const completePokemonsDataJson = await Promise.all(completePokemonsData?.map((response)=>response.json()));
@@ -32366,7 +32366,6 @@ const Header = ()=>{
     const [showmenu, setshowmenu] = (0, _react.useState)(false);
     const navigate = (0, _reactRouterDom.useNavigate)();
     const { pokemondata, setfilteredpokemondata, setcomparisiondata, setfavouritesdata } = (0, _react.useContext)((0, _cardContextDefault.default));
-    console.log(menuIcon);
     const generateRandomPokemon = ()=>{
         if (!pokemondata || pokemondata.length === 0) return;
         const newIndex = Math.floor(Math.random() * pokemondata.length);
@@ -35802,7 +35801,7 @@ const Container = ()=>{
     const [currentPage, setCurrentPage] = (0, _react.useState)(0);
     const [isMobile, setIsMobile] = (0, _react.useState)(false);
     const { filteredpokemondata, pokemondata } = (0, _react.useContext)((0, _cardContextDefault.default));
-    const PAGE_SIZE = isMobile ? 80 : 20;
+    const PAGE_SIZE = isMobile ? 30 : 8;
     const totalPokemons = pokemondata?.length;
     const noOfPages = Math.ceil(totalPokemons / PAGE_SIZE);
     const start = currentPage * PAGE_SIZE;
@@ -35816,7 +35815,7 @@ const Container = ()=>{
         return ()=>window.removeEventListener("resize", handleResize);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "mt-16",
+        className: "mt-16 flex flex-col ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _functionDefault.default), {}, void 0, false, {
                 fileName: "src/components/Container.js",
@@ -35848,7 +35847,7 @@ const Container = ()=>{
                 columnNumber: 7
             }, undefined),
             pokemondata.length == 0 || filteredpokemondata.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-white mt-8 mb-4",
+                className: "bg-white  mt-8  ",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paginationDefault.default), {
                     start: start,
                     end: end,
@@ -35906,22 +35905,22 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages })=>{
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "text-center",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                disabled: currentPage == 0,
-                onClick: ()=>{
-                    goToPrevPage();
-                },
-                className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
-                children: "\u25C0"
-            }, void 0, false, {
-                fileName: "src/components/Pagination.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "overflow-x-scroll",
-                children: [
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "overflow-x-scroll md:overflow-x-hidden",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    disabled: currentPage == 0,
+                    onClick: ()=>{
+                        goToPrevPage();
+                    },
+                    className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
+                    children: "\u25C0"
+                }, void 0, false, {
+                    fileName: "src/components/Pagination.js",
+                    lineNumber: 15,
+                    columnNumber: 10
+                }, undefined),
+                [
                     ...Array(noOfPages).keys()
                 ].map((n)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -35929,35 +35928,35 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages })=>{
                             handleChange(n);
                         },
                         className: `rounded-md shadow-2xl hover:bg-white font-bold mx-2 px-2 py-1 bg-blue-300 cursor-pointer ${currentPage === n && "bg-blue-600 text-white"}`,
-                        children: n
+                        children: n + 1
                     }, n, false, {
                         fileName: "src/components/Pagination.js",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, undefined);
-                })
-            }, void 0, false, {
-                fileName: "src/components/Pagination.js",
-                lineNumber: 22,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                disabled: currentPage == noOfPages - 1,
-                onClick: ()=>{
-                    goToNextPage();
-                },
-                className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
-                children: [
-                    " ",
-                    "\u25B6"
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Pagination.js",
-                lineNumber: 39,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+                }),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    disabled: currentPage == noOfPages - 1,
+                    onClick: ()=>{
+                        goToNextPage();
+                    },
+                    className: "hover:bg-blue-300 py-1 px-1 rounded-md cursor-pointer",
+                    children: [
+                        " ",
+                        "\u25B6"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Pagination.js",
+                    lineNumber: 39,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Pagination.js",
+            lineNumber: 14,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/Pagination.js",
         lineNumber: 12,
         columnNumber: 5

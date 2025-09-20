@@ -308,10 +308,6 @@
 @layer components;
 
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
-
   .absolute {
     position: absolute;
   }
@@ -338,10 +334,6 @@
 
   .z-\[50\] {
     z-index: 50;
-  }
-
-  .z-\[9999\] {
-    z-index: 9999;
   }
 
   .float-right {
@@ -430,10 +422,6 @@
 
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .mb-10 {
@@ -907,14 +895,6 @@
     }
   }
 
-  .md\:invisible {
-    @media (width >= 48rem) {
-      & {
-        visibility: hidden;
-      }
-    }
-  }
-
   .md\:m-1 {
     @media (width >= 48rem) {
       & {
@@ -1095,6 +1075,14 @@
     @media (width >= 48rem) {
       & {
         width: fit-content;
+      }
+    }
+  }
+
+  .md\:overflow-x-hidden {
+    @media (width >= 48rem) {
+      & {
+        overflow-x: hidden;
       }
     }
   }
