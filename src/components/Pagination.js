@@ -19,6 +19,7 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
       >
         ◀
       </button>
+      <div className="overflow-x-scroll">
       {[...Array(noOfPages).keys()].map((n) => {
         return (
           <span
@@ -34,6 +35,7 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
           </span>
         );
       })}
+      </div>
       <button
         disabled={currentPage == noOfPages - 1}
         onClick={() => {

@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import CardContext from "../utils/CardContext";
 import { Link, useNavigate } from "react-router-dom";
+const menuIcon = new URL("../assets/images/menu-icon.png", import.meta.url)
+  .href;
+
 const Header = () => {
   const [showmenu, setshowmenu] = useState(false);
   const navigate = useNavigate();
@@ -10,6 +13,7 @@ const Header = () => {
     setcomparisiondata,
     setfavouritesdata,
   } = useContext(CardContext);
+  console.log(menuIcon);
 
   const generateRandomPokemon = () => {
     if (!pokemondata || pokemondata.length === 0) return;
@@ -20,23 +24,23 @@ const Header = () => {
     setfilteredpokemondata([{ ...randomPokemon, _key: Date.now() }]);
     navigate("/random");
   };
-  
 
   return (
-    <div className="bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full">
-      <nav className="flex flex-wrap justify-between">
+    <div className=" bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full">
+      <nav className="flex flex-wrap justify-between relative">
         <h1 className="text-xl md:text-3xl font-bold ml-2 font">PokeSphere</h1>
+       
         <img
-          className="block z-50  md:hidden h-8 "
-          src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png"
-          onClick={() => {
-            setshowmenu(!showmenu);
-          }}
+          className=" h-8  md:hidden cursor-pointer"
+          src={menuIcon}
+          alt="menu"
+          onClick={() => setshowmenu(!showmenu)}
         />
+
         <div
           className={`${
             showmenu
-              ? "absolute top-12 right-0 bg-blue-300 w-30 text-sm"
+              ? "absolute top-12 right-0 bg-blue-300 w-30 text-sm z-[50]"
               : "hidden md:flex ml-auto my-auto"
           }`}
         >
@@ -49,7 +53,7 @@ const Header = () => {
               }`}
               onClick={() => {
                 setfilteredpokemondata([]);
-                 setshowmenu(false)
+                setshowmenu(false);
               }}
             >
               Get All Cards
@@ -71,7 +75,7 @@ const Header = () => {
                   "favourites",
                   JSON.stringify(favouritedata)
                 );
-                setshowmenu(false)
+                setshowmenu(false);
               }}
             >
               Favourites
@@ -94,7 +98,7 @@ const Header = () => {
                   "comparisions",
                   JSON.stringify(comparisiondata2)
                 );
-                 setshowmenu(false)
+                setshowmenu(false);
               }}
             >
               Comparision
