@@ -9,6 +9,7 @@ import PokemonDetails from "./components/PokemonDetails";
 import RandomPokemon from "./components/RandomPokemon";
 import CardContext from "./utils/CardContext";
 import Container from "./components/Container";
+import { fetchPokemonData } from "./utils/fetchPokemonData";
 
 const App = () => {
   const [pokemondata, setpokemondata] = useState([]);
@@ -17,7 +18,11 @@ const App = () => {
   const [comparisiondata, setcomparisiondata] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    const getData = async () => {
+      const completePokemonsDataJson = await fetchPokemonData();
+      setpokemondata(completePokemonsDataJson);
+    };
+    getData();
     if (!localStorage.getItem("favourites")) {
       localStorage.setItem("favourites", JSON.stringify([]));
     }
@@ -26,42 +31,27 @@ const App = () => {
     }
   }, []);
 
-  async function fetchData() {
-    const allPokemons = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=200"
-    );
-    const allPokemonsJson = await allPokemons?.json();
-    const completePokemonsData = await Promise.all(
-      allPokemonsJson.results?.map((pokemon) => fetch(pokemon.url))
-    );
-    const completePokemonsDataJson = await Promise.all(
-      completePokemonsData?.map((response) => response.json())
-    );
-   
-    setpokemondata(completePokemonsDataJson);
-  }
-
   return (
     <CardContext.Provider
       value={{
-        pokemondata: pokemondata,
-        setpokemondata: setpokemondata,
-        filteredpokemondata: filteredpokemondata,
+        pokemondata,
+        setpokemondata,
+        filteredpokemondata,
         setfilteredpokemondata,
-        favouritesdata: favouritesdata,
-        setfavouritesdata: setfavouritesdata,
-        comparisiondata: comparisiondata,
-        setcomparisiondata: setcomparisiondata,
+        favouritesdata,
+        setfavouritesdata,
+        comparisiondata,
+        setcomparisiondata,
       }}
     >
       <Header />
       <Routes>
-        <Route path="/" element={<Body />} >
-        <Route index element={<Container/>}/>
-        <Route path="/favourites" element={<Favourites />} />
-        <Route path="/details" element={<PokemonDetails />} />
-        <Route path="/compare" element={<Comparison />} />
-        <Route path="/random" element={<RandomPokemon />} />
+        <Route path="/" element={<Body />}>
+          <Route index element={<Container />} />
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="/details" element={<PokemonDetails />} />
+          <Route path="/compare" element={<Comparison />} />
+          <Route path="/random" element={<RandomPokemon />} />
         </Route>
       </Routes>
     </CardContext.Provider>

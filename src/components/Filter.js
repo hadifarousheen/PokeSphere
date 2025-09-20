@@ -55,9 +55,9 @@ const Filter = () => {
             );
           })}
           </div>
-          <div className="ml-1 block">
+          <div className="ml-1 flex gap-1">
             <button
-              className="border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400 font-bold"
+              className="w-1/2 border border-blue-950 md:mx-1 my-2 rounded-lg text-blue-900 bg-blue-300 p-0.5 hover:bg-blue-400 font-bold"
               onClick={() => {
                 const filterPokemons = pokemondata.filter((pokemon) =>
                   pokemon.types.some((t) => typevalues.includes(t.type.name))
@@ -68,9 +68,10 @@ const Filter = () => {
               Filter
             </button>
             <button
-              className=" border border-blue-950 text-blue-900 mx-1 rounded-lg px-2 md:p-0.5  bg-blue-300 hover:bg-blue-400 font-bold"
+              className="w-1/2 border border-blue-950 text-blue-900 md:mx-1 rounded-lg  p-0.5 my-2 bg-blue-300 hover:bg-blue-400 font-bold"
               onClick={() => {
                 settypevalues([]);
+                setfilteredpokemondata([])
               }}
             >
               Clear Filter
