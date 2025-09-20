@@ -1,7 +1,7 @@
 {
   "name": "PokeSphere",
   "version": "1.0.0",
-  "homepage": "https://hadifarousheen.github.io/Pokemon-API",
+  "homepage": "https://github.com/hadifarousheen/PokeSphere",
   "scripts": {
     "build": "parcel build index.html --public-url ./",
     "predeploy": "npm run build",
