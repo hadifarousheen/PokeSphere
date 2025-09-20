@@ -28,7 +28,7 @@ const App = () => {
 
   async function fetchData() {
     const allPokemons = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=500"
+      "https://pokeapi.co/api/v2/pokemon?limit=200"
     );
     const allPokemonsJson = await allPokemons?.json();
     const completePokemonsData = await Promise.all(

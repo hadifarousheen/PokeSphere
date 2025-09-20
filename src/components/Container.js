@@ -9,7 +9,7 @@ const Container=()=>{
     const [currentPage, setCurrentPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const { filteredpokemondata, pokemondata } = useContext(CardContext);
-  const PAGE_SIZE = isMobile ? 80 : 20;
+  const PAGE_SIZE = isMobile ? 30 : 8;
   const totalPokemons = pokemondata?.length;
   const noOfPages = Math.ceil(totalPokemons / PAGE_SIZE);
   const start = currentPage * PAGE_SIZE;
@@ -25,7 +25,7 @@ const Container=()=>{
     return () => window.removeEventListener("resize", handleResize);
   }, []);
     return(
-        <div className="mt-16">
+        <div className="mt-16 flex flex-col ">
       <Function />
       <div className="flex flex-wrap md:m-4 items-center justify-center">
         {filteredpokemondata.length != 0 ? (
@@ -42,7 +42,7 @@ const Container=()=>{
       </div>
       {pokemondata.length == 0 ||
         (filteredpokemondata.length == 0 && (
-          <div className="bg-white mt-8 mb-4">
+          <div className="bg-white  mt-8  ">
             <Pagination
               start={start}
               end={end}

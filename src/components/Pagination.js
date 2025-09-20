@@ -10,7 +10,9 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
   };
   return (
     <div className="text-center">
-      <button
+     
+      <div className="overflow-x-scroll md:overflow-x-hidden">
+         <button
         disabled={currentPage == 0}
         onClick={() => {
           goToPrevPage();
@@ -19,7 +21,6 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
       >
         ◀
       </button>
-      <div className="overflow-x-scroll">
       {[...Array(noOfPages).keys()].map((n) => {
         return (
           <span
@@ -31,11 +32,10 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
             }`}
             key={n}
           >
-            {n}
+            {n+1}
           </span>
         );
       })}
-      </div>
       <button
         disabled={currentPage == noOfPages - 1}
         onClick={() => {
@@ -46,6 +46,8 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages }) => {
         {" "}
         ▶
       </button>
+      </div>
+      
     </div>
   );
 };

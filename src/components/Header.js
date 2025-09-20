@@ -13,7 +13,7 @@ const Header = () => {
     setcomparisiondata,
     setfavouritesdata,
   } = useContext(CardContext);
-  console.log(menuIcon);
+ 
 
   const generateRandomPokemon = () => {
     if (!pokemondata || pokemondata.length === 0) return;
