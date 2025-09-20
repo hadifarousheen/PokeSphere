@@ -130,7 +130,7 @@
 
   // Only insert newRequire.load when it is actually used.
   // The code in this file is linted against ES5, so dynamic import is not allowed.
-  // INSERT_LOAD_HERE
+  function $parcel$resolve(url) {  url = importMap[url] || url;  return import.meta.resolve(distDir + url);}newRequire.resolve = $parcel$resolve;
 
   Object.defineProperty(newRequire, 'root', {
     get: function () {
@@ -32360,11 +32360,13 @@ var _cardContext = require("../utils/CardContext");
 var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
+const menuIcon = new URL(require("e62bce76da8fc918")).href;
 const Header = ()=>{
     _s();
     const [showmenu, setshowmenu] = (0, _react.useState)(false);
     const navigate = (0, _reactRouterDom.useNavigate)();
     const { pokemondata, setfilteredpokemondata, setcomparisiondata, setfavouritesdata } = (0, _react.useContext)((0, _cardContextDefault.default));
+    console.log(menuIcon);
     const generateRandomPokemon = ()=>{
         if (!pokemondata || pokemondata.length === 0) return;
         const newIndex = Math.floor(Math.random() * pokemondata.length);
@@ -32378,31 +32380,30 @@ const Header = ()=>{
         navigate("/random");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full",
+        className: " bg-blue-400 p-2 mb-2 shadow-xl/20 text-black fixed top-0 w-full",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-            className: "flex flex-wrap justify-between",
+            className: "flex flex-wrap justify-between relative",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     className: "text-xl md:text-3xl font-bold ml-2 font",
                     children: "PokeSphere"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 28,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "block z-50  md:hidden h-8 ",
-                    src: "https://cdn-icons-png.flaticon.com/128/5358/5358649.png",
-                    onClick: ()=>{
-                        setshowmenu(!showmenu);
-                    }
+                    className: " h-8  md:hidden cursor-pointer",
+                    src: menuIcon,
+                    alt: "menu",
+                    onClick: ()=>setshowmenu(!showmenu)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 29,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: `${showmenu ? "absolute top-12 right-0 bg-blue-300 w-30 text-sm" : "hidden md:flex ml-auto my-auto"}`,
+                    className: `${showmenu ? "absolute top-12 right-0 bg-blue-300 w-30 text-sm z-[50]" : "hidden md:flex ml-auto my-auto"}`,
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
@@ -32415,12 +32416,12 @@ const Header = ()=>{
                                 children: "Get All Cards"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 44,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 43,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32436,12 +32437,12 @@ const Header = ()=>{
                                 children: "Favourites"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 59,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 58,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -32457,12 +32458,12 @@ const Header = ()=>{
                                 children: "Comparision"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 81,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 80,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -32474,29 +32475,29 @@ const Header = ()=>{
                                 children: "Random Pokemon"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 109,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 104,
+                            lineNumber: 108,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 36,
+                    lineNumber: 40,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Header.js",
-            lineNumber: 27,
+            lineNumber: 30,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 26,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -32515,7 +32516,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fcxDq":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/CardContext":"fcxDq","react-router-dom":"61z4w","e62bce76da8fc918":"2x1WA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fcxDq":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1260 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$1260.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -34812,7 +34813,10 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"loQlg":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2x1WA":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("menu-icon.0b0a6b32.png") + "?" + Date.now();
+
+},{}],"loQlg":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$8a58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$8a58.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -35915,21 +35919,28 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages })=>{
                 lineNumber: 13,
                 columnNumber: 7
             }, undefined),
-            [
-                ...Array(noOfPages).keys()
-            ].map((n)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    onClick: ()=>{
-                        handleChange(n);
-                    },
-                    className: `rounded-md shadow-2xl hover:bg-white font-bold mx-2 px-2 py-1 bg-blue-300 cursor-pointer ${currentPage === n && "bg-blue-600 text-white"}`,
-                    children: n
-                }, n, false, {
-                    fileName: "src/components/Pagination.js",
-                    lineNumber: 24,
-                    columnNumber: 11
-                }, undefined);
-            }),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "overflow-x-scroll",
+                children: [
+                    ...Array(noOfPages).keys()
+                ].map((n)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        onClick: ()=>{
+                            handleChange(n);
+                        },
+                        className: `rounded-md shadow-2xl hover:bg-white font-bold mx-2 px-2 py-1 bg-blue-300 cursor-pointer ${currentPage === n && "bg-blue-600 text-white"}`,
+                        children: n
+                    }, n, false, {
+                        fileName: "src/components/Pagination.js",
+                        lineNumber: 25,
+                        columnNumber: 11
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Pagination.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 disabled: currentPage == noOfPages - 1,
                 onClick: ()=>{
@@ -35942,7 +35953,7 @@ const Pagination = ({ start, end, currentPage, setCurrentPage, noOfPages })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Pagination.js",
-                lineNumber: 37,
+                lineNumber: 39,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36686,6 +36697,6 @@ $RefreshReg$(_c, "Filter");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../utils/CardContext":"fcxDq","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire17bc", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","../utils/CardContext":"fcxDq","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire17bc", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=Pokemon-API.2c54e4d8.js.map
